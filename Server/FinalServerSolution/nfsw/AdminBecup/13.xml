@@ -1,0 +1,1501 @@
+This XML file does not appear to have any style information associated with it. The document tree is shown below.
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+<xs:import schemaLocation="http://89.234.36.233/nfsw/Engine.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/Victory.Service"/>
+<xs:import schemaLocation="http://89.234.36.233/nfsw/Engine.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+<xs:import schemaLocation="http://89.234.36.233/nfsw/Engine.svc?xsd=xsd1" namespace="http://schemas.datacontract.org/2004/07/Victory.Service.Objects"/>
+<xs:import schemaLocation="http://89.234.36.233/nfsw/Engine.svc?xsd=xsd11" namespace="http://schemas.datacontract.org/2004/07/Victory.TransferObjects.DriverPersona"/>
+<xs:import schemaLocation="http://89.234.36.233/nfsw/Engine.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization"/>
+<xs:import schemaLocation="http://89.234.36.233/nfsw/Engine.svc?xsd=xsd14" namespace="http://schemas.datacontract.org/2004/07/Victory.TransferObjects.User"/>
+<xs:import schemaLocation="http://89.234.36.233/nfsw/Engine.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization.LoginAnnouncement"/>
+<xs:import schemaLocation="http://89.234.36.233/nfsw/Engine.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization.Event"/>
+<xs:import schemaLocation="http://89.234.36.233/nfsw/Engine.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization.Social"/>
+<xs:import schemaLocation="http://89.234.36.233/nfsw/Engine.svc?xsd=xsd16" namespace="http://schemas.datacontract.org/2004/07/Victory.TransferObjects.Session"/>
+<xs:import schemaLocation="http://89.234.36.233/nfsw/Engine.svc?xsd=xsd17" namespace="http://schemas.datacontract.org/2004/07/Victory.Service.Objects.Event"/>
+<xs:import schemaLocation="http://89.234.36.233/nfsw/Engine.svc?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/Victory.TransferObjects.News"/>
+<xs:import schemaLocation="http://89.234.36.233/nfsw/Engine.svc?xsd=xsd18" namespace="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization.Gift"/>
+<xs:element name="JoinQueueRaceNow">
+<xs:complexType>
+<xs:sequence/>
+</xs:complexType>
+</xs:element>
+<xs:element name="JoinQueueRaceNowResponse">
+<xs:complexType>
+<xs:sequence/>
+</xs:complexType>
+</xs:element>
+<xs:element name="LeaveQueue">
+<xs:complexType>
+<xs:sequence/>
+</xs:complexType>
+</xs:element>
+<xs:element name="LeaveQueueResponse">
+<xs:complexType>
+<xs:sequence/>
+</xs:complexType>
+</xs:element>
+<xs:element name="AcceptInvite">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="lobbyInviteId" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="AcceptInviteResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Victory.Service" minOccurs="0" name="AcceptInviteResult" nillable="true" type="q1:LobbyInfo"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="DeclineInvite">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="lobbyInviteId" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="DeclineInviteResponse">
+<xs:complexType>
+<xs:sequence/>
+</xs:complexType>
+</xs:element>
+<xs:element name="MakePrivateLobby">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="strEventId" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="MakePrivateLobbyResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Victory.Service" minOccurs="0" name="MakePrivateLobbyResult" nillable="true" type="q2:LobbyInfo"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="InviteToPrivateLobby">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="invitePersonaId" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="InviteToPrivateLobbyResponse">
+<xs:complexType>
+<xs:sequence/>
+</xs:complexType>
+</xs:element>
+<xs:element name="LeaveLobby">
+<xs:complexType>
+<xs:sequence/>
+</xs:complexType>
+</xs:element>
+<xs:element name="LeaveLobbyResponse">
+<xs:complexType>
+<xs:sequence/>
+</xs:complexType>
+</xs:element>
+<xs:element name="DriverPersona_ReserveName">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="userId" type="xs:long"/>
+<xs:element minOccurs="0" name="name" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="DriverPersona_ReserveNameResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="DriverPersona_ReserveNameResult" nillable="true" type="q3:ArrayOfstring"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="DriverPersona_UnreserveName">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="userId" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="DriverPersona_UnreserveNameResponse">
+<xs:complexType>
+<xs:sequence/>
+</xs:complexType>
+</xs:element>
+<xs:element name="DriverPersona_GetExpLevelPointsMap">
+<xs:complexType>
+<xs:sequence/>
+</xs:complexType>
+</xs:element>
+<xs:element name="DriverPersona_GetExpLevelPointsMapResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="DriverPersona_GetExpLevelPointsMapResult" nillable="true" type="q4:ArrayOfint"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="DriverPersona_CreatePersona">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="userId" type="xs:long"/>
+<xs:element minOccurs="0" name="name" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="iconIndex" type="xs:int"/>
+<xs:element minOccurs="0" name="clan" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="clanIcon" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="DriverPersona_CreatePersonaResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Victory.Service.Objects" minOccurs="0" name="DriverPersona_CreatePersonaResult" nillable="true" type="q5:ProfileData"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="DriverPersona_GetPersonaBaseFromList">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Victory.TransferObjects.DriverPersona" minOccurs="0" name="personaIds" nillable="true" type="q6:PersonaIdArray"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="DriverPersona_GetPersonaBaseFromListResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Victory.Service.Objects" minOccurs="0" name="DriverPersona_GetPersonaBaseFromListResult" nillable="true" type="q7:ArrayOfPersonaBase"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="DriverPersona_GetPersonaInfo">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="personaId" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="DriverPersona_GetPersonaInfoResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Victory.Service.Objects" minOccurs="0" name="DriverPersona_GetPersonaInfoResult" nillable="true" type="q8:ProfileData"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="DriverPersona_GetPersonaPresenceByName">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="displayName" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="DriverPersona_GetPersonaPresenceByNameResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Victory.TransferObjects.DriverPersona" minOccurs="0" name="DriverPersona_GetPersonaPresenceByNameResult" nillable="true" type="q9:PersonaPresence"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="DriverPersona_DeletePersona">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="personaId" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="DriverPersona_DeletePersonaResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="DriverPersona_DeletePersonaResult" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="DriverPersona_UpdateStatusMessage">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Victory.TransferObjects.DriverPersona" minOccurs="0" name="motto" nillable="true" type="q10:PersonaMotto"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="DriverPersona_UpdateStatusMessageResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Victory.TransferObjects.DriverPersona" minOccurs="0" name="DriverPersona_UpdateStatusMessageResult" nillable="true" type="q11:PersonaMotto"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="DriverPersona_UpdatePersonaPresence">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="personaId" type="xs:long"/>
+<xs:element minOccurs="0" name="presence" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="DriverPersona_UpdatePersonaPresenceResponse">
+<xs:complexType>
+<xs:sequence/>
+</xs:complexType>
+</xs:element>
+<xs:element name="Achievements_LoadAll">
+<xs:complexType>
+<xs:sequence/>
+</xs:complexType>
+</xs:element>
+<xs:element name="Achievements_LoadAllResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Victory.Service.Objects" minOccurs="0" name="Achievements_LoadAllResult" nillable="true" type="q12:AchievementsPacket"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="Achievements_RedeemReward">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="achievementRankId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="Achievements_RedeemRewardResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Victory.Service.Objects" minOccurs="0" name="Achievements_RedeemRewardResult" nillable="true" type="q13:AchievementRewards"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="Badges_Set">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Victory.Service.Objects" minOccurs="0" name="badgeBundle" nillable="true" type="q14:BadgeBundle"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="Badges_SetResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Victory.Service.Objects" minOccurs="0" name="Badges_SetResult" nillable="true" type="q15:BadgesPacket"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="User_AuthenticateUser">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization" minOccurs="0" name="credentials" nillable="true" type="q16:Credentials"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="User_AuthenticateUserResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Victory.TransferObjects.User" minOccurs="0" name="User_AuthenticateUserResult" nillable="true" type="q17:User"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="User_AuthenticateUserByToken">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization" minOccurs="0" name="token" nillable="true" type="q18:Token"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="User_AuthenticateUserByTokenResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Victory.TransferObjects.User" minOccurs="0" name="User_AuthenticateUserByTokenResult" nillable="true" type="q19:User"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="User_SetRegion">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="userId" type="xs:long"/>
+<xs:element minOccurs="0" name="regionId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="User_SetRegionResponse">
+<xs:complexType>
+<xs:sequence/>
+</xs:complexType>
+</xs:element>
+<xs:element name="User_GetPermanentSession">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization" minOccurs="0" name="data" nillable="true" type="q20:GetPermanentSessionData"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="User_GetPermanentSessionResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/Victory.TransferObjects.User" minOccurs="0" name="User_GetPermanentSessionResult" nillable="true" type="q21:UserInfo"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="User_GetUserInfoFromSecurityToken">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="userId" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="User_GetUserInfoFromSecurityTokenResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Victory.TransferObjects.User" minOccurs="0" name="User_GetUserInfoFromSecurityTokenResult" nillable="true" type="q22:UserInfo"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="User_SecureLogout">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="userId" type="xs:long"/>
+<xs:element minOccurs="0" name="personaId" type="xs:long"/>
+<xs:element minOccurs="0" name="exitCode" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="User_SecureLogoutResponse">
+<xs:complexType>
+<xs:sequence/>
+</xs:complexType>
+</xs:element>
+<xs:element name="LoginAnnouncements_GetLoginAnnouncements">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="language" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="LoginAnnouncements_GetLoginAnnouncementsResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization.LoginAnnouncement" minOccurs="0" name="LoginAnnouncements_GetLoginAnnouncementsResult" nillable="true" type="q23:LoginAnnouncementsDefinition"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="Reporting_LoginAnnouncementClicked">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="userId" type="xs:long"/>
+<xs:element minOccurs="0" name="announcementId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="Reporting_LoginAnnouncementClickedResponse">
+<xs:complexType>
+<xs:sequence/>
+</xs:complexType>
+</xs:element>
+<xs:element name="ReapplyProgressionAmplifiers">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="personaId" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="ReapplyProgressionAmplifiersResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization.Event" minOccurs="0" name="ReapplyProgressionAmplifiersResult" nillable="true" type="q24:Reward"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="GetBlockedUsersList">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="userId" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="GetBlockedUsersListResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization.Social" minOccurs="0" name="GetBlockedUsersListResult" nillable="true" type="q25:ArrayOfBasicBlockPlayerInfo"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="GetBlockersByUsers">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="personaId" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="GetBlockersByUsersResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q26="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetBlockersByUsersResult" nillable="true" type="q26:ArrayOflong"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="BlockPlayer">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="personaId" type="xs:long"/>
+<xs:element minOccurs="0" name="otherPersonaId" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="BlockPlayerResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/Victory.Service.Objects" minOccurs="0" name="BlockPlayerResult" nillable="true" type="q27:PersonaBase"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="UnblockPlayer">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="personaId" type="xs:long"/>
+<xs:element minOccurs="0" name="otherPersonaId" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="UnblockPlayerResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="UnblockPlayerResult" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="AddFriendRequest">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="personaId" type="xs:long"/>
+<xs:element minOccurs="0" name="displayName" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="reqMessage" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="AddFriendRequestResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/Victory.TransferObjects.DriverPersona" minOccurs="0" name="AddFriendRequestResult" nillable="true" type="q28:FriendResult"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="ResolveFriendRequest">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="personaId" type="xs:long"/>
+<xs:element minOccurs="0" name="friendPersonaId" type="xs:long"/>
+<xs:element minOccurs="0" name="resolution" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="ResolveFriendRequestResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/Victory.Service.Objects" minOccurs="0" name="ResolveFriendRequestResult" nillable="true" type="q29:PersonaBase"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="GetFriendsListFromUserId">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="userId" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="GetFriendsListFromUserIdResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/Victory.TransferObjects.DriverPersona" minOccurs="0" name="GetFriendsListFromUserIdResult" nillable="true" type="q30:PersonaFriendsList"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="RemoveFriend">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="personaId" type="xs:long"/>
+<xs:element minOccurs="0" name="friendPersonaId" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="RemoveFriendResponse">
+<xs:complexType>
+<xs:sequence/>
+</xs:complexType>
+</xs:element>
+<xs:element name="GetSocialSettings">
+<xs:complexType>
+<xs:sequence/>
+</xs:complexType>
+</xs:element>
+<xs:element name="GetSocialSettingsResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization.Social" minOccurs="0" name="GetSocialSettingsResult" nillable="true" type="q31:SocialSettings"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="SetSocialSettings">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization.Social" minOccurs="0" name="settings" nillable="true" type="q32:SocialSettings"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="SetSocialSettingsResponse">
+<xs:complexType>
+<xs:sequence/>
+</xs:complexType>
+</xs:element>
+<xs:element name="PetitionRequest">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="personaId" type="xs:long"/>
+<xs:element minOccurs="0" name="abuserPersonaId" type="xs:long"/>
+<xs:element minOccurs="0" name="petitionType" type="xs:int"/>
+<xs:element minOccurs="0" name="description" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="chatMinutes" type="xs:int"/>
+<xs:element minOccurs="0" name="customCarID" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="PetitionRequestResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="PetitionRequestResult" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="GetPersonaIdsFromUserIds">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/Victory.TransferObjects.DriverPersona" minOccurs="0" name="userIds" nillable="true" type="q33:UserIdArray"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="GetPersonaIdsFromUserIdsResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization.Social" minOccurs="0" name="GetPersonaIdsFromUserIdsResult" nillable="true" type="q34:UserPersonaMapList"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="GetSocialNetworkInfo">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="userId" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="GetSocialNetworkInfoResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization.Social" minOccurs="0" name="GetSocialNetworkInfoResult" nillable="true" type="q35:SocialNetworkInfo"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="User_SecureLogoutPersona">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="userId" type="xs:long"/>
+<xs:element minOccurs="0" name="personaId" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="User_SecureLogoutPersonaResponse">
+<xs:complexType>
+<xs:sequence/>
+</xs:complexType>
+</xs:element>
+<xs:element name="User_SecureLogin">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="authKey" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="localIp" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="localPort" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="publicIp" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="publicPort" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="natBehavior" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="natIncrement" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="natType" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="User_SecureLoginResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/Victory.TransferObjects.User" minOccurs="0" name="User_SecureLoginResult" nillable="true" type="q36:UserInfo"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="User_SecureLoginPersona">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="userId" type="xs:long"/>
+<xs:element minOccurs="0" name="personaId" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="User_SecureLoginPersonaResponse">
+<xs:complexType>
+<xs:sequence/>
+</xs:complexType>
+</xs:element>
+<xs:element name="User_Logging">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="group" nillable="true" type="xs:string"/>
+<xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization" minOccurs="0" name="log" nillable="true" type="q37:ClientLog"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="User_LoggingResponse">
+<xs:complexType>
+<xs:sequence/>
+</xs:complexType>
+</xs:element>
+<xs:element name="User_ClientConfig">
+<xs:complexType>
+<xs:sequence/>
+</xs:complexType>
+</xs:element>
+<xs:element name="User_ClientConfigResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization" minOccurs="0" name="User_ClientConfigResult" nillable="true" type="q38:ClientConfigTrans"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="GetUserSettings">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="userId" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="GetUserSettingsResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization" minOccurs="0" name="GetUserSettingsResult" nillable="true" type="q39:User_Settings"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="SetUserSettings">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization" minOccurs="0" name="settings" nillable="true" type="q40:User_Settings"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="SetUserSettingsResponse">
+<xs:complexType>
+<xs:sequence/>
+</xs:complexType>
+</xs:element>
+<xs:element name="Session_GetChatInfo">
+<xs:complexType>
+<xs:sequence/>
+</xs:complexType>
+</xs:element>
+<xs:element name="Session_GetChatInfoResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/Victory.TransferObjects.Session" minOccurs="0" name="Session_GetChatInfoResult" nillable="true" type="q41:chatServer"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="Reporting_SendHardwareInfo">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization" minOccurs="0" name="hardwareInfo" nillable="true" type="q42:HardwareInfo"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="Reporting_SendHardwareInfoResponse">
+<xs:complexType>
+<xs:sequence/>
+</xs:complexType>
+</xs:element>
+<xs:element name="Reporting_SendUserSettings">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization" minOccurs="0" name="userSettings" nillable="true" type="q43:UserSettings"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="Reporting_SendUserSettingsResponse">
+<xs:complexType>
+<xs:sequence/>
+</xs:complexType>
+</xs:element>
+<xs:element name="Reporting_SendMachineIndetification">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization" minOccurs="0" name="machineIndetification" nillable="true" type="q44:MachineIdentification"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="Reporting_SendMachineIndetificationResponse">
+<xs:complexType>
+<xs:sequence/>
+</xs:complexType>
+</xs:element>
+<xs:element name="Reporting_LauncherPatcherStart">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization" minOccurs="0" name="startObject" nillable="true" type="q45:LauncherStartTrans"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="Reporting_LauncherPatcherStartResponse">
+<xs:complexType>
+<xs:sequence/>
+</xs:complexType>
+</xs:element>
+<xs:element name="Reporting_LauncherPatcherEnd">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization" minOccurs="0" name="endObject" nillable="true" type="q46:LauncherEndTrans"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="Reporting_LauncherPatcherEndResponse">
+<xs:complexType>
+<xs:sequence/>
+</xs:complexType>
+</xs:element>
+<xs:element name="Reporting_SendMultiplayerConnect">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="personaId" type="xs:long"/>
+<xs:element minOccurs="0" name="netErrorCode" type="xs:int"/>
+<xs:element minOccurs="0" name="duration" type="xs:unsignedInt"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="Reporting_SendMultiplayerConnectResponse">
+<xs:complexType>
+<xs:sequence/>
+</xs:complexType>
+</xs:element>
+<xs:element name="Reporting_SendClientPingTime">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="personaId" type="xs:long"/>
+<xs:element minOccurs="0" name="pingTime" type="xs:int"/>
+<xs:element minOccurs="0" name="UDPR_IP" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="Reporting_SendClientPingTimeResponse">
+<xs:complexType>
+<xs:sequence/>
+</xs:complexType>
+</xs:element>
+<xs:element name="Event_GetTreasureHuntEventSession">
+<xs:complexType>
+<xs:sequence/>
+</xs:complexType>
+</xs:element>
+<xs:element name="Event_GetTreasureHuntEventSessionResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization.Event" minOccurs="0" name="Event_GetTreasureHuntEventSessionResult" nillable="true" type="q47:TreasureHuntEventSession"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="Event_NotifyTreasureHuntCoinCollected">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="coinsCollected" type="xs:unsignedInt"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="Event_NotifyTreasureHuntCoinCollectedResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization.Event" minOccurs="0" name="Event_NotifyTreasureHuntCoinCollectedResult" nillable="true" type="q48:Accolades"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="Event_GetEventsAvailableAtLevel">
+<xs:complexType>
+<xs:sequence/>
+</xs:complexType>
+</xs:element>
+<xs:element name="Event_GetEventsAvailableAtLevelResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization.Event" minOccurs="0" name="Event_GetEventsAvailableAtLevelResult" nillable="true" type="q49:EventsPacket"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="Event_Launched">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="eventSessionId" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="Event_LaunchedResponse">
+<xs:complexType>
+<xs:sequence/>
+</xs:complexType>
+</xs:element>
+<xs:element name="Event_FetchInstancedAccolades">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="eventSessionId" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="Event_FetchInstancedAccoladesResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization.Event" minOccurs="0" name="Event_FetchInstancedAccoladesResult" nillable="true" type="q50:Accolades"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="Event_FetchAccolades">
+<xs:complexType>
+<xs:sequence/>
+</xs:complexType>
+</xs:element>
+<xs:element name="Event_FetchAccoladesResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization.Event" minOccurs="0" name="Event_FetchAccoladesResult" nillable="true" type="q51:Accolades"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="Event_Arbitration">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="eventSessionId" type="xs:long"/>
+<xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/Victory.Service.Objects" minOccurs="0" name="arbitrationRecord" nillable="true" type="q52:ArbitrationPacket"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="Event_ArbitrationResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q53="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization.Event" minOccurs="0" name="Event_ArbitrationResult" nillable="true" type="q53:EventResult"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="Event_Abort">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="eventSessionId" type="xs:long"/>
+<xs:element xmlns:q54="http://schemas.datacontract.org/2004/07/Victory.Service.Objects" minOccurs="0" name="arbitrationRecord" nillable="true" type="q54:ArbitrationPacket"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="Event_AbortResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q55="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization.Event" minOccurs="0" name="Event_AbortResult" nillable="true" type="q55:EventResult"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="Event_Busted">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="eventSessionId" type="xs:long"/>
+<xs:element xmlns:q56="http://schemas.datacontract.org/2004/07/Victory.Service.Objects" minOccurs="0" name="arbitrationRecord" nillable="true" type="q56:ArbitrationPacket"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="Event_BustedResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q57="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization.Event" minOccurs="0" name="Event_BustedResult" nillable="true" type="q57:EventResult"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="LaunchEvent">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="strEventId" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="LaunchEventResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q58="http://schemas.datacontract.org/2004/07/Victory.Service" minOccurs="0" name="LaunchEventResult" nillable="true" type="q58:SessionInfo"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="JoinQueueEvent">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="strEventId" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="JoinQueueEventResponse">
+<xs:complexType>
+<xs:sequence/>
+</xs:complexType>
+</xs:element>
+<xs:element name="SystemInfo">
+<xs:complexType>
+<xs:sequence/>
+</xs:complexType>
+</xs:element>
+<xs:element name="SystemInfoResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q59="http://schemas.datacontract.org/2004/07/Victory.Service" minOccurs="0" name="SystemInfoResult" nillable="true" type="q59:SystemInfo"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="LauncherInfo">
+<xs:complexType>
+<xs:sequence/>
+</xs:complexType>
+</xs:element>
+<xs:element name="LauncherInfoResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q60="http://schemas.datacontract.org/2004/07/Victory.Service" minOccurs="0" name="LauncherInfoResult" nillable="true" type="q60:configuration"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="GetShardInfo">
+<xs:complexType>
+<xs:sequence/>
+</xs:complexType>
+</xs:element>
+<xs:element name="GetShardInfoResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q61="http://schemas.datacontract.org/2004/07/Victory.Service.Objects" minOccurs="0" name="GetShardInfoResult" nillable="true" type="q61:ArrayOfShardInfo"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="Heartbeat">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q62="http://schemas.datacontract.org/2004/07/Victory.Service.Objects" minOccurs="0" name="report" nillable="true" type="q62:Report"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="HeartbeatResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q63="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization" minOccurs="0" name="HeartbeatResult" nillable="true" type="q63:HeartBeat"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="HeartbeatLauncher">
+<xs:complexType>
+<xs:sequence/>
+</xs:complexType>
+</xs:element>
+<xs:element name="HeartbeatLauncherResponse">
+<xs:complexType>
+<xs:sequence/>
+</xs:complexType>
+</xs:element>
+<xs:element name="GetServerTime">
+<xs:complexType>
+<xs:sequence/>
+</xs:complexType>
+</xs:element>
+<xs:element name="GetServerTimeResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q64="http://schemas.datacontract.org/2004/07/Victory.Service" minOccurs="0" name="GetServerTimeResult" nillable="true" type="q64:ServerTime"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="GenerateWebToken">
+<xs:complexType>
+<xs:sequence/>
+</xs:complexType>
+</xs:element>
+<xs:element name="GenerateWebTokenResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="GenerateWebTokenResult" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="GetFraudConfig">
+<xs:complexType>
+<xs:sequence/>
+</xs:complexType>
+</xs:element>
+<xs:element name="GetFraudConfigResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q65="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization" minOccurs="0" name="GetFraudConfigResult" nillable="true" type="q65:FraudConfig"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="LogFraudDetectionEvents">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q66="http://schemas.datacontract.org/2004/07/Victory.Service.Objects" minOccurs="0" name="fraudDetectionObjectCollection" nillable="true" type="q66:FraudDetectionCollection"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="LogFraudDetectionEventsResponse">
+<xs:complexType>
+<xs:sequence/>
+</xs:complexType>
+</xs:element>
+<xs:element name="GetDefaultCarForPersona">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="personaId" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="GetDefaultCarForPersonaResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q67="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization" minOccurs="0" name="GetDefaultCarForPersonaResult" nillable="true" type="q67:OwnedCarTrans"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="GetDefaultCarForPersonas">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q68="http://schemas.datacontract.org/2004/07/Victory.TransferObjects.DriverPersona" minOccurs="0" name="personaIds" nillable="true" type="q68:PersonaIdArray"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="GetDefaultCarForPersonasResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q69="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization" minOccurs="0" name="GetDefaultCarForPersonasResult" nillable="true" type="q69:ArrayOfOwnedCarTrans"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="GetMyDefaultCar">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="personaId" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="GetMyDefaultCarResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q70="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization" minOccurs="0" name="GetMyDefaultCarResult" nillable="true" type="q70:OwnedCarTrans"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="SetDefaultCarForPersona">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="personaId" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="ownedcarId" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="SetDefaultCarForPersonaResponse">
+<xs:complexType>
+<xs:sequence/>
+</xs:complexType>
+</xs:element>
+<xs:element name="GetCarsOwnedByPersona">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="personaId" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="GetCarsOwnedByPersonaResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q71="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization" minOccurs="0" name="GetCarsOwnedByPersonaResult" nillable="true" type="q71:ArrayOfOwnedCarTrans"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="GetCarOwnedByPersona">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="personaId" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="ownedcarId" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="GetCarOwnedByPersonaResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q72="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization" minOccurs="0" name="GetCarOwnedByPersonaResult" nillable="true" type="q72:OwnedCarTrans"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="SellCar">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="personaId" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="ownedcarId" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="SellCarResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q73="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization" minOccurs="0" name="SellCarResult" nillable="true" type="q73:OwnedCarTrans"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="UpdateCar">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="personaId" nillable="true" type="xs:string"/>
+<xs:element xmlns:q74="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization" minOccurs="0" name="car" nillable="true" type="q74:OwnedCarTrans"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="UpdateCarResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q75="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization" minOccurs="0" name="UpdateCarResult" nillable="true" type="q75:OwnedCarTrans"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="GetPerformanceUpgradesForBaseCar">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="baseCarHash" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="language" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="GetPerformanceUpgradesForBaseCarResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q76="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization" minOccurs="0" name="GetPerformanceUpgradesForBaseCarResult" nillable="true" type="q76:ArrayOfProductTrans"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="RepairDefaultOwnedCar">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="personaId" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="RepairDefaultOwnedCarResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="RepairDefaultOwnedCarResult" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="GetCarClasses">
+<xs:complexType>
+<xs:sequence/>
+</xs:complexType>
+</xs:element>
+<xs:element name="GetCarClassesResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q77="http://schemas.datacontract.org/2004/07/Victory.Service.Objects.Event" minOccurs="0" name="GetCarClassesResult" nillable="true" type="q77:ArrayOfCarClass"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="Inventory_GetPersonaInventoryObject">
+<xs:complexType>
+<xs:sequence/>
+</xs:complexType>
+</xs:element>
+<xs:element name="Inventory_GetPersonaInventoryObjectResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q78="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization" minOccurs="0" name="Inventory_GetPersonaInventoryObjectResult" nillable="true" type="q78:InventoryTrans"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="Inventory_SellPersonaEntitlementTag">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="strEntitlementTag" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="Inventory_SellPersonaEntitlementTagResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q79="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization" minOccurs="0" name="Inventory_SellPersonaEntitlementTagResult" nillable="true" type="q79:ArrayOfInventoryItemTrans"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="Inventory_SellPersonaEntitlementList">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q80="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization" minOccurs="0" name="entitlements" nillable="true" type="q80:EntitlementTrans"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="Inventory_SellPersonaEntitlementListResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q81="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization" minOccurs="0" name="Inventory_SellPersonaEntitlementListResult" nillable="true" type="q81:ArrayOfInventoryItemTrans"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="Catalog_GetPersonalizedCategoriesInCategory">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="personaId" type="xs:long"/>
+<xs:element minOccurs="0" name="categoryName" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="language" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="Catalog_GetPersonalizedCategoriesInCategoryResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q82="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization" minOccurs="0" name="Catalog_GetPersonalizedCategoriesInCategoryResult" nillable="true" type="q82:ArrayOfCategoryTrans"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="Catalog_GetPersonalizedProductsWithClientProductType">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="personaId" type="xs:long"/>
+<xs:element minOccurs="0" name="clientProductType" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="language" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="Catalog_GetPersonalizedProductsWithClientProductTypeResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q83="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization" minOccurs="0" name="Catalog_GetPersonalizedProductsWithClientProductTypeResult" nillable="true" type="q83:ArrayOfProductTrans"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="Catalog_GetProductsWithClientProductType">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="userId" type="xs:long"/>
+<xs:element minOccurs="0" name="clientProductType" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="language" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="Catalog_GetProductsWithClientProductTypeResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q84="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization" minOccurs="0" name="Catalog_GetProductsWithClientProductTypeResult" nillable="true" type="q84:ArrayOfProductTrans"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="Catalog_GetProductsInCategoryWithClientProductType">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="userId" type="xs:long"/>
+<xs:element minOccurs="0" name="categoryName" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="clientProductType" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="currencyType" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="language" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="Catalog_GetProductsInCategoryWithClientProductTypeResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q85="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization" minOccurs="0" name="Catalog_GetProductsInCategoryWithClientProductTypeResult" nillable="true" type="q85:ArrayOfProductTrans"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="Catalog_GetCatalogVersion">
+<xs:complexType>
+<xs:sequence/>
+</xs:complexType>
+</xs:element>
+<xs:element name="Catalog_GetCatalogVersionResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="Catalog_GetCatalogVersionResult" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="ReportStoreFailure">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="ReportStoreFailureResponse">
+<xs:complexType>
+<xs:sequence/>
+</xs:complexType>
+</xs:element>
+<xs:element name="SubmitNewBasket">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="strPersonaId" nillable="true" type="xs:string"/>
+<xs:element xmlns:q86="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization" minOccurs="0" name="basket" nillable="true" type="q86:BasketTrans"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="SubmitNewBasketResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q87="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization" minOccurs="0" name="SubmitNewBasketResult" nillable="true" type="q87:CommerceResultTrans"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="SubmitCommerceSession">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="strPersonaId" nillable="true" type="xs:string"/>
+<xs:element xmlns:q88="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization" minOccurs="0" name="Commerce" nillable="true" type="q88:CommerceSessionTrans"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="SubmitCommerceSessionResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q89="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization" minOccurs="0" name="SubmitCommerceSessionResult" nillable="true" type="q89:CommerceSessionResultTrans"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="GetClientServerCryptoTicket">
+<xs:complexType>
+<xs:sequence/>
+</xs:complexType>
+</xs:element>
+<xs:element name="GetClientServerCryptoTicketResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q90="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization" minOccurs="0" name="GetClientServerCryptoTicketResult" nillable="true" type="q90:ClientServerCryptoTicket"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="GetUdpRelayCryptoTicket">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="strPersonaId" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="GetUdpRelayCryptoTicketResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q91="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization" minOccurs="0" name="GetUdpRelayCryptoTicketResult" nillable="true" type="q91:UdpRelayCryptoTicket"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="GetRebroadcasters">
+<xs:complexType>
+<xs:sequence/>
+</xs:complexType>
+</xs:element>
+<xs:element name="GetRebroadcastersResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q92="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization" minOccurs="0" name="GetRebroadcastersResult" nillable="true" type="q92:ArrayOfUdpRelayInfo"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="GetRegionInfo">
+<xs:complexType>
+<xs:sequence/>
+</xs:complexType>
+</xs:element>
+<xs:element name="GetRegionInfoResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q93="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization" minOccurs="0" name="GetRegionInfoResult" nillable="true" type="q93:RegionInfo"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="RequestArticles">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="personaId" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="RequestArticlesResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q94="http://schemas.datacontract.org/2004/07/Victory.TransferObjects.News" minOccurs="0" name="RequestArticlesResult" nillable="true" type="q94:ArrayOfNewsArticleTrans"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="News_TriggerCarRentalExpired">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="personaId" type="xs:long"/>
+<xs:element minOccurs="0" name="hashId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="News_TriggerCarRentalExpiredResponse">
+<xs:complexType>
+<xs:sequence/>
+</xs:complexType>
+</xs:element>
+<xs:element name="GetCarSlotInfoForPersona">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="personaId" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="language" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="GetCarSlotInfoForPersonaResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q95="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization" minOccurs="0" name="GetCarSlotInfoForPersonaResult" nillable="true" type="q95:CarSlotInfoTrans"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="GetAllPowerUpItemsForPersona">
+<xs:complexType>
+<xs:sequence/>
+</xs:complexType>
+</xs:element>
+<xs:element name="GetAllPowerUpItemsForPersonaResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q96="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization" minOccurs="0" name="GetAllPowerUpItemsForPersonaResult" nillable="true" type="q96:ArrayOfInventoryItemTrans"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="PowerUpActivated">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="powerupKey" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="targetId" type="xs:long"/>
+<xs:element minOccurs="0" name="receivers" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="eventSessionId" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="PowerUpActivatedResponse">
+<xs:complexType>
+<xs:sequence/>
+</xs:complexType>
+</xs:element>
+<xs:element name="Gifts_GetAndTriggerAvailableLevelGifts">
+<xs:complexType>
+<xs:sequence/>
+</xs:complexType>
+</xs:element>
+<xs:element name="Gifts_GetAndTriggerAvailableLevelGiftsResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element xmlns:q97="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization.Gift" minOccurs="0" name="Gifts_GetAndTriggerAvailableLevelGiftsResult" nillable="true" type="q97:ArrayOfLevelGiftDefinition"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="LoginAnnouncements_GetImagesPath">
+<xs:complexType>
+<xs:sequence/>
+</xs:complexType>
+</xs:element>
+<xs:element name="LoginAnnouncements_GetImagesPathResponse">
+<xs:complexType>
+<xs:sequence>
+<xs:element minOccurs="0" name="LoginAnnouncements_GetImagesPathResult" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:schema>

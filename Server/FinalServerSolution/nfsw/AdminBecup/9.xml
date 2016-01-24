@@ -1,0 +1,1287 @@
+This XML file does not appear to have any style information associated with it. The document tree is shown below.
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Victory" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Victory">
+<xs:import schemaLocation="http://89.234.36.233/nfsw/Engine.svc?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+<xs:simpleType name="EngineErrorCode">
+<xs:restriction base="xs:string">
+<xs:enumeration value="Undefined"/>
+<xs:enumeration value="Unknown"/>
+<xs:enumeration value="MissingMethodInputData"/>
+<xs:enumeration value="ValuesAreNotEqual"/>
+<xs:enumeration value="ArgumentNullOrEmpty"/>
+<xs:enumeration value="XmlDeserializationError"/>
+<xs:enumeration value="UnknownRemoteAccountManagementError"/>
+<xs:enumeration value="ValuesAreEqual"/>
+<xs:enumeration value="InvalidOperation"/>
+<xs:enumeration value="LeftIsGreaterThanRight"/>
+<xs:enumeration value="LeftIsLessThanRight"/>
+<xs:enumeration value="ChatConnectionError">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-100</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="GameServerRegionDoesntExist">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">101</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="ServerConfigDoesntExist">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">102</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="CustomCarDoesntExist">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-200</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="CarNotOwnedByDriver">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-201</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="CarIsntPresetCar">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-202</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="CarIsntCustomCar">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-203</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="CarDataInvalid">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-205</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="PowerUpItemInfoDoesntExist">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-206</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="MultiplePaintsInSameSlot">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-207</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="InvalidPaintGroupForPaintSlot">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-208</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="CantDeleteLastOwnedCar">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-209</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="PresetCarDoesntExist">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-210</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="InvalidCurrencyType">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">300</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="WalletDoesntExist">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-301</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="InsufficientFunds">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-302</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="WalletAlreadyExists">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-303</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="UnsupportedCurrency">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-304</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="InvalidDebitAmount">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-305</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="InvalidCreditAmount">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-306</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="InvalidWalletType">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-307</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="WalletNotUserWallet">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-308</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="InventoryItemDoesntExist">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-350</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="VirtualItemTypeDoesntExist">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-351</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="InsufficientInventory">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-352</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="ItemIsForAnotherTier">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-353</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="RecursiveCatalog">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-354</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="InvalidCatalog">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-355</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="InvalidBasket">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-356</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="GameIsPrivate">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-398</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="GameLocked">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-399</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="NotInGame">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-400</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="NotEnoughSpace">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-401</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="GameDoesNotExist">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-402</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="NotPrivateGame">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-403</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="InviteAutoDeclined">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-404</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="MaxStackOrRentalLimitErrorCode">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-417</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="UnspecifiedError">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-500</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="RequiredHeadersNotFound">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-501</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="InvalidHeaderValues">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-502</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="FailedSessionSecurityPolicy">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1503</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="FailedUserIdComparison">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-504</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="FailedPersonaIdComparison">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-505</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="FailedSessionInsertion">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-506</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="FailedPresenceCheck">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-507</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="FailedDeleteSession">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-508</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="FailedUpdateSession">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-509</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="FailedReadSession">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-510</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="NoSuchSessionInSessionStore">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-511</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="InvalidUserId">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-512</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="InvalidPresence">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-513</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="NoSuchInfoValueInSessionCurrentTable">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-514</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="FailedPlayGameEntitlementCheck">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-516</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="NotPermanentSessionKey">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-517</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="WebTokenCheckFailed">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-518</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="ConfigFilesAuthenticationException">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-519</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="LoginFailureLimitReached">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-520</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="MaximumUsersLoggedInHardCapReached">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-521</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="MaximumUsersLoggedInSoftCapReached">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-522</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="MaximumUsersLoggedInUnspecified">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-523</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="SessionRequestThresholdReached">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-524</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="InvalidEntrantEventSession">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-600</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="InvalidFinishReason">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-603</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="InvalidRaceTimeInResult">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-614</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="InvalidSpeedInResult">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-615</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="InvalidPlacingInResult">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-616</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="InvalidFractionCompletedInResult">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-617</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="InvalidRequestorIdHeader">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-700</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="UsernameIsNotAllowed">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-708</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="EmailInvalid">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-710</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="EmailInvalidDomain">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-711</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="EmailMissing">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-712</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="EmailDuplicate">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-713</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="PasswordMissing">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-714</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="PasswordTooShort">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-715</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="PasswordTooLong">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-716</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="PasswordNoSpacesAllowed">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-717</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="PasswordEmailCombinationDuplicate">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-718</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="DateOfBirthMissing">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-720</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="DateOfBirthInvalid">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-721</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="DateOfBirthTooYoung">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-722</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="CountryMissing">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-723</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="CountryInvalid">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-725</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="CountryBanned">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-726</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="LanguageMissing">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-727</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="LanguageInvalid">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-728</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="TosVersionMissing">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-729</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="TosVersionTooLong">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-730</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="StatusMissing">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-731</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="StatusInvalid">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-732</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="StatusIllegalValue">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-733</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="GlobalOptInMissing">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-737</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="GlobalOptInInvalid">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-738</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="ThirdPartyOptInMissing">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-739</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="ThirdPartyOptInInvalid">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-740</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="LastAuthenticatedOnDateInvalid">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-744</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="RemoteUserDoesNotExist">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-746</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="PasswordIncorrect">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-747</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="RemoteUserIsBanned">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-748</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="RegistrationSourceTooLong">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-749</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="RemoteUserIsGameBanned">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-750</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="RemoteUserIsTempGameBanned">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-751</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="InvalidGenderErrorCode">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-758</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="RemoteNamespaceDoesNotExist">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-760</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="DisplayNameMissing">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-761</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="DisplayNameDuplicate">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-762</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="DisplayNameTooLong">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-763</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="DisplayNameTooShort">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-764</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="DisplayNameNotAllowed">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-765</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="DisplayNameSuggestionFailed">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-766</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="StatusReasonCodeInvalid">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-768</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="LastAuthenticatedDateInvalid">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-769</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="MaximumNumberOfPersonasInNamespaceReached">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-770</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="PersonaNotFound">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-771</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="RemotePersonaDoesNotBelongToUser">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-773</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="UserNotFound">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-774</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="MoreThanOneRemoteUserFound">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-775</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="UnableToAuthenticateUserByAuthKey">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-777</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="PersonaCarIsNull">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-782</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="PersonaMottoIsTooLong">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-783</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="TooManySuggestionsRequested">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-787</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="MaximumNumberOfPersonasForUserReached">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-788</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="WrongClientVersion">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-799</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="AuthenticationTokenMissing">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-800</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="TransactionAlreadyActive">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-880</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="FriendIsSelf">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-900</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="FriendAlreadyAdded">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-901</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="FriendDoesNotExist">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-902</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="FriendsListExceededMaximumCount">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-903</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="TargetFriendsListExceededMaximumCount">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-904</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="NullValue">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-1002</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="LuckyDrawNoTableDefinedForRace">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-1520</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="LuckyDrawInvalidDraw">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-1521</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="LuckyDrawNoMoreDraws">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-1522</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="LuckyDrawNoLootTablesNotPopulated">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-1523</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="LuckyDrawCouldNotDrawProduct">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-1524</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="LuckyDrawCannotDeterminePersonaLevel">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-1525</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="LuckyDrawContextNotFoundOrEmpty">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-1526</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="EventNotFound">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-1550</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="SuggestiveSalesInvalidContext">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-1600</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="SuggestiveSalesInvalidConfiguration">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-1601</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="SuggestiveSalesCannotDeterminePersonaLevel">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-1602</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="MissingRequiredEntitlements">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-1612</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="BannedEntitlements">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-1613</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="RemotePersonaIdInvalid">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-1646</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="PlayerNotRanked">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-1670</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="NoWalletErrorCode">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-1683</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="WalletBalanceIsNotEnough">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-1684</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="UserHasNoEntitlements">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-1730</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="NotInQueue">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-1801</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="EntitlementProductIdMissing">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-1900</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="EntitlementProductIdTooShort">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-1901</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="EntitlementProductIdTooLong">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-1902</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="EntitlementTagMissing">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-1903</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="EntitlementTagTooShort">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-1904</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="EntitlementTagTooLong">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-1905</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="EntitlementGrantDateInvalid">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-1906</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="EntitlementTerminationDateInvalid">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-1907</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="EntitlementNoSuchGroup">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-1908</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="EntitlementConcurrencyFailure">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-1909</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="EntitlementInvalidCount">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-1910</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="NoProductErrorCode">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-1911</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="NoPricepointErrorCode">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-1917</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="MoreThanOneRemotePersonaFound">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-2000</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="ServerConfigNotFound">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-2500</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="NoSuchEntitlementExists">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-3000</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="SessionKeyRequiredButNotFound">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-6666</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="InvalidRewardModeForTelemetry">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-6667</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="SocialFriendRequestNotResolvable">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-10000</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="NotFound">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-10404</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="RemoteAccountManagementTimeout">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-11000</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="VoipRemoteCallTimeout">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-11001</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="VoipUnknownError">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-11002</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="LiveUpdateAuthenticationFailed">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-100000</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="LiveUpdateInvalidCatalogVersion">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-100001</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="SecurityKickedArbitration">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-200000</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="SecurityKickedRaceTime">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-200001</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="SecurityKickedRaceTimeRatio">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-200002</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="SecurityKickedStatisticalRaceTime">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-200003</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="SecurityKickedStatisticalTopSpeed">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-200004</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="SecurityKickedInvalidPowerup">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-200005</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+</xs:restriction>
+</xs:simpleType>
+<xs:element name="EngineErrorCode" nillable="true" type="tns:EngineErrorCode"/>
+</xs:schema>

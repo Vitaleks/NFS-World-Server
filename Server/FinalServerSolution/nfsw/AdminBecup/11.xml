@@ -1,0 +1,69 @@
+This XML file does not appear to have any style information associated with it. The document tree is shown below.
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Victory.TransferObjects.DriverPersona" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Victory.TransferObjects.DriverPersona">
+<xs:import schemaLocation="http://89.234.36.233/nfsw/Engine.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+<xs:complexType name="PersonaDeleted">
+<xs:sequence>
+<xs:element minOccurs="0" name="personaId" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="PersonaDeleted" nillable="true" type="tns:PersonaDeleted"/>
+<xs:complexType name="PersonaIdArray">
+<xs:sequence>
+<xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="PersonaIds" nillable="true" type="q1:ArrayOflong"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="PersonaIdArray" nillable="true" type="tns:PersonaIdArray"/>
+<xs:complexType name="PersonaPresence">
+<xs:sequence>
+<xs:element minOccurs="0" name="personaId" type="xs:long"/>
+<xs:element minOccurs="0" name="presence" type="xs:int"/>
+<xs:element minOccurs="0" name="userId" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="PersonaPresence" nillable="true" type="tns:PersonaPresence"/>
+<xs:complexType name="PersonaMotto">
+<xs:sequence>
+<xs:element minOccurs="0" name="message" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="personaId" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="PersonaMotto" nillable="true" type="tns:PersonaMotto"/>
+<xs:complexType name="FriendResult">
+<xs:sequence>
+<xs:element minOccurs="0" name="persona" nillable="true" type="tns:FriendPersona"/>
+<xs:element minOccurs="0" name="result" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="FriendResult" nillable="true" type="tns:FriendResult"/>
+<xs:complexType name="FriendPersona">
+<xs:sequence>
+<xs:element minOccurs="0" name="iconIndex" type="xs:int"/>
+<xs:element minOccurs="0" name="level" type="xs:int"/>
+<xs:element minOccurs="0" name="name" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="originalName" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="personaId" type="xs:long"/>
+<xs:element minOccurs="0" name="presence" type="xs:int"/>
+<xs:element minOccurs="0" name="socialNetwork" type="xs:int"/>
+<xs:element minOccurs="0" name="userId" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="FriendPersona" nillable="true" type="tns:FriendPersona"/>
+<xs:complexType name="PersonaFriendsList">
+<xs:sequence>
+<xs:element minOccurs="0" name="friendPersona" nillable="true" type="tns:ArrayOfFriendPersona"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="PersonaFriendsList" nillable="true" type="tns:PersonaFriendsList"/>
+<xs:complexType name="ArrayOfFriendPersona">
+<xs:sequence>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="FriendPersona" nillable="true" type="tns:FriendPersona"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="ArrayOfFriendPersona" nillable="true" type="tns:ArrayOfFriendPersona"/>
+<xs:complexType name="UserIdArray">
+<xs:sequence>
+<xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="UserIds" nillable="true" type="q2:ArrayOflong"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="UserIdArray" nillable="true" type="tns:UserIdArray"/>
+</xs:schema>

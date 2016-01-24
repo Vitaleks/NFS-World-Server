@@ -1,0 +1,5 @@
+<PersonaPresence>
+	<personaId>{0}</personaId>
+	<presence>0</presence>
+	<userId>{1}</userId>
+</PersonaPresence>

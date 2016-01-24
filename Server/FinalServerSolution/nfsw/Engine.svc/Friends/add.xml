@@ -1,0 +1,12 @@
+<AddFriendRequestResult>
+		<FriendPersona>
+			<iconIndex>{0}</iconIndex>
+			<level>{1}</level>
+			<name>{2}</name>
+			<originalName i:nil="true" />
+			<personaId>{3}</personaId>
+			<presence>{4}</presence>
+			<socialNetwork>{5}</socialNetwork>
+			<userId>{6}</userId>
+		</FriendPersona>
+</AddFriendRequestResult>

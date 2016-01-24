@@ -1,0 +1,464 @@
+This XML file does not appear to have any style information associated with it. The document tree is shown below.
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization.Event" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization.Event">
+<xs:import schemaLocation="http://89.234.36.233/nfsw/Engine.svc?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+<xs:import schemaLocation="http://89.234.36.233/nfsw/Engine.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization"/>
+<xs:import schemaLocation="http://89.234.36.233/nfsw/Engine.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+<xs:simpleType name="FinishReason">
+<xs:restriction base="xs:string">
+<xs:enumeration value="Unknown"/>
+<xs:enumeration value="Completed">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="Succeeded">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">6</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="DidNotFinish">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">10</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="CrossedFinish">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">22</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="KnockedOut">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">42</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="Totalled">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">74</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="EngineBlown">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">138</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="Busted">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">266</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="Evaded">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">518</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="ChallengeCompleted">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1030</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="Disconnected">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2058</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="FalseStart">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4106</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="Aborted">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">8202</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="TimedOut">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">16394</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="TimeLimitExpired">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">32774</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="PauseDetected">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">65546</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="SpeedHacking">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">131082</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="CodePatchDetected">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">262154</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="BadVerifierResponse">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">524298</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+</xs:restriction>
+</xs:simpleType>
+<xs:element name="FinishReason" nillable="true" type="tns:FinishReason"/>
+<xs:complexType name="EventTimingOut">
+<xs:sequence>
+<xs:element minOccurs="0" name="EventSessionId" type="xs:long"/>
+<xs:element minOccurs="0" name="TimeInMilliseconds" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="EventTimingOut" nillable="true" type="tns:EventTimingOut"/>
+<xs:complexType name="EventTimedOut">
+<xs:sequence>
+<xs:element minOccurs="0" name="EventSessionId" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="EventTimedOut" nillable="true" type="tns:EventTimedOut"/>
+<xs:complexType name="EventResult">
+<xs:sequence>
+<xs:element minOccurs="0" name="Accolades" nillable="true" type="tns:Accolades"/>
+<xs:element minOccurs="0" name="Durability" type="xs:int"/>
+<xs:element minOccurs="0" name="EventId" type="xs:int"/>
+<xs:element minOccurs="0" name="EventSessionId" type="xs:long"/>
+<xs:element minOccurs="0" name="ExitPath" type="tns:ExitPath"/>
+<xs:element minOccurs="0" name="InviteLifetimeInMilliseconds" type="xs:int"/>
+<xs:element minOccurs="0" name="LobbyInviteId" type="xs:long"/>
+<xs:element minOccurs="0" name="PersonaId" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="EventResult" nillable="true" type="tns:EventResult"/>
+<xs:complexType name="Accolades">
+<xs:sequence>
+<xs:element minOccurs="0" name="FinalRewards" nillable="true" type="tns:Reward"/>
+<xs:element minOccurs="0" name="HasLeveledUp" type="xs:boolean"/>
+<xs:element minOccurs="0" name="LuckyDrawInfo" nillable="true" type="tns:LuckyDrawInfo"/>
+<xs:element minOccurs="0" name="OriginalRewards" nillable="true" type="tns:Reward"/>
+<xs:element minOccurs="0" name="RewardInfo" nillable="true" type="tns:ArrayOfRewardPart"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="Accolades" nillable="true" type="tns:Accolades"/>
+<xs:complexType name="Reward">
+<xs:sequence>
+<xs:element minOccurs="0" name="Rep" type="xs:int"/>
+<xs:element minOccurs="0" name="Tokens" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="Reward" nillable="true" type="tns:Reward"/>
+<xs:complexType name="LuckyDrawInfo">
+<xs:sequence>
+<xs:element minOccurs="0" name="Boxes" nillable="true" type="tns:ArrayOfLuckyDrawBox"/>
+<xs:element minOccurs="0" name="CardDeck" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="CurrentStreak" type="xs:int"/>
+<xs:element minOccurs="0" name="IsStreakBroken" type="xs:boolean"/>
+<xs:element minOccurs="0" name="Items" nillable="true" type="tns:ArrayOfLuckyDrawItem"/>
+<xs:element minOccurs="0" name="NumBoxAnimations" type="xs:int"/>
+<xs:element minOccurs="0" name="NumCards" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="LuckyDrawInfo" nillable="true" type="tns:LuckyDrawInfo"/>
+<xs:complexType name="ArrayOfLuckyDrawBox">
+<xs:sequence>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="LuckyDrawBox" nillable="true" type="tns:LuckyDrawBox"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="ArrayOfLuckyDrawBox" nillable="true" type="tns:ArrayOfLuckyDrawBox"/>
+<xs:complexType name="LuckyDrawBox">
+<xs:sequence>
+<xs:element minOccurs="0" name="IsValid" type="xs:boolean"/>
+<xs:element minOccurs="0" name="LocalizationString" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="LuckyDrawSetCategoryId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="LuckyDrawBox" nillable="true" type="tns:LuckyDrawBox"/>
+<xs:complexType name="ArrayOfLuckyDrawItem">
+<xs:sequence>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="LuckyDrawItem" nillable="true" type="tns:LuckyDrawItem"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="ArrayOfLuckyDrawItem" nillable="true" type="tns:ArrayOfLuckyDrawItem"/>
+<xs:complexType name="LuckyDrawItem">
+<xs:sequence>
+<xs:element minOccurs="0" name="Description" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="Hash" type="xs:int"/>
+<xs:element minOccurs="0" name="Icon" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="RemainingUseCount" type="xs:int"/>
+<xs:element minOccurs="0" name="ResellPrice" type="xs:float"/>
+<xs:element minOccurs="0" name="VirtualItem" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="VirtualItemType" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="WasSold" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="LuckyDrawItem" nillable="true" type="tns:LuckyDrawItem"/>
+<xs:complexType name="ArrayOfRewardPart">
+<xs:sequence>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="RewardPart" nillable="true" type="tns:RewardPart"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="ArrayOfRewardPart" nillable="true" type="tns:ArrayOfRewardPart"/>
+<xs:complexType name="RewardPart">
+<xs:sequence>
+<xs:element minOccurs="0" name="RepPart" type="xs:int"/>
+<xs:element minOccurs="0" name="RewardCategory" type="tns:enumRewardCategory"/>
+<xs:element minOccurs="0" name="RewardType" type="tns:enumRewardType"/>
+<xs:element minOccurs="0" name="TokenPart" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="RewardPart" nillable="true" type="tns:RewardPart"/>
+<xs:simpleType name="enumRewardCategory">
+<xs:restriction base="xs:string">
+<xs:enumeration value="Base"/>
+<xs:enumeration value="Rank"/>
+<xs:enumeration value="Bonus"/>
+<xs:enumeration value="TeamBonus"/>
+<xs:enumeration value="Amplifier"/>
+<xs:enumeration value="Skill"/>
+<xs:enumeration value="Pursuit"/>
+<xs:enumeration value="Objective"/>
+<xs:enumeration value="SkillMod"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:element name="enumRewardCategory" nillable="true" type="tns:enumRewardCategory"/>
+<xs:simpleType name="enumRewardType">
+<xs:restriction base="xs:string">
+<xs:enumeration value="None"/>
+<xs:enumeration value="Busted"/>
+<xs:enumeration value="Evaded"/>
+<xs:enumeration value="RepAmplifier"/>
+<xs:enumeration value="TokenAmplifier"/>
+<xs:enumeration value="SkillMostWanted"/>
+<xs:enumeration value="SkillSocialite"/>
+<xs:enumeration value="SkillTycoon"/>
+<xs:enumeration value="SkillTerminator"/>
+<xs:enumeration value="HeatLevel"/>
+<xs:enumeration value="PursuitLength"/>
+<xs:enumeration value="Bounty"/>
+<xs:enumeration value="CopCarsDeployed"/>
+<xs:enumeration value="CopCarsRammed"/>
+<xs:enumeration value="CopCarsDisabled"/>
+<xs:enumeration value="RhinosDisabled"/>
+<xs:enumeration value="CostToState"/>
+<xs:enumeration value="RoadblocksDodged"/>
+<xs:enumeration value="SpikeStripsDodged"/>
+<xs:enumeration value="Infractions"/>
+<xs:enumeration value="LevelCap"/>
+<xs:enumeration value="EntitlementLevelCap"/>
+<xs:enumeration value="TopenCap"/>
+<xs:enumeration value="SafehouseReached"/>
+<xs:enumeration value="Finished"/>
+<xs:enumeration value="TimeBonus"/>
+<xs:enumeration value="Player1"/>
+<xs:enumeration value="Player2"/>
+<xs:enumeration value="Player3"/>
+<xs:enumeration value="Player4"/>
+<xs:enumeration value="StrikeFree"/>
+<xs:enumeration value="TeamStrikeBonus"/>
+<xs:enumeration value="PowerupBonus"/>
+<xs:enumeration value="SkillMod"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:element name="enumRewardType" nillable="true" type="tns:enumRewardType"/>
+<xs:simpleType name="ExitPath">
+<xs:annotation>
+<xs:appinfo>
+<ActualType xmlns="http://schemas.microsoft.com/2003/10/Serialization/" Name="unsignedByte" Namespace="http://www.w3.org/2001/XMLSchema"/>
+</xs:appinfo>
+</xs:annotation>
+<xs:restriction base="xs:string">
+<xs:enumeration value="ExitToFreeroam"/>
+<xs:enumeration value="ExitToLobby"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:element name="ExitPath" nillable="true" type="tns:ExitPath"/>
+<xs:complexType name="RouteEventResult">
+<xs:complexContent mixed="false">
+<xs:extension base="tns:EventResult">
+<xs:sequence>
+<xs:element minOccurs="0" name="Entrants" nillable="true" type="tns:ArrayOfRouteEntrantResult"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+<xs:element name="RouteEventResult" nillable="true" type="tns:RouteEventResult"/>
+<xs:complexType name="ArrayOfRouteEntrantResult">
+<xs:sequence>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="RouteEntrantResult" nillable="true" type="tns:RouteEntrantResult"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="ArrayOfRouteEntrantResult" nillable="true" type="tns:ArrayOfRouteEntrantResult"/>
+<xs:complexType name="RouteEntrantResult">
+<xs:complexContent mixed="false">
+<xs:extension base="tns:EntrantResult">
+<xs:sequence>
+<xs:element minOccurs="0" name="BestLapDurationInMilliseconds" type="xs:unsignedInt"/>
+<xs:element minOccurs="0" name="TopSpeed" type="xs:float"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+<xs:element name="RouteEntrantResult" nillable="true" type="tns:RouteEntrantResult"/>
+<xs:complexType name="EntrantResult">
+<xs:sequence>
+<xs:element minOccurs="0" name="EventDurationInMilliseconds" type="xs:unsignedInt"/>
+<xs:element minOccurs="0" name="EventSessionId" type="xs:long"/>
+<xs:element minOccurs="0" name="FinishReason" type="xs:int"/>
+<xs:element minOccurs="0" name="PersonaId" type="xs:long"/>
+<xs:element minOccurs="0" name="Ranking" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="EntrantResult" nillable="true" type="tns:EntrantResult"/>
+<xs:complexType name="DragEventResult">
+<xs:complexContent mixed="false">
+<xs:extension base="tns:EventResult">
+<xs:sequence>
+<xs:element minOccurs="0" name="Entrants" nillable="true" type="tns:ArrayOfDragEntrantResult"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+<xs:element name="DragEventResult" nillable="true" type="tns:DragEventResult"/>
+<xs:complexType name="ArrayOfDragEntrantResult">
+<xs:sequence>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="DragEntrantResult" nillable="true" type="tns:DragEntrantResult"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="ArrayOfDragEntrantResult" nillable="true" type="tns:ArrayOfDragEntrantResult"/>
+<xs:complexType name="DragEntrantResult">
+<xs:complexContent mixed="false">
+<xs:extension base="tns:EntrantResult">
+<xs:sequence>
+<xs:element minOccurs="0" name="TopSpeed" type="xs:float"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+<xs:element name="DragEntrantResult" nillable="true" type="tns:DragEntrantResult"/>
+<xs:complexType name="TeamEscapeEventResult">
+<xs:complexContent mixed="false">
+<xs:extension base="tns:EventResult">
+<xs:sequence>
+<xs:element minOccurs="0" name="Entrants" nillable="true" type="tns:ArrayOfTeamEscapeEntrantResult"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+<xs:element name="TeamEscapeEventResult" nillable="true" type="tns:TeamEscapeEventResult"/>
+<xs:complexType name="ArrayOfTeamEscapeEntrantResult">
+<xs:sequence>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="TeamEscapeEntrantResult" nillable="true" type="tns:TeamEscapeEntrantResult"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="ArrayOfTeamEscapeEntrantResult" nillable="true" type="tns:ArrayOfTeamEscapeEntrantResult"/>
+<xs:complexType name="TeamEscapeEntrantResult">
+<xs:complexContent mixed="false">
+<xs:extension base="tns:EntrantResult">
+<xs:sequence>
+<xs:element minOccurs="0" name="DistanceToFinish" type="xs:float"/>
+<xs:element minOccurs="0" name="FractionCompleted" type="xs:float"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+<xs:element name="TeamEscapeEntrantResult" nillable="true" type="tns:TeamEscapeEntrantResult"/>
+<xs:complexType name="PursuitEventResult">
+<xs:complexContent mixed="false">
+<xs:extension base="tns:EventResult">
+<xs:sequence>
+<xs:element minOccurs="0" name="Heat" type="xs:float"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+<xs:element name="PursuitEventResult" nillable="true" type="tns:PursuitEventResult"/>
+<xs:complexType name="TreasureHuntEventSession">
+<xs:sequence>
+<xs:element minOccurs="0" name="CoinsCollected" type="xs:int"/>
+<xs:element minOccurs="0" name="IsStreakBroken" type="xs:boolean"/>
+<xs:element minOccurs="0" name="NumCoins" type="xs:int"/>
+<xs:element minOccurs="0" name="Seed" type="xs:int"/>
+<xs:element minOccurs="0" name="Streak" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="TreasureHuntEventSession" nillable="true" type="tns:TreasureHuntEventSession"/>
+<xs:complexType name="EventsPacket">
+<xs:sequence>
+<xs:element minOccurs="0" name="Events" nillable="true" type="tns:ArrayOfEventDefinition"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="EventsPacket" nillable="true" type="tns:EventsPacket"/>
+<xs:complexType name="ArrayOfEventDefinition">
+<xs:sequence>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="EventDefinition" nillable="true" type="tns:EventDefinition"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="ArrayOfEventDefinition" nillable="true" type="tns:ArrayOfEventDefinition"/>
+<xs:complexType name="EventDefinition">
+<xs:sequence>
+<xs:element minOccurs="0" name="CarClassHash" type="xs:int"/>
+<xs:element minOccurs="0" name="Coins" type="xs:int"/>
+<xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization" minOccurs="0" name="EngagePoint" nillable="true" type="q1:Vector3"/>
+<xs:element minOccurs="0" name="EventId" type="xs:int"/>
+<xs:element minOccurs="0" name="EventLocalization" type="xs:int"/>
+<xs:element minOccurs="0" name="EventModeDescriptionLocalization" type="xs:int"/>
+<xs:element minOccurs="0" name="EventModeIcon" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="EventModeId" type="xs:int"/>
+<xs:element minOccurs="0" name="EventModeLocalization" type="xs:int"/>
+<xs:element minOccurs="0" name="IsEnabled" type="xs:boolean"/>
+<xs:element minOccurs="0" name="IsLocked" type="xs:boolean"/>
+<xs:element minOccurs="0" name="Laps" type="xs:int"/>
+<xs:element minOccurs="0" name="Length" type="xs:float"/>
+<xs:element minOccurs="0" name="MaxClassRating" type="xs:int"/>
+<xs:element minOccurs="0" name="MaxEntrants" type="xs:int"/>
+<xs:element minOccurs="0" name="MaxLevel" type="xs:int"/>
+<xs:element minOccurs="0" name="MinClassRating" type="xs:int"/>
+<xs:element minOccurs="0" name="MinEntrants" type="xs:int"/>
+<xs:element minOccurs="0" name="MinLevel" type="xs:int"/>
+<xs:element minOccurs="0" name="RegionLocalization" type="xs:int"/>
+<xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="RewardModes" nillable="true" type="q2:ArrayOfint"/>
+<xs:element minOccurs="0" name="TimeLimit" type="xs:float"/>
+<xs:element minOccurs="0" name="TrackLayoutMap" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="TrackLocalization" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="EventDefinition" nillable="true" type="tns:EventDefinition"/>
+</xs:schema>

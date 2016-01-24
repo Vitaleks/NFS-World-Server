@@ -1,0 +1,229 @@
+This XML file does not appear to have any style information associated with it. The document tree is shown below.
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Victory.Service" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Victory.Service">
+<xs:complexType name="LobbyLaunched">
+<xs:sequence>
+<xs:element minOccurs="0" name="CryptoTickets" nillable="true" type="tns:ArrayOfP2PCryptoTicket"/>
+<xs:element minOccurs="0" name="Entrants" nillable="true" type="tns:ArrayOfLobbyEntrantInfo"/>
+<xs:element minOccurs="0" name="EventSession" nillable="true" type="tns:SessionInfo"/>
+<xs:element minOccurs="0" name="IsNewRelayServer" type="xs:boolean"/>
+<xs:element minOccurs="0" name="LobbyId" type="xs:long"/>
+<xs:element minOccurs="0" name="UdpRelayHost" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="UdpRelayPort" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="LobbyLaunched" nillable="true" type="tns:LobbyLaunched"/>
+<xs:complexType name="ArrayOfP2PCryptoTicket">
+<xs:sequence>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="P2PCryptoTicket" nillable="true" type="tns:P2PCryptoTicket"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="ArrayOfP2PCryptoTicket" nillable="true" type="tns:ArrayOfP2PCryptoTicket"/>
+<xs:complexType name="P2PCryptoTicket">
+<xs:sequence>
+<xs:element minOccurs="0" name="PersonaId" type="xs:long"/>
+<xs:element minOccurs="0" name="SessionKey" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="P2PCryptoTicket" nillable="true" type="tns:P2PCryptoTicket"/>
+<xs:complexType name="ArrayOfLobbyEntrantInfo">
+<xs:sequence>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="LobbyEntrantInfo" nillable="true" type="tns:LobbyEntrantInfo"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="ArrayOfLobbyEntrantInfo" nillable="true" type="tns:ArrayOfLobbyEntrantInfo"/>
+<xs:complexType name="LobbyEntrantInfo">
+<xs:sequence>
+<xs:element minOccurs="0" name="GridIndex" type="xs:int"/>
+<xs:element minOccurs="0" name="Heat" type="xs:float"/>
+<xs:element minOccurs="0" name="Level" type="xs:int"/>
+<xs:element minOccurs="0" name="PersonaId" type="xs:long"/>
+<xs:element minOccurs="0" name="State" type="tns:LobbyEntrantState"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="LobbyEntrantInfo" nillable="true" type="tns:LobbyEntrantInfo"/>
+<xs:simpleType name="LobbyEntrantState">
+<xs:annotation>
+<xs:appinfo>
+<ActualType xmlns="http://schemas.microsoft.com/2003/10/Serialization/" Name="unsignedByte" Namespace="http://www.w3.org/2001/XMLSchema"/>
+</xs:appinfo>
+</xs:annotation>
+<xs:restriction base="xs:string">
+<xs:enumeration value="Unknown"/>
+<xs:enumeration value="InFreeRoam"/>
+<xs:enumeration value="InLobby"/>
+<xs:enumeration value="InEvent"/>
+<xs:enumeration value="InPostEvent"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:element name="LobbyEntrantState" nillable="true" type="tns:LobbyEntrantState"/>
+<xs:complexType name="SessionInfo">
+<xs:sequence>
+<xs:element minOccurs="0" name="Challenge" nillable="true" type="tns:SecurityChallenge"/>
+<xs:element minOccurs="0" name="EventId" type="xs:int"/>
+<xs:element minOccurs="0" name="SessionId" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="SessionInfo" nillable="true" type="tns:SessionInfo"/>
+<xs:complexType name="SecurityChallenge">
+<xs:sequence>
+<xs:element minOccurs="0" name="ChallengeId" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="LeftSize" type="xs:int"/>
+<xs:element minOccurs="0" name="Pattern" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="RightSize" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="SecurityChallenge" nillable="true" type="tns:SecurityChallenge"/>
+<xs:complexType name="LobbyCancelled">
+<xs:sequence/>
+</xs:complexType>
+<xs:element name="LobbyCancelled" nillable="true" type="tns:LobbyCancelled"/>
+<xs:complexType name="LobbyInvite">
+<xs:sequence>
+<xs:element minOccurs="0" name="EventId" type="xs:int"/>
+<xs:element minOccurs="0" name="InviteLifetimeInMilliseconds" type="xs:int"/>
+<xs:element minOccurs="0" name="InvitedByPersonaId" type="xs:long"/>
+<xs:element minOccurs="0" name="IsPrivate" type="xs:boolean"/>
+<xs:element minOccurs="0" name="LobbyInviteId" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="LobbyInvite" nillable="true" type="tns:LobbyInvite"/>
+<xs:complexType name="LobbyCountdown">
+<xs:sequence>
+<xs:element minOccurs="0" name="EventId" type="xs:int"/>
+<xs:element minOccurs="0" name="IsWaiting" type="xs:boolean"/>
+<xs:element minOccurs="0" name="LobbyCountdownInMilliseconds" type="xs:int"/>
+<xs:element minOccurs="0" name="LobbyId" type="xs:long"/>
+<xs:element minOccurs="0" name="LobbyStuckDurationInMilliseconds" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="LobbyCountdown" nillable="true" type="tns:LobbyCountdown"/>
+<xs:complexType name="LobbyEntrantAdded">
+<xs:complexContent mixed="false">
+<xs:extension base="tns:LobbyEntrantInfo">
+<xs:sequence>
+<xs:element minOccurs="0" name="LobbyId" type="xs:long"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+<xs:element name="LobbyEntrantAdded" nillable="true" type="tns:LobbyEntrantAdded"/>
+<xs:complexType name="LobbyEntrantRemoved">
+<xs:sequence>
+<xs:element minOccurs="0" name="LobbyId" type="xs:long"/>
+<xs:element minOccurs="0" name="PersonaId" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="LobbyEntrantRemoved" nillable="true" type="tns:LobbyEntrantRemoved"/>
+<xs:complexType name="LobbyEntrantUpdated">
+<xs:sequence>
+<xs:element minOccurs="0" name="PersonaId" type="xs:long"/>
+<xs:element minOccurs="0" name="State" type="tns:LobbyEntrantState"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="LobbyEntrantUpdated" nillable="true" type="tns:LobbyEntrantUpdated"/>
+<xs:complexType name="EngineExceptionTrans">
+<xs:sequence>
+<xs:element minOccurs="0" name="Description" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="ErrorCode" type="xs:int"/>
+<xs:element minOccurs="0" name="InnerException" nillable="true" type="tns:EngineInnerExceptionTrans"/>
+<xs:element minOccurs="0" name="Message" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="StackTrace" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="EngineExceptionTrans" nillable="true" type="tns:EngineExceptionTrans"/>
+<xs:complexType name="EngineInnerExceptionTrans">
+<xs:sequence>
+<xs:element minOccurs="0" name="Description" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="ErrorCode" type="xs:int"/>
+<xs:element minOccurs="0" name="Message" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="StackTrace" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="EngineInnerExceptionTrans" nillable="true" type="tns:EngineInnerExceptionTrans"/>
+<xs:complexType name="LobbyInfo">
+<xs:sequence>
+<xs:element minOccurs="0" name="Countdown" nillable="true" type="tns:LobbyCountdown"/>
+<xs:element minOccurs="0" name="Entrants" nillable="true" type="tns:ArrayOfLobbyEntrantInfo"/>
+<xs:element minOccurs="0" name="EventId" type="xs:int"/>
+<xs:element minOccurs="0" name="IsInviteEnabled" type="xs:boolean"/>
+<xs:element minOccurs="0" name="LobbyId" type="xs:long"/>
+<xs:element minOccurs="0" name="LobbyInviteId" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="LobbyInfo" nillable="true" type="tns:LobbyInfo"/>
+<xs:complexType name="SystemInfo">
+<xs:sequence>
+<xs:element minOccurs="0" name="Branch" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="ChangeList" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="ClientVersion" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="ClientVersionCheck" type="xs:boolean"/>
+<xs:element minOccurs="0" name="Deployed" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="EntitlementsToDownload" type="xs:boolean"/>
+<xs:element minOccurs="0" name="ForcePermanentSession" type="xs:boolean"/>
+<xs:element minOccurs="0" name="JidPrepender" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="LauncherServiceUrl" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="NucleusNamespace" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="NucleusNamespaceWeb" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="PersonaCacheTimeout" type="xs:int"/>
+<xs:element minOccurs="0" name="PortalDomain" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="PortalSecureDomain" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="PortalStoreFailurePage" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="PortalTimeOut" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="ShardName" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="Time" type="xs:dateTime"/>
+<xs:element minOccurs="0" name="Version" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="SystemInfo" nillable="true" type="tns:SystemInfo"/>
+<xs:complexType name="configuration">
+<xs:sequence>
+<xs:element minOccurs="0" name="gameserver" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="webserver" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="regions" nillable="true" type="tns:ArrayOfregion"/>
+<xs:element minOccurs="0" name="cdn" nillable="true" type="tns:Cdn"/>
+<xs:element minOccurs="0" name="termsofservice" nillable="true" type="tns:TermsOfService"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="configuration" nillable="true" type="tns:configuration"/>
+<xs:complexType name="ArrayOfregion">
+<xs:sequence>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="region" nillable="true" type="tns:region"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="ArrayOfregion" nillable="true" type="tns:ArrayOfregion"/>
+<xs:complexType name="region">
+<xs:sequence>
+<xs:element minOccurs="0" name="name" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="region" nillable="true" type="tns:region"/>
+<xs:complexType name="Cdn">
+<xs:sequence>
+<xs:element minOccurs="0" name="game" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="launcher" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="Cdn" nillable="true" type="tns:Cdn"/>
+<xs:complexType name="TermsOfService">
+<xs:sequence>
+<xs:element minOccurs="0" name="en" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="de" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="es" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="fr" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pl" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="pt" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="ru" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="th" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="tr" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="zh" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="zh_chs" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="TermsOfService" nillable="true" type="tns:TermsOfService"/>
+<xs:complexType name="ServerTime">
+<xs:sequence>
+<xs:element minOccurs="0" name="Current" type="xs:dateTime"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="ServerTime" nillable="true" type="tns:ServerTime"/>
+</xs:schema>

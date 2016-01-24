@@ -1,0 +1,39 @@
+This XML file does not appear to have any style information associated with it. The document tree is shown below.
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Victory.Data.Objects.Customization" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Victory.Data.Objects.Customization">
+<xs:simpleType name="SkillModEffectType">
+<xs:restriction base="xs:string">
+<xs:enumeration value="None"/>
+<xs:enumeration value="CashRewardExplore"/>
+<xs:enumeration value="PowerupCooldown"/>
+<xs:enumeration value="PowerupDuration"/>
+<xs:enumeration value="PowerupPower"/>
+<xs:enumeration value="CatchUp"/>
+<xs:enumeration value="CollisionMass"/>
+<xs:enumeration value="HeavyMass"/>
+<xs:enumeration value="JumpStart"/>
+<xs:enumeration value="EvadeMeter"/>
+<xs:enumeration value="PerfectStartRange"/>
+<xs:enumeration value="Radar"/>
+<xs:enumeration value="TreasureHunter"/>
+<xs:enumeration value="OneMoreLapPerformance"/>
+<xs:enumeration value="EmergencyEvadeRange"/>
+<xs:enumeration value="CooldownMeter"/>
+<xs:enumeration value="PerfectStartDuration"/>
+<xs:enumeration value="CashRewardPursuit"/>
+<xs:enumeration value="CashRewardRace"/>
+<xs:enumeration value="GearRatioEnhancement"/>
+<xs:enumeration value="LaunchGrip"/>
+<xs:enumeration value="AeroDragReduction"/>
+<xs:enumeration value="QuickShift"/>
+<xs:enumeration value="QuickLaneChange"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:element name="SkillModEffectType" nillable="true" type="tns:SkillModEffectType"/>
+<xs:simpleType name="SkillModEffectAmountConversion">
+<xs:restriction base="xs:string">
+<xs:enumeration value="None"/>
+<xs:enumeration value="Metres2Feet"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:element name="SkillModEffectAmountConversion" nillable="true" type="tns:SkillModEffectAmountConversion"/>
+</xs:schema>

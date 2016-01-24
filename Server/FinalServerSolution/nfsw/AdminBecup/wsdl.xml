@@ -1,0 +1,2126 @@
+This XML file does not appear to have any style information associated with it. The document tree is shown below.
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" name="Engine" targetNamespace="http://tempuri.org/">
+<wsdl:types>
+<xsd:schema targetNamespace="http://tempuri.org/Imports">
+<xsd:import schemaLocation="http://89.234.36.233/nfsw/Engine.svc?xsd=xsd13" namespace="http://tempuri.org/"/>
+<xsd:import schemaLocation="http://89.234.36.233/nfsw/Engine.svc?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+<xsd:import schemaLocation="http://89.234.36.233/nfsw/Engine.svc?xsd=xsd1" namespace="http://schemas.datacontract.org/2004/07/Victory.Service.Objects"/>
+<xsd:import schemaLocation="http://89.234.36.233/nfsw/Engine.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+<xsd:import schemaLocation="http://89.234.36.233/nfsw/Engine.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization.Social"/>
+<xsd:import schemaLocation="http://89.234.36.233/nfsw/Engine.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization"/>
+<xsd:import schemaLocation="http://89.234.36.233/nfsw/Engine.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization.LoginAnnouncement"/>
+<xsd:import schemaLocation="http://89.234.36.233/nfsw/Engine.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Victory.Data.Objects.Customization"/>
+<xsd:import schemaLocation="http://89.234.36.233/nfsw/Engine.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization.Event"/>
+<xsd:import schemaLocation="http://89.234.36.233/nfsw/Engine.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/Victory.Service"/>
+<xsd:import schemaLocation="http://89.234.36.233/nfsw/Engine.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/Victory"/>
+<xsd:import schemaLocation="http://89.234.36.233/nfsw/Engine.svc?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/Victory.TransferObjects.News"/>
+<xsd:import schemaLocation="http://89.234.36.233/nfsw/Engine.svc?xsd=xsd11" namespace="http://schemas.datacontract.org/2004/07/Victory.TransferObjects.DriverPersona"/>
+<xsd:import schemaLocation="http://89.234.36.233/nfsw/Engine.svc?xsd=xsd12" namespace="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization.PowerUp"/>
+<xsd:import schemaLocation="http://89.234.36.233/nfsw/Engine.svc?xsd=xsd14" namespace="http://schemas.datacontract.org/2004/07/Victory.TransferObjects.User"/>
+<xsd:import schemaLocation="http://89.234.36.233/nfsw/Engine.svc?xsd=xsd15" namespace="http://schemas.datacontract.org/2004/07/Victory.DataObjects.Objects.LoginAnnouncement"/>
+<xsd:import schemaLocation="http://89.234.36.233/nfsw/Engine.svc?xsd=xsd16" namespace="http://schemas.datacontract.org/2004/07/Victory.TransferObjects.Session"/>
+<xsd:import schemaLocation="http://89.234.36.233/nfsw/Engine.svc?xsd=xsd17" namespace="http://schemas.datacontract.org/2004/07/Victory.Service.Objects.Event"/>
+<xsd:import schemaLocation="http://89.234.36.233/nfsw/Engine.svc?xsd=xsd18" namespace="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization.Gift"/>
+</xsd:schema>
+</wsdl:types>
+<wsdl:message name="IEngine_JoinQueueRaceNow_InputMessage">
+<wsdl:part name="parameters" element="tns:JoinQueueRaceNow"/>
+</wsdl:message>
+<wsdl:message name="IEngine_JoinQueueRaceNow_OutputMessage">
+<wsdl:part name="parameters" element="tns:JoinQueueRaceNowResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_LeaveQueue_InputMessage">
+<wsdl:part name="parameters" element="tns:LeaveQueue"/>
+</wsdl:message>
+<wsdl:message name="IEngine_LeaveQueue_OutputMessage">
+<wsdl:part name="parameters" element="tns:LeaveQueueResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_AcceptInvite_InputMessage">
+<wsdl:part name="parameters" element="tns:AcceptInvite"/>
+</wsdl:message>
+<wsdl:message name="IEngine_AcceptInvite_OutputMessage">
+<wsdl:part name="parameters" element="tns:AcceptInviteResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_DeclineInvite_InputMessage">
+<wsdl:part name="parameters" element="tns:DeclineInvite"/>
+</wsdl:message>
+<wsdl:message name="IEngine_DeclineInvite_OutputMessage">
+<wsdl:part name="parameters" element="tns:DeclineInviteResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_MakePrivateLobby_InputMessage">
+<wsdl:part name="parameters" element="tns:MakePrivateLobby"/>
+</wsdl:message>
+<wsdl:message name="IEngine_MakePrivateLobby_OutputMessage">
+<wsdl:part name="parameters" element="tns:MakePrivateLobbyResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_InviteToPrivateLobby_InputMessage">
+<wsdl:part name="parameters" element="tns:InviteToPrivateLobby"/>
+</wsdl:message>
+<wsdl:message name="IEngine_InviteToPrivateLobby_OutputMessage">
+<wsdl:part name="parameters" element="tns:InviteToPrivateLobbyResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_LeaveLobby_InputMessage">
+<wsdl:part name="parameters" element="tns:LeaveLobby"/>
+</wsdl:message>
+<wsdl:message name="IEngine_LeaveLobby_OutputMessage">
+<wsdl:part name="parameters" element="tns:LeaveLobbyResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_DriverPersona_ReserveName_InputMessage">
+<wsdl:part name="parameters" element="tns:DriverPersona_ReserveName"/>
+</wsdl:message>
+<wsdl:message name="IEngine_DriverPersona_ReserveName_OutputMessage">
+<wsdl:part name="parameters" element="tns:DriverPersona_ReserveNameResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_DriverPersona_UnreserveName_InputMessage">
+<wsdl:part name="parameters" element="tns:DriverPersona_UnreserveName"/>
+</wsdl:message>
+<wsdl:message name="IEngine_DriverPersona_UnreserveName_OutputMessage">
+<wsdl:part name="parameters" element="tns:DriverPersona_UnreserveNameResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_DriverPersona_GetExpLevelPointsMap_InputMessage">
+<wsdl:part name="parameters" element="tns:DriverPersona_GetExpLevelPointsMap"/>
+</wsdl:message>
+<wsdl:message name="IEngine_DriverPersona_GetExpLevelPointsMap_OutputMessage">
+<wsdl:part name="parameters" element="tns:DriverPersona_GetExpLevelPointsMapResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_DriverPersona_CreatePersona_InputMessage">
+<wsdl:part name="parameters" element="tns:DriverPersona_CreatePersona"/>
+</wsdl:message>
+<wsdl:message name="IEngine_DriverPersona_CreatePersona_OutputMessage">
+<wsdl:part name="parameters" element="tns:DriverPersona_CreatePersonaResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_DriverPersona_GetPersonaBaseFromList_InputMessage">
+<wsdl:part name="parameters" element="tns:DriverPersona_GetPersonaBaseFromList"/>
+</wsdl:message>
+<wsdl:message name="IEngine_DriverPersona_GetPersonaBaseFromList_OutputMessage">
+<wsdl:part name="parameters" element="tns:DriverPersona_GetPersonaBaseFromListResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_DriverPersona_GetPersonaInfo_InputMessage">
+<wsdl:part name="parameters" element="tns:DriverPersona_GetPersonaInfo"/>
+</wsdl:message>
+<wsdl:message name="IEngine_DriverPersona_GetPersonaInfo_OutputMessage">
+<wsdl:part name="parameters" element="tns:DriverPersona_GetPersonaInfoResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_DriverPersona_GetPersonaPresenceByName_InputMessage">
+<wsdl:part name="parameters" element="tns:DriverPersona_GetPersonaPresenceByName"/>
+</wsdl:message>
+<wsdl:message name="IEngine_DriverPersona_GetPersonaPresenceByName_OutputMessage">
+<wsdl:part name="parameters" element="tns:DriverPersona_GetPersonaPresenceByNameResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_DriverPersona_DeletePersona_InputMessage">
+<wsdl:part name="parameters" element="tns:DriverPersona_DeletePersona"/>
+</wsdl:message>
+<wsdl:message name="IEngine_DriverPersona_DeletePersona_OutputMessage">
+<wsdl:part name="parameters" element="tns:DriverPersona_DeletePersonaResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_DriverPersona_UpdateStatusMessage_InputMessage">
+<wsdl:part name="parameters" element="tns:DriverPersona_UpdateStatusMessage"/>
+</wsdl:message>
+<wsdl:message name="IEngine_DriverPersona_UpdateStatusMessage_OutputMessage">
+<wsdl:part name="parameters" element="tns:DriverPersona_UpdateStatusMessageResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_DriverPersona_UpdatePersonaPresence_InputMessage">
+<wsdl:part name="parameters" element="tns:DriverPersona_UpdatePersonaPresence"/>
+</wsdl:message>
+<wsdl:message name="IEngine_DriverPersona_UpdatePersonaPresence_OutputMessage">
+<wsdl:part name="parameters" element="tns:DriverPersona_UpdatePersonaPresenceResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_Achievements_LoadAll_InputMessage">
+<wsdl:part name="parameters" element="tns:Achievements_LoadAll"/>
+</wsdl:message>
+<wsdl:message name="IEngine_Achievements_LoadAll_OutputMessage">
+<wsdl:part name="parameters" element="tns:Achievements_LoadAllResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_Achievements_RedeemReward_InputMessage">
+<wsdl:part name="parameters" element="tns:Achievements_RedeemReward"/>
+</wsdl:message>
+<wsdl:message name="IEngine_Achievements_RedeemReward_OutputMessage">
+<wsdl:part name="parameters" element="tns:Achievements_RedeemRewardResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_Badges_Set_InputMessage">
+<wsdl:part name="parameters" element="tns:Badges_Set"/>
+</wsdl:message>
+<wsdl:message name="IEngine_Badges_Set_OutputMessage">
+<wsdl:part name="parameters" element="tns:Badges_SetResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_User_AuthenticateUser_InputMessage">
+<wsdl:part name="parameters" element="tns:User_AuthenticateUser"/>
+</wsdl:message>
+<wsdl:message name="IEngine_User_AuthenticateUser_OutputMessage">
+<wsdl:part name="parameters" element="tns:User_AuthenticateUserResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_User_AuthenticateUserByToken_InputMessage">
+<wsdl:part name="parameters" element="tns:User_AuthenticateUserByToken"/>
+</wsdl:message>
+<wsdl:message name="IEngine_User_AuthenticateUserByToken_OutputMessage">
+<wsdl:part name="parameters" element="tns:User_AuthenticateUserByTokenResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_User_SetRegion_InputMessage">
+<wsdl:part name="parameters" element="tns:User_SetRegion"/>
+</wsdl:message>
+<wsdl:message name="IEngine_User_SetRegion_OutputMessage">
+<wsdl:part name="parameters" element="tns:User_SetRegionResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_User_GetPermanentSession_InputMessage">
+<wsdl:part name="parameters" element="tns:User_GetPermanentSession"/>
+</wsdl:message>
+<wsdl:message name="IEngine_User_GetPermanentSession_OutputMessage">
+<wsdl:part name="parameters" element="tns:User_GetPermanentSessionResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_User_GetUserInfoFromSecurityToken_InputMessage">
+<wsdl:part name="parameters" element="tns:User_GetUserInfoFromSecurityToken"/>
+</wsdl:message>
+<wsdl:message name="IEngine_User_GetUserInfoFromSecurityToken_OutputMessage">
+<wsdl:part name="parameters" element="tns:User_GetUserInfoFromSecurityTokenResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_User_SecureLogout_InputMessage">
+<wsdl:part name="parameters" element="tns:User_SecureLogout"/>
+</wsdl:message>
+<wsdl:message name="IEngine_User_SecureLogout_OutputMessage">
+<wsdl:part name="parameters" element="tns:User_SecureLogoutResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_LoginAnnouncements_GetLoginAnnouncements_InputMessage">
+<wsdl:part name="parameters" element="tns:LoginAnnouncements_GetLoginAnnouncements"/>
+</wsdl:message>
+<wsdl:message name="IEngine_LoginAnnouncements_GetLoginAnnouncements_OutputMessage">
+<wsdl:part name="parameters" element="tns:LoginAnnouncements_GetLoginAnnouncementsResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_Reporting_LoginAnnouncementClicked_InputMessage">
+<wsdl:part name="parameters" element="tns:Reporting_LoginAnnouncementClicked"/>
+</wsdl:message>
+<wsdl:message name="IEngine_Reporting_LoginAnnouncementClicked_OutputMessage">
+<wsdl:part name="parameters" element="tns:Reporting_LoginAnnouncementClickedResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_ReapplyProgressionAmplifiers_InputMessage">
+<wsdl:part name="parameters" element="tns:ReapplyProgressionAmplifiers"/>
+</wsdl:message>
+<wsdl:message name="IEngine_ReapplyProgressionAmplifiers_OutputMessage">
+<wsdl:part name="parameters" element="tns:ReapplyProgressionAmplifiersResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_GetBlockedUsersList_InputMessage">
+<wsdl:part name="parameters" element="tns:GetBlockedUsersList"/>
+</wsdl:message>
+<wsdl:message name="IEngine_GetBlockedUsersList_OutputMessage">
+<wsdl:part name="parameters" element="tns:GetBlockedUsersListResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_GetBlockersByUsers_InputMessage">
+<wsdl:part name="parameters" element="tns:GetBlockersByUsers"/>
+</wsdl:message>
+<wsdl:message name="IEngine_GetBlockersByUsers_OutputMessage">
+<wsdl:part name="parameters" element="tns:GetBlockersByUsersResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_BlockPlayer_InputMessage">
+<wsdl:part name="parameters" element="tns:BlockPlayer"/>
+</wsdl:message>
+<wsdl:message name="IEngine_BlockPlayer_OutputMessage">
+<wsdl:part name="parameters" element="tns:BlockPlayerResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_UnblockPlayer_InputMessage">
+<wsdl:part name="parameters" element="tns:UnblockPlayer"/>
+</wsdl:message>
+<wsdl:message name="IEngine_UnblockPlayer_OutputMessage">
+<wsdl:part name="parameters" element="tns:UnblockPlayerResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_AddFriendRequest_InputMessage">
+<wsdl:part name="parameters" element="tns:AddFriendRequest"/>
+</wsdl:message>
+<wsdl:message name="IEngine_AddFriendRequest_OutputMessage">
+<wsdl:part name="parameters" element="tns:AddFriendRequestResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_ResolveFriendRequest_InputMessage">
+<wsdl:part name="parameters" element="tns:ResolveFriendRequest"/>
+</wsdl:message>
+<wsdl:message name="IEngine_ResolveFriendRequest_OutputMessage">
+<wsdl:part name="parameters" element="tns:ResolveFriendRequestResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_GetFriendsListFromUserId_InputMessage">
+<wsdl:part name="parameters" element="tns:GetFriendsListFromUserId"/>
+</wsdl:message>
+<wsdl:message name="IEngine_GetFriendsListFromUserId_OutputMessage">
+<wsdl:part name="parameters" element="tns:GetFriendsListFromUserIdResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_RemoveFriend_InputMessage">
+<wsdl:part name="parameters" element="tns:RemoveFriend"/>
+</wsdl:message>
+<wsdl:message name="IEngine_RemoveFriend_OutputMessage">
+<wsdl:part name="parameters" element="tns:RemoveFriendResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_GetSocialSettings_InputMessage">
+<wsdl:part name="parameters" element="tns:GetSocialSettings"/>
+</wsdl:message>
+<wsdl:message name="IEngine_GetSocialSettings_OutputMessage">
+<wsdl:part name="parameters" element="tns:GetSocialSettingsResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_SetSocialSettings_InputMessage">
+<wsdl:part name="parameters" element="tns:SetSocialSettings"/>
+</wsdl:message>
+<wsdl:message name="IEngine_SetSocialSettings_OutputMessage">
+<wsdl:part name="parameters" element="tns:SetSocialSettingsResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_PetitionRequest_InputMessage">
+<wsdl:part name="parameters" element="tns:PetitionRequest"/>
+</wsdl:message>
+<wsdl:message name="IEngine_PetitionRequest_OutputMessage">
+<wsdl:part name="parameters" element="tns:PetitionRequestResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_GetPersonaIdsFromUserIds_InputMessage">
+<wsdl:part name="parameters" element="tns:GetPersonaIdsFromUserIds"/>
+</wsdl:message>
+<wsdl:message name="IEngine_GetPersonaIdsFromUserIds_OutputMessage">
+<wsdl:part name="parameters" element="tns:GetPersonaIdsFromUserIdsResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_GetSocialNetworkInfo_InputMessage">
+<wsdl:part name="parameters" element="tns:GetSocialNetworkInfo"/>
+</wsdl:message>
+<wsdl:message name="IEngine_GetSocialNetworkInfo_OutputMessage">
+<wsdl:part name="parameters" element="tns:GetSocialNetworkInfoResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_User_SecureLogoutPersona_InputMessage">
+<wsdl:part name="parameters" element="tns:User_SecureLogoutPersona"/>
+</wsdl:message>
+<wsdl:message name="IEngine_User_SecureLogoutPersona_OutputMessage">
+<wsdl:part name="parameters" element="tns:User_SecureLogoutPersonaResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_User_SecureLogin_InputMessage">
+<wsdl:part name="parameters" element="tns:User_SecureLogin"/>
+</wsdl:message>
+<wsdl:message name="IEngine_User_SecureLogin_OutputMessage">
+<wsdl:part name="parameters" element="tns:User_SecureLoginResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_User_SecureLoginPersona_InputMessage">
+<wsdl:part name="parameters" element="tns:User_SecureLoginPersona"/>
+</wsdl:message>
+<wsdl:message name="IEngine_User_SecureLoginPersona_OutputMessage">
+<wsdl:part name="parameters" element="tns:User_SecureLoginPersonaResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_User_Logging_InputMessage">
+<wsdl:part name="parameters" element="tns:User_Logging"/>
+</wsdl:message>
+<wsdl:message name="IEngine_User_Logging_OutputMessage">
+<wsdl:part name="parameters" element="tns:User_LoggingResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_User_ClientConfig_InputMessage">
+<wsdl:part name="parameters" element="tns:User_ClientConfig"/>
+</wsdl:message>
+<wsdl:message name="IEngine_User_ClientConfig_OutputMessage">
+<wsdl:part name="parameters" element="tns:User_ClientConfigResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_GetUserSettings_InputMessage">
+<wsdl:part name="parameters" element="tns:GetUserSettings"/>
+</wsdl:message>
+<wsdl:message name="IEngine_GetUserSettings_OutputMessage">
+<wsdl:part name="parameters" element="tns:GetUserSettingsResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_SetUserSettings_InputMessage">
+<wsdl:part name="parameters" element="tns:SetUserSettings"/>
+</wsdl:message>
+<wsdl:message name="IEngine_SetUserSettings_OutputMessage">
+<wsdl:part name="parameters" element="tns:SetUserSettingsResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_Session_GetChatInfo_InputMessage">
+<wsdl:part name="parameters" element="tns:Session_GetChatInfo"/>
+</wsdl:message>
+<wsdl:message name="IEngine_Session_GetChatInfo_OutputMessage">
+<wsdl:part name="parameters" element="tns:Session_GetChatInfoResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_Reporting_SendHardwareInfo_InputMessage">
+<wsdl:part name="parameters" element="tns:Reporting_SendHardwareInfo"/>
+</wsdl:message>
+<wsdl:message name="IEngine_Reporting_SendHardwareInfo_OutputMessage">
+<wsdl:part name="parameters" element="tns:Reporting_SendHardwareInfoResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_Reporting_SendUserSettings_InputMessage">
+<wsdl:part name="parameters" element="tns:Reporting_SendUserSettings"/>
+</wsdl:message>
+<wsdl:message name="IEngine_Reporting_SendUserSettings_OutputMessage">
+<wsdl:part name="parameters" element="tns:Reporting_SendUserSettingsResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_Reporting_SendMachineIndetification_InputMessage">
+<wsdl:part name="parameters" element="tns:Reporting_SendMachineIndetification"/>
+</wsdl:message>
+<wsdl:message name="IEngine_Reporting_SendMachineIndetification_OutputMessage">
+<wsdl:part name="parameters" element="tns:Reporting_SendMachineIndetificationResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_Reporting_LauncherPatcherStart_InputMessage">
+<wsdl:part name="parameters" element="tns:Reporting_LauncherPatcherStart"/>
+</wsdl:message>
+<wsdl:message name="IEngine_Reporting_LauncherPatcherStart_OutputMessage">
+<wsdl:part name="parameters" element="tns:Reporting_LauncherPatcherStartResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_Reporting_LauncherPatcherEnd_InputMessage">
+<wsdl:part name="parameters" element="tns:Reporting_LauncherPatcherEnd"/>
+</wsdl:message>
+<wsdl:message name="IEngine_Reporting_LauncherPatcherEnd_OutputMessage">
+<wsdl:part name="parameters" element="tns:Reporting_LauncherPatcherEndResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_Reporting_SendMultiplayerConnect_InputMessage">
+<wsdl:part name="parameters" element="tns:Reporting_SendMultiplayerConnect"/>
+</wsdl:message>
+<wsdl:message name="IEngine_Reporting_SendMultiplayerConnect_OutputMessage">
+<wsdl:part name="parameters" element="tns:Reporting_SendMultiplayerConnectResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_Reporting_SendClientPingTime_InputMessage">
+<wsdl:part name="parameters" element="tns:Reporting_SendClientPingTime"/>
+</wsdl:message>
+<wsdl:message name="IEngine_Reporting_SendClientPingTime_OutputMessage">
+<wsdl:part name="parameters" element="tns:Reporting_SendClientPingTimeResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_Event_GetTreasureHuntEventSession_InputMessage">
+<wsdl:part name="parameters" element="tns:Event_GetTreasureHuntEventSession"/>
+</wsdl:message>
+<wsdl:message name="IEngine_Event_GetTreasureHuntEventSession_OutputMessage">
+<wsdl:part name="parameters" element="tns:Event_GetTreasureHuntEventSessionResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_Event_NotifyTreasureHuntCoinCollected_InputMessage">
+<wsdl:part name="parameters" element="tns:Event_NotifyTreasureHuntCoinCollected"/>
+</wsdl:message>
+<wsdl:message name="IEngine_Event_NotifyTreasureHuntCoinCollected_OutputMessage">
+<wsdl:part name="parameters" element="tns:Event_NotifyTreasureHuntCoinCollectedResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_Event_GetEventsAvailableAtLevel_InputMessage">
+<wsdl:part name="parameters" element="tns:Event_GetEventsAvailableAtLevel"/>
+</wsdl:message>
+<wsdl:message name="IEngine_Event_GetEventsAvailableAtLevel_OutputMessage">
+<wsdl:part name="parameters" element="tns:Event_GetEventsAvailableAtLevelResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_Event_Launched_InputMessage">
+<wsdl:part name="parameters" element="tns:Event_Launched"/>
+</wsdl:message>
+<wsdl:message name="IEngine_Event_Launched_OutputMessage">
+<wsdl:part name="parameters" element="tns:Event_LaunchedResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_Event_FetchInstancedAccolades_InputMessage">
+<wsdl:part name="parameters" element="tns:Event_FetchInstancedAccolades"/>
+</wsdl:message>
+<wsdl:message name="IEngine_Event_FetchInstancedAccolades_OutputMessage">
+<wsdl:part name="parameters" element="tns:Event_FetchInstancedAccoladesResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_Event_FetchAccolades_InputMessage">
+<wsdl:part name="parameters" element="tns:Event_FetchAccolades"/>
+</wsdl:message>
+<wsdl:message name="IEngine_Event_FetchAccolades_OutputMessage">
+<wsdl:part name="parameters" element="tns:Event_FetchAccoladesResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_Event_Arbitration_InputMessage">
+<wsdl:part name="parameters" element="tns:Event_Arbitration"/>
+</wsdl:message>
+<wsdl:message name="IEngine_Event_Arbitration_OutputMessage">
+<wsdl:part name="parameters" element="tns:Event_ArbitrationResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_Event_Abort_InputMessage">
+<wsdl:part name="parameters" element="tns:Event_Abort"/>
+</wsdl:message>
+<wsdl:message name="IEngine_Event_Abort_OutputMessage">
+<wsdl:part name="parameters" element="tns:Event_AbortResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_Event_Busted_InputMessage">
+<wsdl:part name="parameters" element="tns:Event_Busted"/>
+</wsdl:message>
+<wsdl:message name="IEngine_Event_Busted_OutputMessage">
+<wsdl:part name="parameters" element="tns:Event_BustedResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_LaunchEvent_InputMessage">
+<wsdl:part name="parameters" element="tns:LaunchEvent"/>
+</wsdl:message>
+<wsdl:message name="IEngine_LaunchEvent_OutputMessage">
+<wsdl:part name="parameters" element="tns:LaunchEventResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_JoinQueueEvent_InputMessage">
+<wsdl:part name="parameters" element="tns:JoinQueueEvent"/>
+</wsdl:message>
+<wsdl:message name="IEngine_JoinQueueEvent_OutputMessage">
+<wsdl:part name="parameters" element="tns:JoinQueueEventResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_SystemInfo_InputMessage">
+<wsdl:part name="parameters" element="tns:SystemInfo"/>
+</wsdl:message>
+<wsdl:message name="IEngine_SystemInfo_OutputMessage">
+<wsdl:part name="parameters" element="tns:SystemInfoResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_LauncherInfo_InputMessage">
+<wsdl:part name="parameters" element="tns:LauncherInfo"/>
+</wsdl:message>
+<wsdl:message name="IEngine_LauncherInfo_OutputMessage">
+<wsdl:part name="parameters" element="tns:LauncherInfoResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_GetShardInfo_InputMessage">
+<wsdl:part name="parameters" element="tns:GetShardInfo"/>
+</wsdl:message>
+<wsdl:message name="IEngine_GetShardInfo_OutputMessage">
+<wsdl:part name="parameters" element="tns:GetShardInfoResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_Heartbeat_InputMessage">
+<wsdl:part name="parameters" element="tns:Heartbeat"/>
+</wsdl:message>
+<wsdl:message name="IEngine_Heartbeat_OutputMessage">
+<wsdl:part name="parameters" element="tns:HeartbeatResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_HeartbeatLauncher_InputMessage">
+<wsdl:part name="parameters" element="tns:HeartbeatLauncher"/>
+</wsdl:message>
+<wsdl:message name="IEngine_HeartbeatLauncher_OutputMessage">
+<wsdl:part name="parameters" element="tns:HeartbeatLauncherResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_GetServerTime_InputMessage">
+<wsdl:part name="parameters" element="tns:GetServerTime"/>
+</wsdl:message>
+<wsdl:message name="IEngine_GetServerTime_OutputMessage">
+<wsdl:part name="parameters" element="tns:GetServerTimeResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_GenerateWebToken_InputMessage">
+<wsdl:part name="parameters" element="tns:GenerateWebToken"/>
+</wsdl:message>
+<wsdl:message name="IEngine_GenerateWebToken_OutputMessage">
+<wsdl:part name="parameters" element="tns:GenerateWebTokenResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_GetFraudConfig_InputMessage">
+<wsdl:part name="parameters" element="tns:GetFraudConfig"/>
+</wsdl:message>
+<wsdl:message name="IEngine_GetFraudConfig_OutputMessage">
+<wsdl:part name="parameters" element="tns:GetFraudConfigResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_LogFraudDetectionEvents_InputMessage">
+<wsdl:part name="parameters" element="tns:LogFraudDetectionEvents"/>
+</wsdl:message>
+<wsdl:message name="IEngine_LogFraudDetectionEvents_OutputMessage">
+<wsdl:part name="parameters" element="tns:LogFraudDetectionEventsResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_GetDefaultCarForPersona_InputMessage">
+<wsdl:part name="parameters" element="tns:GetDefaultCarForPersona"/>
+</wsdl:message>
+<wsdl:message name="IEngine_GetDefaultCarForPersona_OutputMessage">
+<wsdl:part name="parameters" element="tns:GetDefaultCarForPersonaResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_GetDefaultCarForPersonas_InputMessage">
+<wsdl:part name="parameters" element="tns:GetDefaultCarForPersonas"/>
+</wsdl:message>
+<wsdl:message name="IEngine_GetDefaultCarForPersonas_OutputMessage">
+<wsdl:part name="parameters" element="tns:GetDefaultCarForPersonasResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_GetMyDefaultCar_InputMessage">
+<wsdl:part name="parameters" element="tns:GetMyDefaultCar"/>
+</wsdl:message>
+<wsdl:message name="IEngine_GetMyDefaultCar_OutputMessage">
+<wsdl:part name="parameters" element="tns:GetMyDefaultCarResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_SetDefaultCarForPersona_InputMessage">
+<wsdl:part name="parameters" element="tns:SetDefaultCarForPersona"/>
+</wsdl:message>
+<wsdl:message name="IEngine_SetDefaultCarForPersona_OutputMessage">
+<wsdl:part name="parameters" element="tns:SetDefaultCarForPersonaResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_GetCarsOwnedByPersona_InputMessage">
+<wsdl:part name="parameters" element="tns:GetCarsOwnedByPersona"/>
+</wsdl:message>
+<wsdl:message name="IEngine_GetCarsOwnedByPersona_OutputMessage">
+<wsdl:part name="parameters" element="tns:GetCarsOwnedByPersonaResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_GetCarOwnedByPersona_InputMessage">
+<wsdl:part name="parameters" element="tns:GetCarOwnedByPersona"/>
+</wsdl:message>
+<wsdl:message name="IEngine_GetCarOwnedByPersona_OutputMessage">
+<wsdl:part name="parameters" element="tns:GetCarOwnedByPersonaResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_SellCar_InputMessage">
+<wsdl:part name="parameters" element="tns:SellCar"/>
+</wsdl:message>
+<wsdl:message name="IEngine_SellCar_OutputMessage">
+<wsdl:part name="parameters" element="tns:SellCarResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_UpdateCar_InputMessage">
+<wsdl:part name="parameters" element="tns:UpdateCar"/>
+</wsdl:message>
+<wsdl:message name="IEngine_UpdateCar_OutputMessage">
+<wsdl:part name="parameters" element="tns:UpdateCarResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_GetPerformanceUpgradesForBaseCar_InputMessage">
+<wsdl:part name="parameters" element="tns:GetPerformanceUpgradesForBaseCar"/>
+</wsdl:message>
+<wsdl:message name="IEngine_GetPerformanceUpgradesForBaseCar_OutputMessage">
+<wsdl:part name="parameters" element="tns:GetPerformanceUpgradesForBaseCarResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_RepairDefaultOwnedCar_InputMessage">
+<wsdl:part name="parameters" element="tns:RepairDefaultOwnedCar"/>
+</wsdl:message>
+<wsdl:message name="IEngine_RepairDefaultOwnedCar_OutputMessage">
+<wsdl:part name="parameters" element="tns:RepairDefaultOwnedCarResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_GetCarClasses_InputMessage">
+<wsdl:part name="parameters" element="tns:GetCarClasses"/>
+</wsdl:message>
+<wsdl:message name="IEngine_GetCarClasses_OutputMessage">
+<wsdl:part name="parameters" element="tns:GetCarClassesResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_Inventory_GetPersonaInventoryObject_InputMessage">
+<wsdl:part name="parameters" element="tns:Inventory_GetPersonaInventoryObject"/>
+</wsdl:message>
+<wsdl:message name="IEngine_Inventory_GetPersonaInventoryObject_OutputMessage">
+<wsdl:part name="parameters" element="tns:Inventory_GetPersonaInventoryObjectResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_Inventory_SellPersonaEntitlementTag_InputMessage">
+<wsdl:part name="parameters" element="tns:Inventory_SellPersonaEntitlementTag"/>
+</wsdl:message>
+<wsdl:message name="IEngine_Inventory_SellPersonaEntitlementTag_OutputMessage">
+<wsdl:part name="parameters" element="tns:Inventory_SellPersonaEntitlementTagResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_Inventory_SellPersonaEntitlementList_InputMessage">
+<wsdl:part name="parameters" element="tns:Inventory_SellPersonaEntitlementList"/>
+</wsdl:message>
+<wsdl:message name="IEngine_Inventory_SellPersonaEntitlementList_OutputMessage">
+<wsdl:part name="parameters" element="tns:Inventory_SellPersonaEntitlementListResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_Catalog_GetPersonalizedCategoriesInCategory_InputMessage">
+<wsdl:part name="parameters" element="tns:Catalog_GetPersonalizedCategoriesInCategory"/>
+</wsdl:message>
+<wsdl:message name="IEngine_Catalog_GetPersonalizedCategoriesInCategory_OutputMessage">
+<wsdl:part name="parameters" element="tns:Catalog_GetPersonalizedCategoriesInCategoryResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_Catalog_GetPersonalizedProductsWithClientProductType_InputMessage">
+<wsdl:part name="parameters" element="tns:Catalog_GetPersonalizedProductsWithClientProductType"/>
+</wsdl:message>
+<wsdl:message name="IEngine_Catalog_GetPersonalizedProductsWithClientProductType_OutputMessage">
+<wsdl:part name="parameters" element="tns:Catalog_GetPersonalizedProductsWithClientProductTypeResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_Catalog_GetProductsWithClientProductType_InputMessage">
+<wsdl:part name="parameters" element="tns:Catalog_GetProductsWithClientProductType"/>
+</wsdl:message>
+<wsdl:message name="IEngine_Catalog_GetProductsWithClientProductType_OutputMessage">
+<wsdl:part name="parameters" element="tns:Catalog_GetProductsWithClientProductTypeResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_Catalog_GetProductsInCategoryWithClientProductType_InputMessage">
+<wsdl:part name="parameters" element="tns:Catalog_GetProductsInCategoryWithClientProductType"/>
+</wsdl:message>
+<wsdl:message name="IEngine_Catalog_GetProductsInCategoryWithClientProductType_OutputMessage">
+<wsdl:part name="parameters" element="tns:Catalog_GetProductsInCategoryWithClientProductTypeResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_Catalog_GetCatalogVersion_InputMessage">
+<wsdl:part name="parameters" element="tns:Catalog_GetCatalogVersion"/>
+</wsdl:message>
+<wsdl:message name="IEngine_Catalog_GetCatalogVersion_OutputMessage">
+<wsdl:part name="parameters" element="tns:Catalog_GetCatalogVersionResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_ReportStoreFailure_InputMessage">
+<wsdl:part name="parameters" element="tns:ReportStoreFailure"/>
+</wsdl:message>
+<wsdl:message name="IEngine_ReportStoreFailure_OutputMessage">
+<wsdl:part name="parameters" element="tns:ReportStoreFailureResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_SubmitNewBasket_InputMessage">
+<wsdl:part name="parameters" element="tns:SubmitNewBasket"/>
+</wsdl:message>
+<wsdl:message name="IEngine_SubmitNewBasket_OutputMessage">
+<wsdl:part name="parameters" element="tns:SubmitNewBasketResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_SubmitCommerceSession_InputMessage">
+<wsdl:part name="parameters" element="tns:SubmitCommerceSession"/>
+</wsdl:message>
+<wsdl:message name="IEngine_SubmitCommerceSession_OutputMessage">
+<wsdl:part name="parameters" element="tns:SubmitCommerceSessionResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_GetClientServerCryptoTicket_InputMessage">
+<wsdl:part name="parameters" element="tns:GetClientServerCryptoTicket"/>
+</wsdl:message>
+<wsdl:message name="IEngine_GetClientServerCryptoTicket_OutputMessage">
+<wsdl:part name="parameters" element="tns:GetClientServerCryptoTicketResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_GetUdpRelayCryptoTicket_InputMessage">
+<wsdl:part name="parameters" element="tns:GetUdpRelayCryptoTicket"/>
+</wsdl:message>
+<wsdl:message name="IEngine_GetUdpRelayCryptoTicket_OutputMessage">
+<wsdl:part name="parameters" element="tns:GetUdpRelayCryptoTicketResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_GetRebroadcasters_InputMessage">
+<wsdl:part name="parameters" element="tns:GetRebroadcasters"/>
+</wsdl:message>
+<wsdl:message name="IEngine_GetRebroadcasters_OutputMessage">
+<wsdl:part name="parameters" element="tns:GetRebroadcastersResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_GetRegionInfo_InputMessage">
+<wsdl:part name="parameters" element="tns:GetRegionInfo"/>
+</wsdl:message>
+<wsdl:message name="IEngine_GetRegionInfo_OutputMessage">
+<wsdl:part name="parameters" element="tns:GetRegionInfoResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_RequestArticles_InputMessage">
+<wsdl:part name="parameters" element="tns:RequestArticles"/>
+</wsdl:message>
+<wsdl:message name="IEngine_RequestArticles_OutputMessage">
+<wsdl:part name="parameters" element="tns:RequestArticlesResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_News_TriggerCarRentalExpired_InputMessage">
+<wsdl:part name="parameters" element="tns:News_TriggerCarRentalExpired"/>
+</wsdl:message>
+<wsdl:message name="IEngine_News_TriggerCarRentalExpired_OutputMessage">
+<wsdl:part name="parameters" element="tns:News_TriggerCarRentalExpiredResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_GetCarSlotInfoForPersona_InputMessage">
+<wsdl:part name="parameters" element="tns:GetCarSlotInfoForPersona"/>
+</wsdl:message>
+<wsdl:message name="IEngine_GetCarSlotInfoForPersona_OutputMessage">
+<wsdl:part name="parameters" element="tns:GetCarSlotInfoForPersonaResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_GetAllPowerUpItemsForPersona_InputMessage">
+<wsdl:part name="parameters" element="tns:GetAllPowerUpItemsForPersona"/>
+</wsdl:message>
+<wsdl:message name="IEngine_GetAllPowerUpItemsForPersona_OutputMessage">
+<wsdl:part name="parameters" element="tns:GetAllPowerUpItemsForPersonaResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_PowerUpActivated_InputMessage">
+<wsdl:part name="parameters" element="tns:PowerUpActivated"/>
+</wsdl:message>
+<wsdl:message name="IEngine_PowerUpActivated_OutputMessage">
+<wsdl:part name="parameters" element="tns:PowerUpActivatedResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_Gifts_GetAndTriggerAvailableLevelGifts_InputMessage">
+<wsdl:part name="parameters" element="tns:Gifts_GetAndTriggerAvailableLevelGifts"/>
+</wsdl:message>
+<wsdl:message name="IEngine_Gifts_GetAndTriggerAvailableLevelGifts_OutputMessage">
+<wsdl:part name="parameters" element="tns:Gifts_GetAndTriggerAvailableLevelGiftsResponse"/>
+</wsdl:message>
+<wsdl:message name="IEngine_LoginAnnouncements_GetImagesPath_InputMessage">
+<wsdl:part name="parameters" element="tns:LoginAnnouncements_GetImagesPath"/>
+</wsdl:message>
+<wsdl:message name="IEngine_LoginAnnouncements_GetImagesPath_OutputMessage">
+<wsdl:part name="parameters" element="tns:LoginAnnouncements_GetImagesPathResponse"/>
+</wsdl:message>
+<wsdl:portType name="IEngine">
+<wsdl:operation name="JoinQueueRaceNow">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/JoinQueueRaceNow" message="tns:IEngine_JoinQueueRaceNow_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/JoinQueueRaceNowResponse" message="tns:IEngine_JoinQueueRaceNow_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="LeaveQueue">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/LeaveQueue" message="tns:IEngine_LeaveQueue_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/LeaveQueueResponse" message="tns:IEngine_LeaveQueue_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="AcceptInvite">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/AcceptInvite" message="tns:IEngine_AcceptInvite_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/AcceptInviteResponse" message="tns:IEngine_AcceptInvite_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="DeclineInvite">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/DeclineInvite" message="tns:IEngine_DeclineInvite_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/DeclineInviteResponse" message="tns:IEngine_DeclineInvite_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="MakePrivateLobby">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/MakePrivateLobby" message="tns:IEngine_MakePrivateLobby_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/MakePrivateLobbyResponse" message="tns:IEngine_MakePrivateLobby_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="InviteToPrivateLobby">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/InviteToPrivateLobby" message="tns:IEngine_InviteToPrivateLobby_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/InviteToPrivateLobbyResponse" message="tns:IEngine_InviteToPrivateLobby_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="LeaveLobby">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/LeaveLobby" message="tns:IEngine_LeaveLobby_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/LeaveLobbyResponse" message="tns:IEngine_LeaveLobby_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="DriverPersona_ReserveName">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/DriverPersona_ReserveName" message="tns:IEngine_DriverPersona_ReserveName_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/DriverPersona_ReserveNameResponse" message="tns:IEngine_DriverPersona_ReserveName_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="DriverPersona_UnreserveName">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/DriverPersona_UnreserveName" message="tns:IEngine_DriverPersona_UnreserveName_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/DriverPersona_UnreserveNameResponse" message="tns:IEngine_DriverPersona_UnreserveName_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="DriverPersona_GetExpLevelPointsMap">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/DriverPersona_GetExpLevelPointsMap" message="tns:IEngine_DriverPersona_GetExpLevelPointsMap_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/DriverPersona_GetExpLevelPointsMapResponse" message="tns:IEngine_DriverPersona_GetExpLevelPointsMap_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="DriverPersona_CreatePersona">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/DriverPersona_CreatePersona" message="tns:IEngine_DriverPersona_CreatePersona_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/DriverPersona_CreatePersonaResponse" message="tns:IEngine_DriverPersona_CreatePersona_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="DriverPersona_GetPersonaBaseFromList">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/DriverPersona_GetPersonaBaseFromList" message="tns:IEngine_DriverPersona_GetPersonaBaseFromList_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/DriverPersona_GetPersonaBaseFromListResponse" message="tns:IEngine_DriverPersona_GetPersonaBaseFromList_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="DriverPersona_GetPersonaInfo">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/DriverPersona_GetPersonaInfo" message="tns:IEngine_DriverPersona_GetPersonaInfo_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/DriverPersona_GetPersonaInfoResponse" message="tns:IEngine_DriverPersona_GetPersonaInfo_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="DriverPersona_GetPersonaPresenceByName">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/DriverPersona_GetPersonaPresenceByName" message="tns:IEngine_DriverPersona_GetPersonaPresenceByName_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/DriverPersona_GetPersonaPresenceByNameResponse" message="tns:IEngine_DriverPersona_GetPersonaPresenceByName_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="DriverPersona_DeletePersona">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/DriverPersona_DeletePersona" message="tns:IEngine_DriverPersona_DeletePersona_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/DriverPersona_DeletePersonaResponse" message="tns:IEngine_DriverPersona_DeletePersona_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="DriverPersona_UpdateStatusMessage">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/DriverPersona_UpdateStatusMessage" message="tns:IEngine_DriverPersona_UpdateStatusMessage_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/DriverPersona_UpdateStatusMessageResponse" message="tns:IEngine_DriverPersona_UpdateStatusMessage_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="DriverPersona_UpdatePersonaPresence">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/DriverPersona_UpdatePersonaPresence" message="tns:IEngine_DriverPersona_UpdatePersonaPresence_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/DriverPersona_UpdatePersonaPresenceResponse" message="tns:IEngine_DriverPersona_UpdatePersonaPresence_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="Achievements_LoadAll">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/Achievements_LoadAll" message="tns:IEngine_Achievements_LoadAll_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/Achievements_LoadAllResponse" message="tns:IEngine_Achievements_LoadAll_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="Achievements_RedeemReward">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/Achievements_RedeemReward" message="tns:IEngine_Achievements_RedeemReward_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/Achievements_RedeemRewardResponse" message="tns:IEngine_Achievements_RedeemReward_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="Badges_Set">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/Badges_Set" message="tns:IEngine_Badges_Set_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/Badges_SetResponse" message="tns:IEngine_Badges_Set_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="User_AuthenticateUser">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/User_AuthenticateUser" message="tns:IEngine_User_AuthenticateUser_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/User_AuthenticateUserResponse" message="tns:IEngine_User_AuthenticateUser_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="User_AuthenticateUserByToken">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/User_AuthenticateUserByToken" message="tns:IEngine_User_AuthenticateUserByToken_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/User_AuthenticateUserByTokenResponse" message="tns:IEngine_User_AuthenticateUserByToken_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="User_SetRegion">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/User_SetRegion" message="tns:IEngine_User_SetRegion_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/User_SetRegionResponse" message="tns:IEngine_User_SetRegion_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="User_GetPermanentSession">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/User_GetPermanentSession" message="tns:IEngine_User_GetPermanentSession_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/User_GetPermanentSessionResponse" message="tns:IEngine_User_GetPermanentSession_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="User_GetUserInfoFromSecurityToken">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/User_GetUserInfoFromSecurityToken" message="tns:IEngine_User_GetUserInfoFromSecurityToken_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/User_GetUserInfoFromSecurityTokenResponse" message="tns:IEngine_User_GetUserInfoFromSecurityToken_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="User_SecureLogout">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/User_SecureLogout" message="tns:IEngine_User_SecureLogout_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/User_SecureLogoutResponse" message="tns:IEngine_User_SecureLogout_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="LoginAnnouncements_GetLoginAnnouncements">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/LoginAnnouncements_GetLoginAnnouncements" message="tns:IEngine_LoginAnnouncements_GetLoginAnnouncements_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/LoginAnnouncements_GetLoginAnnouncementsResponse" message="tns:IEngine_LoginAnnouncements_GetLoginAnnouncements_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="Reporting_LoginAnnouncementClicked">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/Reporting_LoginAnnouncementClicked" message="tns:IEngine_Reporting_LoginAnnouncementClicked_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/Reporting_LoginAnnouncementClickedResponse" message="tns:IEngine_Reporting_LoginAnnouncementClicked_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="ReapplyProgressionAmplifiers">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/ReapplyProgressionAmplifiers" message="tns:IEngine_ReapplyProgressionAmplifiers_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/ReapplyProgressionAmplifiersResponse" message="tns:IEngine_ReapplyProgressionAmplifiers_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="GetBlockedUsersList">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/GetBlockedUsersList" message="tns:IEngine_GetBlockedUsersList_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/GetBlockedUsersListResponse" message="tns:IEngine_GetBlockedUsersList_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="GetBlockersByUsers">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/GetBlockersByUsers" message="tns:IEngine_GetBlockersByUsers_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/GetBlockersByUsersResponse" message="tns:IEngine_GetBlockersByUsers_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="BlockPlayer">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/BlockPlayer" message="tns:IEngine_BlockPlayer_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/BlockPlayerResponse" message="tns:IEngine_BlockPlayer_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="UnblockPlayer">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/UnblockPlayer" message="tns:IEngine_UnblockPlayer_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/UnblockPlayerResponse" message="tns:IEngine_UnblockPlayer_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="AddFriendRequest">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/AddFriendRequest" message="tns:IEngine_AddFriendRequest_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/AddFriendRequestResponse" message="tns:IEngine_AddFriendRequest_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="ResolveFriendRequest">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/ResolveFriendRequest" message="tns:IEngine_ResolveFriendRequest_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/ResolveFriendRequestResponse" message="tns:IEngine_ResolveFriendRequest_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="GetFriendsListFromUserId">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/GetFriendsListFromUserId" message="tns:IEngine_GetFriendsListFromUserId_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/GetFriendsListFromUserIdResponse" message="tns:IEngine_GetFriendsListFromUserId_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="RemoveFriend">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/RemoveFriend" message="tns:IEngine_RemoveFriend_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/RemoveFriendResponse" message="tns:IEngine_RemoveFriend_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="GetSocialSettings">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/GetSocialSettings" message="tns:IEngine_GetSocialSettings_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/GetSocialSettingsResponse" message="tns:IEngine_GetSocialSettings_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="SetSocialSettings">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/SetSocialSettings" message="tns:IEngine_SetSocialSettings_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/SetSocialSettingsResponse" message="tns:IEngine_SetSocialSettings_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="PetitionRequest">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/PetitionRequest" message="tns:IEngine_PetitionRequest_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/PetitionRequestResponse" message="tns:IEngine_PetitionRequest_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="GetPersonaIdsFromUserIds">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/GetPersonaIdsFromUserIds" message="tns:IEngine_GetPersonaIdsFromUserIds_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/GetPersonaIdsFromUserIdsResponse" message="tns:IEngine_GetPersonaIdsFromUserIds_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="GetSocialNetworkInfo">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/GetSocialNetworkInfo" message="tns:IEngine_GetSocialNetworkInfo_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/GetSocialNetworkInfoResponse" message="tns:IEngine_GetSocialNetworkInfo_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="User_SecureLogoutPersona">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/User_SecureLogoutPersona" message="tns:IEngine_User_SecureLogoutPersona_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/User_SecureLogoutPersonaResponse" message="tns:IEngine_User_SecureLogoutPersona_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="User_SecureLogin">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/User_SecureLogin" message="tns:IEngine_User_SecureLogin_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/User_SecureLoginResponse" message="tns:IEngine_User_SecureLogin_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="User_SecureLoginPersona">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/User_SecureLoginPersona" message="tns:IEngine_User_SecureLoginPersona_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/User_SecureLoginPersonaResponse" message="tns:IEngine_User_SecureLoginPersona_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="User_Logging">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/User_Logging" message="tns:IEngine_User_Logging_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/User_LoggingResponse" message="tns:IEngine_User_Logging_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="User_ClientConfig">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/User_ClientConfig" message="tns:IEngine_User_ClientConfig_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/User_ClientConfigResponse" message="tns:IEngine_User_ClientConfig_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="GetUserSettings">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/GetUserSettings" message="tns:IEngine_GetUserSettings_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/GetUserSettingsResponse" message="tns:IEngine_GetUserSettings_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="SetUserSettings">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/SetUserSettings" message="tns:IEngine_SetUserSettings_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/SetUserSettingsResponse" message="tns:IEngine_SetUserSettings_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="Session_GetChatInfo">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/Session_GetChatInfo" message="tns:IEngine_Session_GetChatInfo_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/Session_GetChatInfoResponse" message="tns:IEngine_Session_GetChatInfo_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="Reporting_SendHardwareInfo">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/Reporting_SendHardwareInfo" message="tns:IEngine_Reporting_SendHardwareInfo_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/Reporting_SendHardwareInfoResponse" message="tns:IEngine_Reporting_SendHardwareInfo_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="Reporting_SendUserSettings">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/Reporting_SendUserSettings" message="tns:IEngine_Reporting_SendUserSettings_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/Reporting_SendUserSettingsResponse" message="tns:IEngine_Reporting_SendUserSettings_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="Reporting_SendMachineIndetification">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/Reporting_SendMachineIndetification" message="tns:IEngine_Reporting_SendMachineIndetification_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/Reporting_SendMachineIndetificationResponse" message="tns:IEngine_Reporting_SendMachineIndetification_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="Reporting_LauncherPatcherStart">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/Reporting_LauncherPatcherStart" message="tns:IEngine_Reporting_LauncherPatcherStart_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/Reporting_LauncherPatcherStartResponse" message="tns:IEngine_Reporting_LauncherPatcherStart_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="Reporting_LauncherPatcherEnd">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/Reporting_LauncherPatcherEnd" message="tns:IEngine_Reporting_LauncherPatcherEnd_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/Reporting_LauncherPatcherEndResponse" message="tns:IEngine_Reporting_LauncherPatcherEnd_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="Reporting_SendMultiplayerConnect">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/Reporting_SendMultiplayerConnect" message="tns:IEngine_Reporting_SendMultiplayerConnect_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/Reporting_SendMultiplayerConnectResponse" message="tns:IEngine_Reporting_SendMultiplayerConnect_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="Reporting_SendClientPingTime">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/Reporting_SendClientPingTime" message="tns:IEngine_Reporting_SendClientPingTime_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/Reporting_SendClientPingTimeResponse" message="tns:IEngine_Reporting_SendClientPingTime_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="Event_GetTreasureHuntEventSession">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/Event_GetTreasureHuntEventSession" message="tns:IEngine_Event_GetTreasureHuntEventSession_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/Event_GetTreasureHuntEventSessionResponse" message="tns:IEngine_Event_GetTreasureHuntEventSession_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="Event_NotifyTreasureHuntCoinCollected">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/Event_NotifyTreasureHuntCoinCollected" message="tns:IEngine_Event_NotifyTreasureHuntCoinCollected_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/Event_NotifyTreasureHuntCoinCollectedResponse" message="tns:IEngine_Event_NotifyTreasureHuntCoinCollected_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="Event_GetEventsAvailableAtLevel">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/Event_GetEventsAvailableAtLevel" message="tns:IEngine_Event_GetEventsAvailableAtLevel_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/Event_GetEventsAvailableAtLevelResponse" message="tns:IEngine_Event_GetEventsAvailableAtLevel_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="Event_Launched">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/Event_Launched" message="tns:IEngine_Event_Launched_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/Event_LaunchedResponse" message="tns:IEngine_Event_Launched_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="Event_FetchInstancedAccolades">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/Event_FetchInstancedAccolades" message="tns:IEngine_Event_FetchInstancedAccolades_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/Event_FetchInstancedAccoladesResponse" message="tns:IEngine_Event_FetchInstancedAccolades_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="Event_FetchAccolades">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/Event_FetchAccolades" message="tns:IEngine_Event_FetchAccolades_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/Event_FetchAccoladesResponse" message="tns:IEngine_Event_FetchAccolades_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="Event_Arbitration">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/Event_Arbitration" message="tns:IEngine_Event_Arbitration_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/Event_ArbitrationResponse" message="tns:IEngine_Event_Arbitration_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="Event_Abort">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/Event_Abort" message="tns:IEngine_Event_Abort_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/Event_AbortResponse" message="tns:IEngine_Event_Abort_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="Event_Busted">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/Event_Busted" message="tns:IEngine_Event_Busted_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/Event_BustedResponse" message="tns:IEngine_Event_Busted_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="LaunchEvent">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/LaunchEvent" message="tns:IEngine_LaunchEvent_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/LaunchEventResponse" message="tns:IEngine_LaunchEvent_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="JoinQueueEvent">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/JoinQueueEvent" message="tns:IEngine_JoinQueueEvent_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/JoinQueueEventResponse" message="tns:IEngine_JoinQueueEvent_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="SystemInfo">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/SystemInfo" message="tns:IEngine_SystemInfo_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/SystemInfoResponse" message="tns:IEngine_SystemInfo_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="LauncherInfo">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/LauncherInfo" message="tns:IEngine_LauncherInfo_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/LauncherInfoResponse" message="tns:IEngine_LauncherInfo_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="GetShardInfo">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/GetShardInfo" message="tns:IEngine_GetShardInfo_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/GetShardInfoResponse" message="tns:IEngine_GetShardInfo_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="Heartbeat">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/Heartbeat" message="tns:IEngine_Heartbeat_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/HeartbeatResponse" message="tns:IEngine_Heartbeat_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="HeartbeatLauncher">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/HeartbeatLauncher" message="tns:IEngine_HeartbeatLauncher_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/HeartbeatLauncherResponse" message="tns:IEngine_HeartbeatLauncher_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="GetServerTime">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/GetServerTime" message="tns:IEngine_GetServerTime_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/GetServerTimeResponse" message="tns:IEngine_GetServerTime_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="GenerateWebToken">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/GenerateWebToken" message="tns:IEngine_GenerateWebToken_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/GenerateWebTokenResponse" message="tns:IEngine_GenerateWebToken_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="GetFraudConfig">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/GetFraudConfig" message="tns:IEngine_GetFraudConfig_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/GetFraudConfigResponse" message="tns:IEngine_GetFraudConfig_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="LogFraudDetectionEvents">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/LogFraudDetectionEvents" message="tns:IEngine_LogFraudDetectionEvents_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/LogFraudDetectionEventsResponse" message="tns:IEngine_LogFraudDetectionEvents_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="GetDefaultCarForPersona">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/GetDefaultCarForPersona" message="tns:IEngine_GetDefaultCarForPersona_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/GetDefaultCarForPersonaResponse" message="tns:IEngine_GetDefaultCarForPersona_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="GetDefaultCarForPersonas">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/GetDefaultCarForPersonas" message="tns:IEngine_GetDefaultCarForPersonas_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/GetDefaultCarForPersonasResponse" message="tns:IEngine_GetDefaultCarForPersonas_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="GetMyDefaultCar">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/GetMyDefaultCar" message="tns:IEngine_GetMyDefaultCar_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/GetMyDefaultCarResponse" message="tns:IEngine_GetMyDefaultCar_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="SetDefaultCarForPersona">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/SetDefaultCarForPersona" message="tns:IEngine_SetDefaultCarForPersona_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/SetDefaultCarForPersonaResponse" message="tns:IEngine_SetDefaultCarForPersona_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="GetCarsOwnedByPersona">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/GetCarsOwnedByPersona" message="tns:IEngine_GetCarsOwnedByPersona_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/GetCarsOwnedByPersonaResponse" message="tns:IEngine_GetCarsOwnedByPersona_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="GetCarOwnedByPersona">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/GetCarOwnedByPersona" message="tns:IEngine_GetCarOwnedByPersona_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/GetCarOwnedByPersonaResponse" message="tns:IEngine_GetCarOwnedByPersona_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="SellCar">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/SellCar" message="tns:IEngine_SellCar_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/SellCarResponse" message="tns:IEngine_SellCar_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="UpdateCar">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/UpdateCar" message="tns:IEngine_UpdateCar_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/UpdateCarResponse" message="tns:IEngine_UpdateCar_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="GetPerformanceUpgradesForBaseCar">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/GetPerformanceUpgradesForBaseCar" message="tns:IEngine_GetPerformanceUpgradesForBaseCar_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/GetPerformanceUpgradesForBaseCarResponse" message="tns:IEngine_GetPerformanceUpgradesForBaseCar_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="RepairDefaultOwnedCar">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/RepairDefaultOwnedCar" message="tns:IEngine_RepairDefaultOwnedCar_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/RepairDefaultOwnedCarResponse" message="tns:IEngine_RepairDefaultOwnedCar_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="GetCarClasses">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/GetCarClasses" message="tns:IEngine_GetCarClasses_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/GetCarClassesResponse" message="tns:IEngine_GetCarClasses_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="Inventory_GetPersonaInventoryObject">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/Inventory_GetPersonaInventoryObject" message="tns:IEngine_Inventory_GetPersonaInventoryObject_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/Inventory_GetPersonaInventoryObjectResponse" message="tns:IEngine_Inventory_GetPersonaInventoryObject_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="Inventory_SellPersonaEntitlementTag">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/Inventory_SellPersonaEntitlementTag" message="tns:IEngine_Inventory_SellPersonaEntitlementTag_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/Inventory_SellPersonaEntitlementTagResponse" message="tns:IEngine_Inventory_SellPersonaEntitlementTag_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="Inventory_SellPersonaEntitlementList">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/Inventory_SellPersonaEntitlementList" message="tns:IEngine_Inventory_SellPersonaEntitlementList_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/Inventory_SellPersonaEntitlementListResponse" message="tns:IEngine_Inventory_SellPersonaEntitlementList_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="Catalog_GetPersonalizedCategoriesInCategory">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/Catalog_GetPersonalizedCategoriesInCategory" message="tns:IEngine_Catalog_GetPersonalizedCategoriesInCategory_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/Catalog_GetPersonalizedCategoriesInCategoryResponse" message="tns:IEngine_Catalog_GetPersonalizedCategoriesInCategory_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="Catalog_GetPersonalizedProductsWithClientProductType">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/Catalog_GetPersonalizedProductsWithClientProductType" message="tns:IEngine_Catalog_GetPersonalizedProductsWithClientProductType_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/Catalog_GetPersonalizedProductsWithClientProductTypeResponse" message="tns:IEngine_Catalog_GetPersonalizedProductsWithClientProductType_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="Catalog_GetProductsWithClientProductType">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/Catalog_GetProductsWithClientProductType" message="tns:IEngine_Catalog_GetProductsWithClientProductType_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/Catalog_GetProductsWithClientProductTypeResponse" message="tns:IEngine_Catalog_GetProductsWithClientProductType_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="Catalog_GetProductsInCategoryWithClientProductType">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/Catalog_GetProductsInCategoryWithClientProductType" message="tns:IEngine_Catalog_GetProductsInCategoryWithClientProductType_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/Catalog_GetProductsInCategoryWithClientProductTypeResponse" message="tns:IEngine_Catalog_GetProductsInCategoryWithClientProductType_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="Catalog_GetCatalogVersion">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/Catalog_GetCatalogVersion" message="tns:IEngine_Catalog_GetCatalogVersion_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/Catalog_GetCatalogVersionResponse" message="tns:IEngine_Catalog_GetCatalogVersion_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="ReportStoreFailure">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/ReportStoreFailure" message="tns:IEngine_ReportStoreFailure_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/ReportStoreFailureResponse" message="tns:IEngine_ReportStoreFailure_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="SubmitNewBasket">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/SubmitNewBasket" message="tns:IEngine_SubmitNewBasket_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/SubmitNewBasketResponse" message="tns:IEngine_SubmitNewBasket_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="SubmitCommerceSession">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/SubmitCommerceSession" message="tns:IEngine_SubmitCommerceSession_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/SubmitCommerceSessionResponse" message="tns:IEngine_SubmitCommerceSession_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="GetClientServerCryptoTicket">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/GetClientServerCryptoTicket" message="tns:IEngine_GetClientServerCryptoTicket_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/GetClientServerCryptoTicketResponse" message="tns:IEngine_GetClientServerCryptoTicket_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="GetUdpRelayCryptoTicket">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/GetUdpRelayCryptoTicket" message="tns:IEngine_GetUdpRelayCryptoTicket_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/GetUdpRelayCryptoTicketResponse" message="tns:IEngine_GetUdpRelayCryptoTicket_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="GetRebroadcasters">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/GetRebroadcasters" message="tns:IEngine_GetRebroadcasters_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/GetRebroadcastersResponse" message="tns:IEngine_GetRebroadcasters_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="GetRegionInfo">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/GetRegionInfo" message="tns:IEngine_GetRegionInfo_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/GetRegionInfoResponse" message="tns:IEngine_GetRegionInfo_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="RequestArticles">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/RequestArticles" message="tns:IEngine_RequestArticles_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/RequestArticlesResponse" message="tns:IEngine_RequestArticles_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="News_TriggerCarRentalExpired">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/News_TriggerCarRentalExpired" message="tns:IEngine_News_TriggerCarRentalExpired_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/News_TriggerCarRentalExpiredResponse" message="tns:IEngine_News_TriggerCarRentalExpired_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="GetCarSlotInfoForPersona">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/GetCarSlotInfoForPersona" message="tns:IEngine_GetCarSlotInfoForPersona_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/GetCarSlotInfoForPersonaResponse" message="tns:IEngine_GetCarSlotInfoForPersona_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="GetAllPowerUpItemsForPersona">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/GetAllPowerUpItemsForPersona" message="tns:IEngine_GetAllPowerUpItemsForPersona_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/GetAllPowerUpItemsForPersonaResponse" message="tns:IEngine_GetAllPowerUpItemsForPersona_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="PowerUpActivated">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/PowerUpActivated" message="tns:IEngine_PowerUpActivated_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/PowerUpActivatedResponse" message="tns:IEngine_PowerUpActivated_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="Gifts_GetAndTriggerAvailableLevelGifts">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/Gifts_GetAndTriggerAvailableLevelGifts" message="tns:IEngine_Gifts_GetAndTriggerAvailableLevelGifts_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/Gifts_GetAndTriggerAvailableLevelGiftsResponse" message="tns:IEngine_Gifts_GetAndTriggerAvailableLevelGifts_OutputMessage"/>
+</wsdl:operation>
+<wsdl:operation name="LoginAnnouncements_GetImagesPath">
+<wsdl:input wsaw:Action="http://tempuri.org/IEngine/LoginAnnouncements_GetImagesPath" message="tns:IEngine_LoginAnnouncements_GetImagesPath_InputMessage"/>
+<wsdl:output wsaw:Action="http://tempuri.org/IEngine/LoginAnnouncements_GetImagesPathResponse" message="tns:IEngine_LoginAnnouncements_GetImagesPath_OutputMessage"/>
+</wsdl:operation>
+</wsdl:portType>
+<wsdl:binding name="CustomBinding_IEngine" type="tns:IEngine">
+<soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+<wsdl:operation name="JoinQueueRaceNow">
+<soap12:operation soapAction="http://tempuri.org/IEngine/JoinQueueRaceNow" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="LeaveQueue">
+<soap12:operation soapAction="http://tempuri.org/IEngine/LeaveQueue" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="AcceptInvite">
+<soap12:operation soapAction="http://tempuri.org/IEngine/AcceptInvite" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="DeclineInvite">
+<soap12:operation soapAction="http://tempuri.org/IEngine/DeclineInvite" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="MakePrivateLobby">
+<soap12:operation soapAction="http://tempuri.org/IEngine/MakePrivateLobby" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="InviteToPrivateLobby">
+<soap12:operation soapAction="http://tempuri.org/IEngine/InviteToPrivateLobby" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="LeaveLobby">
+<soap12:operation soapAction="http://tempuri.org/IEngine/LeaveLobby" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="DriverPersona_ReserveName">
+<soap12:operation soapAction="http://tempuri.org/IEngine/DriverPersona_ReserveName" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="DriverPersona_UnreserveName">
+<soap12:operation soapAction="http://tempuri.org/IEngine/DriverPersona_UnreserveName" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="DriverPersona_GetExpLevelPointsMap">
+<soap12:operation soapAction="http://tempuri.org/IEngine/DriverPersona_GetExpLevelPointsMap" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="DriverPersona_CreatePersona">
+<soap12:operation soapAction="http://tempuri.org/IEngine/DriverPersona_CreatePersona" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="DriverPersona_GetPersonaBaseFromList">
+<soap12:operation soapAction="http://tempuri.org/IEngine/DriverPersona_GetPersonaBaseFromList" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="DriverPersona_GetPersonaInfo">
+<soap12:operation soapAction="http://tempuri.org/IEngine/DriverPersona_GetPersonaInfo" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="DriverPersona_GetPersonaPresenceByName">
+<soap12:operation soapAction="http://tempuri.org/IEngine/DriverPersona_GetPersonaPresenceByName" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="DriverPersona_DeletePersona">
+<soap12:operation soapAction="http://tempuri.org/IEngine/DriverPersona_DeletePersona" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="DriverPersona_UpdateStatusMessage">
+<soap12:operation soapAction="http://tempuri.org/IEngine/DriverPersona_UpdateStatusMessage" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="DriverPersona_UpdatePersonaPresence">
+<soap12:operation soapAction="http://tempuri.org/IEngine/DriverPersona_UpdatePersonaPresence" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="Achievements_LoadAll">
+<soap12:operation soapAction="http://tempuri.org/IEngine/Achievements_LoadAll" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="Achievements_RedeemReward">
+<soap12:operation soapAction="http://tempuri.org/IEngine/Achievements_RedeemReward" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="Badges_Set">
+<soap12:operation soapAction="http://tempuri.org/IEngine/Badges_Set" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="User_AuthenticateUser">
+<soap12:operation soapAction="http://tempuri.org/IEngine/User_AuthenticateUser" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="User_AuthenticateUserByToken">
+<soap12:operation soapAction="http://tempuri.org/IEngine/User_AuthenticateUserByToken" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="User_SetRegion">
+<soap12:operation soapAction="http://tempuri.org/IEngine/User_SetRegion" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="User_GetPermanentSession">
+<soap12:operation soapAction="http://tempuri.org/IEngine/User_GetPermanentSession" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="User_GetUserInfoFromSecurityToken">
+<soap12:operation soapAction="http://tempuri.org/IEngine/User_GetUserInfoFromSecurityToken" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="User_SecureLogout">
+<soap12:operation soapAction="http://tempuri.org/IEngine/User_SecureLogout" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="LoginAnnouncements_GetLoginAnnouncements">
+<soap12:operation soapAction="http://tempuri.org/IEngine/LoginAnnouncements_GetLoginAnnouncements" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="Reporting_LoginAnnouncementClicked">
+<soap12:operation soapAction="http://tempuri.org/IEngine/Reporting_LoginAnnouncementClicked" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="ReapplyProgressionAmplifiers">
+<soap12:operation soapAction="http://tempuri.org/IEngine/ReapplyProgressionAmplifiers" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="GetBlockedUsersList">
+<soap12:operation soapAction="http://tempuri.org/IEngine/GetBlockedUsersList" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="GetBlockersByUsers">
+<soap12:operation soapAction="http://tempuri.org/IEngine/GetBlockersByUsers" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="BlockPlayer">
+<soap12:operation soapAction="http://tempuri.org/IEngine/BlockPlayer" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="UnblockPlayer">
+<soap12:operation soapAction="http://tempuri.org/IEngine/UnblockPlayer" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="AddFriendRequest">
+<soap12:operation soapAction="http://tempuri.org/IEngine/AddFriendRequest" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="ResolveFriendRequest">
+<soap12:operation soapAction="http://tempuri.org/IEngine/ResolveFriendRequest" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="GetFriendsListFromUserId">
+<soap12:operation soapAction="http://tempuri.org/IEngine/GetFriendsListFromUserId" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="RemoveFriend">
+<soap12:operation soapAction="http://tempuri.org/IEngine/RemoveFriend" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="GetSocialSettings">
+<soap12:operation soapAction="http://tempuri.org/IEngine/GetSocialSettings" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="SetSocialSettings">
+<soap12:operation soapAction="http://tempuri.org/IEngine/SetSocialSettings" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="PetitionRequest">
+<soap12:operation soapAction="http://tempuri.org/IEngine/PetitionRequest" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="GetPersonaIdsFromUserIds">
+<soap12:operation soapAction="http://tempuri.org/IEngine/GetPersonaIdsFromUserIds" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="GetSocialNetworkInfo">
+<soap12:operation soapAction="http://tempuri.org/IEngine/GetSocialNetworkInfo" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="User_SecureLogoutPersona">
+<soap12:operation soapAction="http://tempuri.org/IEngine/User_SecureLogoutPersona" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="User_SecureLogin">
+<soap12:operation soapAction="http://tempuri.org/IEngine/User_SecureLogin" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="User_SecureLoginPersona">
+<soap12:operation soapAction="http://tempuri.org/IEngine/User_SecureLoginPersona" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="User_Logging">
+<soap12:operation soapAction="http://tempuri.org/IEngine/User_Logging" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="User_ClientConfig">
+<soap12:operation soapAction="http://tempuri.org/IEngine/User_ClientConfig" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="GetUserSettings">
+<soap12:operation soapAction="http://tempuri.org/IEngine/GetUserSettings" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="SetUserSettings">
+<soap12:operation soapAction="http://tempuri.org/IEngine/SetUserSettings" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="Session_GetChatInfo">
+<soap12:operation soapAction="http://tempuri.org/IEngine/Session_GetChatInfo" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="Reporting_SendHardwareInfo">
+<soap12:operation soapAction="http://tempuri.org/IEngine/Reporting_SendHardwareInfo" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="Reporting_SendUserSettings">
+<soap12:operation soapAction="http://tempuri.org/IEngine/Reporting_SendUserSettings" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="Reporting_SendMachineIndetification">
+<soap12:operation soapAction="http://tempuri.org/IEngine/Reporting_SendMachineIndetification" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="Reporting_LauncherPatcherStart">
+<soap12:operation soapAction="http://tempuri.org/IEngine/Reporting_LauncherPatcherStart" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="Reporting_LauncherPatcherEnd">
+<soap12:operation soapAction="http://tempuri.org/IEngine/Reporting_LauncherPatcherEnd" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="Reporting_SendMultiplayerConnect">
+<soap12:operation soapAction="http://tempuri.org/IEngine/Reporting_SendMultiplayerConnect" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="Reporting_SendClientPingTime">
+<soap12:operation soapAction="http://tempuri.org/IEngine/Reporting_SendClientPingTime" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="Event_GetTreasureHuntEventSession">
+<soap12:operation soapAction="http://tempuri.org/IEngine/Event_GetTreasureHuntEventSession" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="Event_NotifyTreasureHuntCoinCollected">
+<soap12:operation soapAction="http://tempuri.org/IEngine/Event_NotifyTreasureHuntCoinCollected" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="Event_GetEventsAvailableAtLevel">
+<soap12:operation soapAction="http://tempuri.org/IEngine/Event_GetEventsAvailableAtLevel" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="Event_Launched">
+<soap12:operation soapAction="http://tempuri.org/IEngine/Event_Launched" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="Event_FetchInstancedAccolades">
+<soap12:operation soapAction="http://tempuri.org/IEngine/Event_FetchInstancedAccolades" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="Event_FetchAccolades">
+<soap12:operation soapAction="http://tempuri.org/IEngine/Event_FetchAccolades" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="Event_Arbitration">
+<soap12:operation soapAction="http://tempuri.org/IEngine/Event_Arbitration" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="Event_Abort">
+<soap12:operation soapAction="http://tempuri.org/IEngine/Event_Abort" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="Event_Busted">
+<soap12:operation soapAction="http://tempuri.org/IEngine/Event_Busted" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="LaunchEvent">
+<soap12:operation soapAction="http://tempuri.org/IEngine/LaunchEvent" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="JoinQueueEvent">
+<soap12:operation soapAction="http://tempuri.org/IEngine/JoinQueueEvent" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="SystemInfo">
+<soap12:operation soapAction="http://tempuri.org/IEngine/SystemInfo" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="LauncherInfo">
+<soap12:operation soapAction="http://tempuri.org/IEngine/LauncherInfo" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="GetShardInfo">
+<soap12:operation soapAction="http://tempuri.org/IEngine/GetShardInfo" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="Heartbeat">
+<soap12:operation soapAction="http://tempuri.org/IEngine/Heartbeat" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="HeartbeatLauncher">
+<soap12:operation soapAction="http://tempuri.org/IEngine/HeartbeatLauncher" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="GetServerTime">
+<soap12:operation soapAction="http://tempuri.org/IEngine/GetServerTime" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="GenerateWebToken">
+<soap12:operation soapAction="http://tempuri.org/IEngine/GenerateWebToken" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="GetFraudConfig">
+<soap12:operation soapAction="http://tempuri.org/IEngine/GetFraudConfig" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="LogFraudDetectionEvents">
+<soap12:operation soapAction="http://tempuri.org/IEngine/LogFraudDetectionEvents" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="GetDefaultCarForPersona">
+<soap12:operation soapAction="http://tempuri.org/IEngine/GetDefaultCarForPersona" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="GetDefaultCarForPersonas">
+<soap12:operation soapAction="http://tempuri.org/IEngine/GetDefaultCarForPersonas" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="GetMyDefaultCar">
+<soap12:operation soapAction="http://tempuri.org/IEngine/GetMyDefaultCar" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="SetDefaultCarForPersona">
+<soap12:operation soapAction="http://tempuri.org/IEngine/SetDefaultCarForPersona" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="GetCarsOwnedByPersona">
+<soap12:operation soapAction="http://tempuri.org/IEngine/GetCarsOwnedByPersona" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="GetCarOwnedByPersona">
+<soap12:operation soapAction="http://tempuri.org/IEngine/GetCarOwnedByPersona" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="SellCar">
+<soap12:operation soapAction="http://tempuri.org/IEngine/SellCar" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="UpdateCar">
+<soap12:operation soapAction="http://tempuri.org/IEngine/UpdateCar" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="GetPerformanceUpgradesForBaseCar">
+<soap12:operation soapAction="http://tempuri.org/IEngine/GetPerformanceUpgradesForBaseCar" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="RepairDefaultOwnedCar">
+<soap12:operation soapAction="http://tempuri.org/IEngine/RepairDefaultOwnedCar" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="GetCarClasses">
+<soap12:operation soapAction="http://tempuri.org/IEngine/GetCarClasses" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="Inventory_GetPersonaInventoryObject">
+<soap12:operation soapAction="http://tempuri.org/IEngine/Inventory_GetPersonaInventoryObject" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="Inventory_SellPersonaEntitlementTag">
+<soap12:operation soapAction="http://tempuri.org/IEngine/Inventory_SellPersonaEntitlementTag" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="Inventory_SellPersonaEntitlementList">
+<soap12:operation soapAction="http://tempuri.org/IEngine/Inventory_SellPersonaEntitlementList" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="Catalog_GetPersonalizedCategoriesInCategory">
+<soap12:operation soapAction="http://tempuri.org/IEngine/Catalog_GetPersonalizedCategoriesInCategory" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="Catalog_GetPersonalizedProductsWithClientProductType">
+<soap12:operation soapAction="http://tempuri.org/IEngine/Catalog_GetPersonalizedProductsWithClientProductType" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="Catalog_GetProductsWithClientProductType">
+<soap12:operation soapAction="http://tempuri.org/IEngine/Catalog_GetProductsWithClientProductType" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="Catalog_GetProductsInCategoryWithClientProductType">
+<soap12:operation soapAction="http://tempuri.org/IEngine/Catalog_GetProductsInCategoryWithClientProductType" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="Catalog_GetCatalogVersion">
+<soap12:operation soapAction="http://tempuri.org/IEngine/Catalog_GetCatalogVersion" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="ReportStoreFailure">
+<soap12:operation soapAction="http://tempuri.org/IEngine/ReportStoreFailure" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="SubmitNewBasket">
+<soap12:operation soapAction="http://tempuri.org/IEngine/SubmitNewBasket" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="SubmitCommerceSession">
+<soap12:operation soapAction="http://tempuri.org/IEngine/SubmitCommerceSession" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="GetClientServerCryptoTicket">
+<soap12:operation soapAction="http://tempuri.org/IEngine/GetClientServerCryptoTicket" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="GetUdpRelayCryptoTicket">
+<soap12:operation soapAction="http://tempuri.org/IEngine/GetUdpRelayCryptoTicket" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="GetRebroadcasters">
+<soap12:operation soapAction="http://tempuri.org/IEngine/GetRebroadcasters" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="GetRegionInfo">
+<soap12:operation soapAction="http://tempuri.org/IEngine/GetRegionInfo" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="RequestArticles">
+<soap12:operation soapAction="http://tempuri.org/IEngine/RequestArticles" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="News_TriggerCarRentalExpired">
+<soap12:operation soapAction="http://tempuri.org/IEngine/News_TriggerCarRentalExpired" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="GetCarSlotInfoForPersona">
+<soap12:operation soapAction="http://tempuri.org/IEngine/GetCarSlotInfoForPersona" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="GetAllPowerUpItemsForPersona">
+<soap12:operation soapAction="http://tempuri.org/IEngine/GetAllPowerUpItemsForPersona" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="PowerUpActivated">
+<soap12:operation soapAction="http://tempuri.org/IEngine/PowerUpActivated" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="Gifts_GetAndTriggerAvailableLevelGifts">
+<soap12:operation soapAction="http://tempuri.org/IEngine/Gifts_GetAndTriggerAvailableLevelGifts" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="LoginAnnouncements_GetImagesPath">
+<soap12:operation soapAction="http://tempuri.org/IEngine/LoginAnnouncements_GetImagesPath" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+</wsdl:binding>
+<wsdl:service name="Engine">
+<wsdl:port name="CustomBinding_IEngine" binding="tns:CustomBinding_IEngine">
+<soap12:address location="http://89.234.36.233/nfsw/Engine.svc"/>
+</wsdl:port>
+</wsdl:service>
+</wsdl:definitions>

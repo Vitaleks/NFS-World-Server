@@ -1,0 +1,13 @@
+<ArrayOfPersonaBase xmlns="http://schemas.datacontract.org/2004/07/Victory.Service.Objects" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+  <PersonaBase>
+    <Badges />
+    <IconIndex>{0}</IconIndex>
+    <Level>{1}</Level>
+    <Motto>{2}</Motto>
+    <Name>{3}</Name>
+    <PersonaId>{4}</PersonaId>
+    <Presence>1</Presence>
+    <Score>{5}</Score>
+    <UserId>{6}</UserId>
+  </PersonaBase>
+</ArrayOfPersonaBase>

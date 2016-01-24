@@ -1,0 +1,10 @@
+<SessionInfo>
+	<Challenge>
+		<ChallengeId>{0}</ChallengeId>
+		<LeftSize>1500</LeftSize>
+		<Pattern>ABCDEFFFFFFFFFFF</Pattern>
+		<RightSize>0</RightSize>
+	</Challenge>
+	<EventId>{1}</EventId>
+	<SessionId>{2}</SessionId>
+</SessionInfo>

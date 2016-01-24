@@ -1,0 +1,43 @@
+c:\users\vital\documents\visual studio 2013\Projects\FinalServerSolution\FinalServerSolution\bin\Release\FinalServerSolution.exe.config
+c:\users\vital\documents\visual studio 2013\Projects\FinalServerSolution\FinalServerSolution\bin\Release\FinalServerSolution.exe
+c:\users\vital\documents\visual studio 2013\Projects\FinalServerSolution\FinalServerSolution\bin\Release\FinalServerSolution.pdb
+c:\users\vital\documents\visual studio 2013\Projects\FinalServerSolution\FinalServerSolution\obj\Release\FinalServerSolution.exe
+c:\users\vital\documents\visual studio 2013\Projects\FinalServerSolution\FinalServerSolution\obj\Release\FinalServerSolution.pdb
+c:\users\vital\documents\visual studio 2013\Projects\FinalServerSolution\FinalServerSolution\obj\Release\FinalServerSolution.csprojResolveAssemblyReference.cache
+C:\Users\Edmundas919\Desktop\serv\serv\FinalServerSolution\bin\Release\FinalServerSolution.exe.config
+C:\Users\Edmundas919\Desktop\serv\serv\FinalServerSolution\obj\Release\FinalServerSolution.exe
+C:\Users\Edmundas919\Desktop\serv\serv\FinalServerSolution\bin\Release\FinalServerSolution.exe
+C:\Users\Edmundas919\Desktop\serv\serv\FinalServerSolution\bin\Release\FinalServerSolution.pdb
+C:\Users\Edmundas919\Desktop\serv\serv\FinalServerSolution\obj\Release\FinalServerSolution.pdb
+C:\Users\Edmundas919\Desktop\serv\serv\FinalServerSolution\obj\Release\FinalServerSolution.csprojResolveAssemblyReference.cache
+C:\Users\Vital\Desktop\serv\serv\FinalServerSolution\bin\Release\FinalServerSolution.exe.config
+C:\Users\Vital\Desktop\serv\serv\FinalServerSolution\obj\Release\FinalServerSolution.exe
+C:\Users\Vital\Desktop\serv\serv\FinalServerSolution\obj\Release\FinalServerSolution.pdb
+C:\Users\Vital\Desktop\serv\serv\FinalServerSolution\bin\Release\FinalServerSolution.exe
+C:\Users\Vital\Desktop\serv\serv\FinalServerSolution\bin\Release\FinalServerSolution.pdb
+C:\Users\Vital\Desktop\serv\serv\FinalServerSolution\obj\Release\FinalServerSolution.csprojResolveAssemblyReference.cache
+C:\Users\Edmundas919\Desktop\servnew\serv\serv\FinalServerSolution\bin\Release\FinalServerSolution.exe.config
+C:\Users\Edmundas919\Desktop\servnew\serv\serv\FinalServerSolution\obj\Release\FinalServerSolution.exe
+C:\Users\Edmundas919\Desktop\servnew\serv\serv\FinalServerSolution\obj\Release\FinalServerSolution.pdb
+C:\Users\Edmundas919\Desktop\servnew\serv\serv\FinalServerSolution\bin\Release\FinalServerSolution.exe
+C:\Users\Edmundas919\Desktop\servnew\serv\serv\FinalServerSolution\bin\Release\FinalServerSolution.pdb
+C:\Users\Edmundas919\Desktop\servnew\serv\serv\FinalServerSolution\obj\Release\FinalServerSolution.csprojResolveAssemblyReference.cache
+C:\Users\Edmundas919\Desktop\servnew\serv\FinalServerSolution\bin\Release\FinalServerSolution.exe.config
+C:\Users\Edmundas919\Desktop\servnew\serv\FinalServerSolution\obj\Release\FinalServerSolution.exe
+C:\Users\Edmundas919\Desktop\servnew\serv\FinalServerSolution\obj\Release\FinalServerSolution.pdb
+C:\Users\Edmundas919\Desktop\servnew\serv\FinalServerSolution\bin\Release\FinalServerSolution.exe
+C:\Users\Edmundas919\Desktop\servnew\serv\FinalServerSolution\bin\Release\FinalServerSolution.pdb
+C:\Users\Edmundas919\Desktop\servnew\serv\FinalServerSolution\obj\Release\FinalServerSolution.csprojResolveAssemblyReference.cache
+C:\Users\Edmundas919\Desktop\servnew\serv\serv\serv\FinalServerSolution\bin\Release\FinalServerSolution.exe.config
+C:\Users\Edmundas919\Desktop\servnew\serv\serv\serv\FinalServerSolution\obj\Release\FinalServerSolution.exe
+C:\Users\Edmundas919\Desktop\servnew\serv\serv\serv\FinalServerSolution\obj\Release\FinalServerSolution.pdb
+C:\Users\Edmundas919\Desktop\servnew\serv\serv\serv\FinalServerSolution\bin\Release\FinalServerSolution.exe
+C:\Users\Edmundas919\Desktop\servnew\serv\serv\serv\FinalServerSolution\bin\Release\FinalServerSolution.pdb
+C:\Users\Edmundas919\Desktop\servnew\serv\serv\serv\FinalServerSolution\obj\Release\FinalServerSolution.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\serv\FinalServerSolution\bin\Release\FinalServerSolution.exe.config
+C:\Users\Administrator\Desktop\serv\FinalServerSolution\bin\Release\FinalServerSolution.exe
+C:\Users\Administrator\Desktop\serv\FinalServerSolution\bin\Release\FinalServerSolution.pdb
+C:\Users\Administrator\Desktop\serv\FinalServerSolution\obj\Release\FinalServerSolution.exe
+C:\Users\Administrator\Desktop\serv\FinalServerSolution\obj\Release\FinalServerSolution.pdb
+C:\Users\Administrator\Desktop\serv\FinalServerSolution\obj\Release\FinalServerSolution.csprojResolveAssemblyReference.cache
+C:\WServer\NFS World Server\FinalServerSolution\bin\Release\FinalServerSolution.exe.config

@@ -1,0 +1,25 @@
+<User_Settings
+	xmlns="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization"
+	xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<CarCacheAgeLimit>600</CarCacheAgeLimit>
+	<IsRaceNowEnabled>true</IsRaceNowEnabled>
+	<MaxCarCacheSize>250</MaxCarCacheSize>
+	<MinRaceNowLevel>2</MinRaceNowLevel>
+	<VoipAvailable>false</VoipAvailable>
+	<activatedHolidaySceneryGroups
+		xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+		<a:string>SCENERY_GROUP_CHRISTMAS</a:string>
+	</activatedHolidaySceneryGroups>
+	<activeHolidayIds
+		xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+		<a:long>0</a:long><a:long>1</a:long><a:long>2</a:long><a:long>3</a:long>
+	</activeHolidayIds>
+	<disactivatedHolidaySceneryGroups
+		xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+		<a:string>SCENERY_GROUP_CHRISTMAS_DISABLE</a:string>
+	</disactivatedHolidaySceneryGroups>
+	<firstTimeLogin>false</firstTimeLogin>
+	<maxLevel>60</maxLevel>
+	<starterPackApplied>false</starterPackApplied>
+	<userId>{0}</userId>
+</User_Settings>

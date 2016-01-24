@@ -1,0 +1,6 @@
+<CarSlotInfoTrans>
+<CarsOwnedByPersona>{0}</CarsOwnedByPersona>
+<DefaultOwnedCarIndex>{1}</DefaultOwnedCarIndex>
+<ObtainableSlots>{2}</ObtainableSlots>
+<OwnedCarSlotsCount>{3}</OwnedCarSlotsCount>
+</CarSlotInfoTrans>

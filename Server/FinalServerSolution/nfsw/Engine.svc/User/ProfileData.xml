@@ -1,0 +1,15 @@
+
+    <ProfileData>
+      <Boost>{0}</Boost>
+      <Cash>{1}</Cash>
+      <IconIndex>{2}</IconIndex>
+      <Level>{3}</Level>
+      <Motto>{4}</Motto>
+      <Name>{5}</Name>
+      <PercentToLevel>0</PercentToLevel>
+      <PersonaId>{6}</PersonaId>
+      <Rating>{7}</Rating>
+      <Rep>{8}</Rep>
+      <RepAtCurrentLevel>0</RepAtCurrentLevel>
+      <ccar i:nil="true" />
+    </ProfileData>

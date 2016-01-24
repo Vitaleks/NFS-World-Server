@@ -1,0 +1,84 @@
+This XML file does not appear to have any style information associated with it. The document tree is shown below.
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Victory.TransferObjects.User" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Victory.TransferObjects.User">
+<xs:complexType name="User">
+<xs:sequence>
+<xs:element minOccurs="0" name="address1" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="address2" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="country" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="dateCreated" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="dob" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="email" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="emailStatus" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="firstName" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="fullGameAccess" type="xs:boolean"/>
+<xs:element minOccurs="0" name="gender" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="idDigits" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="isComplete" type="xs:boolean"/>
+<xs:element minOccurs="0" name="landlinePhone" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="language" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="lastAuthDate" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="lastName" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="mobile" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="nickname" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="postalCode" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="realName" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="reasonCode" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="remoteUserId" type="xs:long"/>
+<xs:element minOccurs="0" name="securityToken" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="starterPackEntitlementTag" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="status" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="subscribeMsg" type="xs:boolean"/>
+<xs:element minOccurs="0" name="tosVersion" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="userId" type="xs:long"/>
+<xs:element minOccurs="0" name="username" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="User" nillable="true" type="tns:User"/>
+<xs:complexType name="UserInfo">
+<xs:sequence>
+<xs:element minOccurs="0" name="defaultPersonaIdx" type="xs:int"/>
+<xs:element minOccurs="0" name="personas" nillable="true" type="tns:ArrayOfProfileData"/>
+<xs:element minOccurs="0" name="user" nillable="true" type="tns:User"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="UserInfo" nillable="true" type="tns:UserInfo"/>
+<xs:complexType name="ArrayOfProfileData">
+<xs:sequence>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="ProfileData" nillable="true" type="tns:ProfileData"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="ArrayOfProfileData" nillable="true" type="tns:ArrayOfProfileData"/>
+<xs:complexType name="ProfileData">
+<xs:sequence>
+<xs:element minOccurs="0" name="Boost" type="xs:decimal"/>
+<xs:element minOccurs="0" name="Cash" type="xs:decimal"/>
+<xs:element minOccurs="0" name="IconIndex" type="xs:int"/>
+<xs:element minOccurs="0" name="Level" type="xs:int"/>
+<xs:element minOccurs="0" name="Motto" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="Name" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="PercentToLevel" type="xs:float"/>
+<xs:element minOccurs="0" name="PersonaId" type="xs:long"/>
+<xs:element minOccurs="0" name="Rating" type="xs:double"/>
+<xs:element minOccurs="0" name="Rep" type="xs:double"/>
+<xs:element minOccurs="0" name="RepAtCurrentLevel" type="xs:int"/>
+<xs:element minOccurs="0" name="ccar" nillable="true" type="tns:ArrayOfPersonaCCar"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="ProfileData" nillable="true" type="tns:ProfileData"/>
+<xs:complexType name="ArrayOfPersonaCCar">
+<xs:sequence>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="PersonaCCar" nillable="true" type="tns:PersonaCCar"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="ArrayOfPersonaCCar" nillable="true" type="tns:ArrayOfPersonaCCar"/>
+<xs:complexType name="PersonaCCar">
+<xs:sequence>
+<xs:element minOccurs="0" name="CCID" type="xs:int"/>
+<xs:element minOccurs="0" name="Durability" type="xs:int"/>
+<xs:element minOccurs="0" name="Heat" type="xs:float"/>
+<xs:element minOccurs="0" name="IsDefault" type="xs:boolean"/>
+<xs:element minOccurs="0" name="PersonaId" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="PersonaCCar" nillable="true" type="tns:PersonaCCar"/>
+</xs:schema>

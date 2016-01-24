@@ -1,0 +1,21 @@
+<SystemInfo xmlns="http://schemas.datacontract.org/2004/07/Victory.Service" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+  <Branch>Private Server</Branch>
+  <ChangeList>Private Server</ChangeList>
+  <ClientVersion>Private Server</ClientVersion>
+  <ClientVersionCheck>true</ClientVersionCheck>
+  <Deployed>06/20/2015 11:24:40</Deployed>
+  <EntitlementsToDownload>true</EntitlementsToDownload>
+  <ForcePermanentSession>true</ForcePermanentSession>
+  <JidPrepender>nfsw</JidPrepender>
+  <LauncherServiceUrl></LauncherServiceUrl>
+  <NucleusNamespace>nfsw</NucleusNamespace>
+  <NucleusNamespaceWeb>web</NucleusNamespaceWeb>
+  <PersonaCacheTimeout>10</PersonaCacheTimeout>
+  <PortalDomain>google.com</PortalDomain>
+  <PortalSecureDomain>google.com</PortalSecureDomain>
+  <PortalStoreFailurePage>google.com</PortalStoreFailurePage>
+  <PortalTimeOut>10</PortalTimeOut>
+  <ShardName>CooL</ShardName>
+  <Time>{0:s}.0000000+00:00</Time>
+  <Version>Private Server</Version>
+</SystemInfo>

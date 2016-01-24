@@ -1,0 +1,9 @@
+<ArrayOfShardInfo
+	>
+	<ShardInfo>
+		<RegionId>3</RegionId>
+		<RegionName>US</RegionName>
+		<ShardName>CHICANE</ShardName>
+		<Url>https://94.236.46.101/nfsw/Engine.svc</Url>
+	</ShardInfo>
+</ArrayOfShardInfo>

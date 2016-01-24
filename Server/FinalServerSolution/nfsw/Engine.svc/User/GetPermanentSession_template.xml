@@ -1,0 +1,37 @@
+<UserInfo xmlns="http://schemas.datacontract.org/2004/07/Victory.TransferObjects.User" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+  <defaultPersonaIdx>0</defaultPersonaIdx>
+  <personas>
+    {0}
+  </personas>
+  <user>
+    <address1 i:nil="true" />
+    <address2 i:nil="true" />
+    <country i:nil="true" />
+    <dateCreated i:nil="true" />
+    <dob i:nil="true" />
+    <email i:nil="true" />
+    <emailStatus i:nil="true" />
+    <firstName i:nil="true" />
+    <fullGameAccess>false</fullGameAccess>
+    <gender i:nil="true" />
+    <idDigits i:nil="true" />
+    <isComplete>false</isComplete>
+    <landlinePhone i:nil="true" />
+    <language i:nil="true" />
+    <lastAuthDate i:nil="true" />
+    <lastName i:nil="true" />
+    <mobile i:nil="true" />
+    <nickname i:nil="true" />
+    <postalCode i:nil="true" />
+    <realName i:nil="true" />
+    <reasonCode i:nil="true" />
+    <remoteUserId>{1}</remoteUserId>
+    <securityToken>{2}</securityToken>
+    <starterPackEntitlementTag />
+    <status i:nil="true" />
+    <subscribeMsg>false</subscribeMsg>
+    <tosVersion i:nil="true" />
+    <userId>{1}</userId>
+    <username i:nil="true" />
+  </user>
+</UserInfo>

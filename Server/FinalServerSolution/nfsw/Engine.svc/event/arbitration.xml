@@ -1,0 +1,10 @@
+<{0}EventResult>
+	<Durability>{1}</Durability>
+	<EventId>{2}</EventId>
+	<EventSessionId>{3}</EventSessionId>
+	<ExitPath>ExitToFreeroam</ExitPath>
+	<InviteLifetimeInMilliseconds>0</InviteLifetimeInMilliseconds>
+	<LobbyInviteId>0</LobbyInviteId>
+	<PersonaId>{4}</PersonaId>
+	{5}
+</{0}EventResult>

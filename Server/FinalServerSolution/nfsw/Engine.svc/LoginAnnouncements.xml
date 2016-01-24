@@ -1,0 +1,21 @@
+<LoginAnnouncementsDefinition xmlns="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization.LoginAnnouncement" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Announcements>
+		<LoginAnnouncementDefinition>
+			<Context>NotApplicable</Context>
+			<Id>0</Id>
+			<ImageChecksum>-1</ImageChecksum>
+			<ImageUrl>VSlogo2.jpg</ImageUrl>
+			<Target>https://vk.com/vitaleksteam</Target>
+			<Type>ExternalLink</Type>
+		</LoginAnnouncementDefinition>
+		<LoginAnnouncementDefinition>
+			<Context>NotApplicable</Context>
+			<Id>1</Id>
+			<ImageChecksum>-1</ImageChecksum>
+			<ImageUrl>Server.jpg</ImageUrl>
+			<Target>https://vk.com/vitaleksteam</Target>
+			<Type>ExternalLink</Type>
+		</LoginAnnouncementDefinition>
+	</Announcements>
+	<ImagesPath>http://176.58.61.101:20008/quadcopter_vision_base/Engine.svc/NewsImages</ImagesPath>
+</LoginAnnouncementsDefinition>

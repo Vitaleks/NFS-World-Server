@@ -1,0 +1,17 @@
+This XML file does not appear to have any style information associated with it. The document tree is shown below.
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization.Gift" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization.Gift">
+<xs:complexType name="ArrayOfLevelGiftDefinition">
+<xs:sequence>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="LevelGiftDefinition" nillable="true" type="tns:LevelGiftDefinition"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="ArrayOfLevelGiftDefinition" nillable="true" type="tns:ArrayOfLevelGiftDefinition"/>
+<xs:complexType name="LevelGiftDefinition">
+<xs:sequence>
+<xs:element minOccurs="0" name="Boost" type="xs:int"/>
+<xs:element minOccurs="0" name="Level" type="xs:int"/>
+<xs:element minOccurs="0" name="LevelGiftId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="LevelGiftDefinition" nillable="true" type="tns:LevelGiftDefinition"/>
+</xs:schema>

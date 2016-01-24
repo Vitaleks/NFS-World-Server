@@ -1,0 +1,7 @@
+/home/wserver/serv/FinalServerSolution/obj/Release/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/wserver/serv/FinalServerSolution/bin/Release/FinalServerSolution.exe.config
+/home/wserver/serv/FinalServerSolution/bin/Release/FinalServerSolution.exe.mdb
+/home/wserver/serv/FinalServerSolution/bin/Release/FinalServerSolution.exe
+/home/wserver/serv/FinalServerSolution/obj/Release/FinalServerSolution.exe
+/home/wserver/serv/FinalServerSolution/obj/Release/FinalServerSolution.exe.mdb
+/home/wserver/serv/FinalServerSolution/bin/Release/MySql.Data.dll

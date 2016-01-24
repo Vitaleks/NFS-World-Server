@@ -1,0 +1,689 @@
+This XML file does not appear to have any style information associated with it. The document tree is shown below.
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization">
+<xs:import schemaLocation="http://89.234.36.233/nfsw/Engine.svc?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+<xs:import schemaLocation="http://89.234.36.233/nfsw/Engine.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+<xs:simpleType name="MetagameFlags">
+<xs:restriction base="xs:string">
+<xs:enumeration value="RaceNowEnabled">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+</xs:restriction>
+</xs:simpleType>
+<xs:element name="MetagameFlags" nillable="true" type="tns:MetagameFlags"/>
+<xs:simpleType name="enumPowerUpType">
+<xs:restriction base="xs:string">
+<xs:enumeration value="None"/>
+<xs:enumeration value="EmergencyEvade"/>
+<xs:enumeration value="InstantCooldown"/>
+<xs:enumeration value="Juggernaut"/>
+<xs:enumeration value="NosShot"/>
+<xs:enumeration value="OneMoreLap"/>
+<xs:enumeration value="Ready"/>
+<xs:enumeration value="RunFlatTires"/>
+<xs:enumeration value="Shield"/>
+<xs:enumeration value="Slingshot"/>
+<xs:enumeration value="TeamEmergencyEvade"/>
+<xs:enumeration value="TeamSlingshot"/>
+<xs:enumeration value="TrafficMagnet"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:element name="enumPowerUpType" nillable="true" type="tns:enumPowerUpType"/>
+<xs:complexType name="ClientLog">
+<xs:sequence>
+<xs:element minOccurs="0" name="date" type="xs:dateTime"/>
+<xs:element minOccurs="0" name="message" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="ClientLog" nillable="true" type="tns:ClientLog"/>
+<xs:complexType name="CommerceResultTrans">
+<xs:sequence>
+<xs:element minOccurs="0" name="CommerceItems" nillable="true" type="tns:ArrayOfCommerceItemTrans"/>
+<xs:element minOccurs="0" name="InvalidBasket" nillable="true" type="tns:InvalidBasketTrans"/>
+<xs:element minOccurs="0" name="InventoryItems" nillable="true" type="tns:ArrayOfInventoryItemTrans"/>
+<xs:element minOccurs="0" name="PurchasedCars" nillable="true" type="tns:ArrayOfOwnedCarTrans"/>
+<xs:element minOccurs="0" name="Status" type="tns:CommerceResultStatus"/>
+<xs:element minOccurs="0" name="Wallets" nillable="true" type="tns:ArrayOfWalletTrans"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="CommerceResultTrans" nillable="true" type="tns:CommerceResultTrans"/>
+<xs:complexType name="ArrayOfCommerceItemTrans">
+<xs:sequence>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="CommerceItemTrans" nillable="true" type="tns:CommerceItemTrans"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="ArrayOfCommerceItemTrans" nillable="true" type="tns:ArrayOfCommerceItemTrans"/>
+<xs:complexType name="CommerceItemTrans">
+<xs:sequence>
+<xs:element minOccurs="0" name="Hash" type="xs:int"/>
+<xs:element minOccurs="0" name="Title" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="CommerceItemTrans" nillable="true" type="tns:CommerceItemTrans"/>
+<xs:complexType name="InvalidBasketTrans">
+<xs:sequence>
+<xs:element minOccurs="0" name="Basket" nillable="true" type="tns:BasketTrans"/>
+<xs:element minOccurs="0" name="InvalidItems" nillable="true" type="tns:ArrayOfInvalidBasketItemTrans"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="InvalidBasketTrans" nillable="true" type="tns:InvalidBasketTrans"/>
+<xs:complexType name="BasketTrans">
+<xs:sequence>
+<xs:element minOccurs="0" name="Items" nillable="true" type="tns:ArrayOfBasketItemTrans"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="BasketTrans" nillable="true" type="tns:BasketTrans"/>
+<xs:complexType name="ArrayOfBasketItemTrans">
+<xs:sequence>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="BasketItemTrans" nillable="true" type="tns:BasketItemTrans"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="ArrayOfBasketItemTrans" nillable="true" type="tns:ArrayOfBasketItemTrans"/>
+<xs:complexType name="BasketItemTrans">
+<xs:sequence>
+<xs:element minOccurs="0" name="ProductId" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="Quantity" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="BasketItemTrans" nillable="true" type="tns:BasketItemTrans"/>
+<xs:complexType name="ArrayOfInvalidBasketItemTrans">
+<xs:sequence>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="InvalidBasketItemTrans" nillable="true" type="tns:InvalidBasketItemTrans"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="ArrayOfInvalidBasketItemTrans" nillable="true" type="tns:ArrayOfInvalidBasketItemTrans"/>
+<xs:complexType name="InvalidBasketItemTrans">
+<xs:sequence>
+<xs:element minOccurs="0" name="Index" type="xs:int"/>
+<xs:element minOccurs="0" name="Reason" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="InvalidBasketItemTrans" nillable="true" type="tns:InvalidBasketItemTrans"/>
+<xs:complexType name="ArrayOfInventoryItemTrans">
+<xs:sequence>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="InventoryItemTrans" nillable="true" type="tns:InventoryItemTrans"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="ArrayOfInventoryItemTrans" nillable="true" type="tns:ArrayOfInventoryItemTrans"/>
+<xs:complexType name="InventoryItemTrans">
+<xs:sequence>
+<xs:element minOccurs="0" name="EntitlementTag" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="ExpirationDate" nillable="true" type="xs:dateTime"/>
+<xs:element minOccurs="0" name="Hash" type="xs:int"/>
+<xs:element minOccurs="0" name="InventoryId" type="xs:long"/>
+<xs:element minOccurs="0" name="ProductId" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="RemainingUseCount" type="xs:long"/>
+<xs:element minOccurs="0" name="ResellPrice" type="xs:decimal"/>
+<xs:element minOccurs="0" name="Status" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="StringHash" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="VirtualItemType" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="InventoryItemTrans" nillable="true" type="tns:InventoryItemTrans"/>
+<xs:complexType name="ArrayOfOwnedCarTrans">
+<xs:sequence>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="OwnedCarTrans" nillable="true" type="tns:OwnedCarTrans"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="ArrayOfOwnedCarTrans" nillable="true" type="tns:ArrayOfOwnedCarTrans"/>
+<xs:complexType name="OwnedCarTrans">
+<xs:sequence>
+<xs:element minOccurs="0" name="CustomCar" nillable="true" type="tns:CustomCarTrans"/>
+<xs:element minOccurs="0" name="Durability" type="xs:int"/>
+<xs:element minOccurs="0" name="ExpirationDate" nillable="true" type="xs:dateTime"/>
+<xs:element minOccurs="0" name="Heat" type="xs:float"/>
+<xs:element minOccurs="0" name="Id" type="xs:long"/>
+<xs:element minOccurs="0" name="OwnershipType" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="OwnedCarTrans" nillable="true" type="tns:OwnedCarTrans"/>
+<xs:complexType name="CustomCarTrans">
+<xs:sequence>
+<xs:element minOccurs="0" name="BaseCar" type="xs:int"/>
+<xs:element minOccurs="0" name="CarClassHash" type="xs:int"/>
+<xs:element minOccurs="0" name="Id" type="xs:int"/>
+<xs:element minOccurs="0" name="IsPreset" type="xs:boolean"/>
+<xs:element minOccurs="0" name="Level" type="xs:int"/>
+<xs:element minOccurs="0" name="Name" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="Paints" nillable="true" type="tns:ArrayOfCustomPaintTrans"/>
+<xs:element minOccurs="0" name="PerformanceParts" nillable="true" type="tns:ArrayOfPerformancePartTrans"/>
+<xs:element minOccurs="0" name="PhysicsProfileHash" type="xs:int"/>
+<xs:element minOccurs="0" name="Rating" type="xs:int"/>
+<xs:element minOccurs="0" name="ResalePrice" type="xs:float"/>
+<xs:element minOccurs="0" name="RideHeightDrop" type="xs:float"/>
+<xs:element minOccurs="0" name="SkillModParts" nillable="true" type="tns:ArrayOfSkillModPartTrans"/>
+<xs:element minOccurs="0" name="SkillModSlotCount" type="xs:int"/>
+<xs:element minOccurs="0" name="Version" type="xs:int"/>
+<xs:element minOccurs="0" name="Vinyls" nillable="true" type="tns:ArrayOfCustomVinylTrans"/>
+<xs:element minOccurs="0" name="VisualParts" nillable="true" type="tns:ArrayOfVisualPartTrans"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="CustomCarTrans" nillable="true" type="tns:CustomCarTrans"/>
+<xs:complexType name="ArrayOfCustomPaintTrans">
+<xs:sequence>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="CustomPaintTrans" type="tns:CustomPaintTrans"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="ArrayOfCustomPaintTrans" nillable="true" type="tns:ArrayOfCustomPaintTrans"/>
+<xs:complexType name="CustomPaintTrans">
+<xs:annotation>
+<xs:appinfo>
+<IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
+</xs:appinfo>
+</xs:annotation>
+<xs:sequence>
+<xs:element minOccurs="0" name="Group" type="xs:int"/>
+<xs:element minOccurs="0" name="Hue" type="xs:int"/>
+<xs:element minOccurs="0" name="Sat" type="xs:int"/>
+<xs:element minOccurs="0" name="Slot" type="xs:int"/>
+<xs:element minOccurs="0" name="Var" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="CustomPaintTrans" nillable="true" type="tns:CustomPaintTrans"/>
+<xs:complexType name="ArrayOfPerformancePartTrans">
+<xs:sequence>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="PerformancePartTrans" type="tns:PerformancePartTrans"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="ArrayOfPerformancePartTrans" nillable="true" type="tns:ArrayOfPerformancePartTrans"/>
+<xs:complexType name="PerformancePartTrans">
+<xs:annotation>
+<xs:appinfo>
+<IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
+</xs:appinfo>
+</xs:annotation>
+<xs:sequence>
+<xs:element minOccurs="0" name="PerformancePartAttribHash" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="PerformancePartTrans" nillable="true" type="tns:PerformancePartTrans"/>
+<xs:complexType name="ArrayOfSkillModPartTrans">
+<xs:sequence>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="SkillModPartTrans" type="tns:SkillModPartTrans"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="ArrayOfSkillModPartTrans" nillable="true" type="tns:ArrayOfSkillModPartTrans"/>
+<xs:complexType name="SkillModPartTrans">
+<xs:annotation>
+<xs:appinfo>
+<IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
+</xs:appinfo>
+</xs:annotation>
+<xs:sequence>
+<xs:element minOccurs="0" name="IsFixed" type="xs:boolean"/>
+<xs:element minOccurs="0" name="SkillModPartAttribHash" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="SkillModPartTrans" nillable="true" type="tns:SkillModPartTrans"/>
+<xs:complexType name="ArrayOfCustomVinylTrans">
+<xs:sequence>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="CustomVinylTrans" type="tns:CustomVinylTrans"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="ArrayOfCustomVinylTrans" nillable="true" type="tns:ArrayOfCustomVinylTrans"/>
+<xs:complexType name="CustomVinylTrans">
+<xs:annotation>
+<xs:appinfo>
+<IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
+</xs:appinfo>
+</xs:annotation>
+<xs:sequence>
+<xs:element minOccurs="0" name="Hash" type="xs:int"/>
+<xs:element minOccurs="0" name="Hue1" type="xs:int"/>
+<xs:element minOccurs="0" name="Hue2" type="xs:int"/>
+<xs:element minOccurs="0" name="Hue3" type="xs:int"/>
+<xs:element minOccurs="0" name="Hue4" type="xs:int"/>
+<xs:element minOccurs="0" name="Layer" type="xs:int"/>
+<xs:element minOccurs="0" name="Mir" type="xs:boolean"/>
+<xs:element minOccurs="0" name="Rot" type="xs:int"/>
+<xs:element minOccurs="0" name="Sat1" type="xs:int"/>
+<xs:element minOccurs="0" name="Sat2" type="xs:int"/>
+<xs:element minOccurs="0" name="Sat3" type="xs:int"/>
+<xs:element minOccurs="0" name="Sat4" type="xs:int"/>
+<xs:element minOccurs="0" name="ScaleX" type="xs:int"/>
+<xs:element minOccurs="0" name="ScaleY" type="xs:int"/>
+<xs:element minOccurs="0" name="Shear" type="xs:int"/>
+<xs:element minOccurs="0" name="TranX" type="xs:int"/>
+<xs:element minOccurs="0" name="TranY" type="xs:int"/>
+<xs:element minOccurs="0" name="Var1" type="xs:int"/>
+<xs:element minOccurs="0" name="Var2" type="xs:int"/>
+<xs:element minOccurs="0" name="Var3" type="xs:int"/>
+<xs:element minOccurs="0" name="Var4" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="CustomVinylTrans" nillable="true" type="tns:CustomVinylTrans"/>
+<xs:complexType name="ArrayOfVisualPartTrans">
+<xs:sequence>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="VisualPartTrans" type="tns:VisualPartTrans"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="ArrayOfVisualPartTrans" nillable="true" type="tns:ArrayOfVisualPartTrans"/>
+<xs:complexType name="VisualPartTrans">
+<xs:annotation>
+<xs:appinfo>
+<IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
+</xs:appinfo>
+</xs:annotation>
+<xs:sequence>
+<xs:element minOccurs="0" name="PartHash" type="xs:int"/>
+<xs:element minOccurs="0" name="SlotHash" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="VisualPartTrans" nillable="true" type="tns:VisualPartTrans"/>
+<xs:simpleType name="CommerceResultStatus">
+<xs:restriction base="xs:string">
+<xs:enumeration value="Success"/>
+<xs:enumeration value="Fail_InvalidBasket">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">100</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="Fail_InsufficientFunds">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">101</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="Fail_InsufficientCarSlots">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">102</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="Fail_MaxStackOrRentalLimit">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">103</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="Fail_InvalidPerformanceUpgrade">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">104</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="Fail_ItemNotAvailableStandalone">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">105</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="Fail_PersonaNotRightLevel">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">106</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="Fail_LockedProductNotAccessibleToThisUser">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">107</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="Fail_BoostTransactionsAreDisabled">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">108</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="Fail_InsufficientPerformancePartInventory">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">109</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="Fail_MaxAllowedPurchasesForThisProduct">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">110</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+</xs:restriction>
+</xs:simpleType>
+<xs:element name="CommerceResultStatus" nillable="true" type="tns:CommerceResultStatus"/>
+<xs:complexType name="ArrayOfWalletTrans">
+<xs:sequence>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="WalletTrans" nillable="true" type="tns:WalletTrans"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="ArrayOfWalletTrans" nillable="true" type="tns:ArrayOfWalletTrans"/>
+<xs:complexType name="WalletTrans">
+<xs:sequence>
+<xs:element minOccurs="0" name="Balance" type="xs:decimal"/>
+<xs:element minOccurs="0" name="Currency" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="WalletTrans" nillable="true" type="tns:WalletTrans"/>
+<xs:complexType name="Credentials">
+<xs:sequence>
+<xs:element minOccurs="0" name="Email" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="Password" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="Region" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="Credentials" nillable="true" type="tns:Credentials"/>
+<xs:complexType name="Token">
+<xs:sequence>
+<xs:element minOccurs="0" name="EualaAccepted" type="xs:boolean"/>
+<xs:element minOccurs="0" name="Region" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="Value" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="Token" nillable="true" type="tns:Token"/>
+<xs:complexType name="GetPermanentSessionData">
+<xs:sequence>
+<xs:element minOccurs="0" name="machineID" type="xs:long"/>
+<xs:element minOccurs="0" name="version" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="GetPermanentSessionData" nillable="true" type="tns:GetPermanentSessionData"/>
+<xs:complexType name="ClientConfigTrans">
+<xs:sequence>
+<xs:element minOccurs="0" name="clientConfigs" nillable="true" type="tns:ArrayOfClientConfig"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="ClientConfigTrans" nillable="true" type="tns:ClientConfigTrans"/>
+<xs:complexType name="ArrayOfClientConfig">
+<xs:sequence>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="ClientConfig" nillable="true" type="tns:ClientConfig"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="ArrayOfClientConfig" nillable="true" type="tns:ArrayOfClientConfig"/>
+<xs:complexType name="ClientConfig">
+<xs:sequence>
+<xs:element minOccurs="0" name="group" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="level" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="ClientConfig" nillable="true" type="tns:ClientConfig"/>
+<xs:complexType name="User_Settings">
+<xs:sequence>
+<xs:element minOccurs="0" name="CarCacheAgeLimit" type="xs:int"/>
+<xs:element minOccurs="0" name="IsRaceNowEnabled" type="xs:boolean"/>
+<xs:element minOccurs="0" name="MaxCarCacheSize" type="xs:int"/>
+<xs:element minOccurs="0" name="MinRaceNowLevel" type="xs:int"/>
+<xs:element minOccurs="0" name="VoipAvailable" type="xs:boolean"/>
+<xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="activatedHolidaySceneryGroups" nillable="true" type="q1:ArrayOfstring"/>
+<xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="activeHolidayIds" nillable="true" type="q2:ArrayOflong"/>
+<xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="disactivatedHolidaySceneryGroups" nillable="true" type="q3:ArrayOfstring"/>
+<xs:element minOccurs="0" name="firstTimeLogin" type="xs:boolean"/>
+<xs:element minOccurs="0" name="maxLevel" type="xs:int"/>
+<xs:element minOccurs="0" name="starterPackApplied" type="xs:boolean"/>
+<xs:element minOccurs="0" name="userId" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="User_Settings" nillable="true" type="tns:User_Settings"/>
+<xs:complexType name="HardwareInfo">
+<xs:sequence>
+<xs:element minOccurs="0" name="availableMem" type="xs:unsignedInt"/>
+<xs:element minOccurs="0" name="cpuBrand" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="cpuid0" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="cpuid1_0" type="xs:unsignedInt"/>
+<xs:element minOccurs="0" name="cpuid1_1" type="xs:unsignedInt"/>
+<xs:element minOccurs="0" name="cpuid1_2" type="xs:unsignedInt"/>
+<xs:element minOccurs="0" name="cpuid1_3" type="xs:unsignedInt"/>
+<xs:element minOccurs="0" name="deviceID" type="xs:unsignedInt"/>
+<xs:element minOccurs="0" name="excpuid1_0" type="xs:unsignedInt"/>
+<xs:element minOccurs="0" name="excpuid1_1" type="xs:unsignedInt"/>
+<xs:element minOccurs="0" name="excpuid1_2" type="xs:unsignedInt"/>
+<xs:element minOccurs="0" name="excpuid1_3" type="xs:unsignedInt"/>
+<xs:element minOccurs="0" name="gpuDescription" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="gpuDriverBuild" type="xs:unsignedInt"/>
+<xs:element minOccurs="0" name="gpuDriverSubversion" type="xs:unsignedInt"/>
+<xs:element minOccurs="0" name="gpuDriverVersion" type="xs:unsignedInt"/>
+<xs:element minOccurs="0" name="gpuMemory" type="xs:unsignedInt"/>
+<xs:element minOccurs="0" name="gpuProduct" type="xs:unsignedInt"/>
+<xs:element minOccurs="0" name="osBuildNumber" type="xs:unsignedInt"/>
+<xs:element minOccurs="0" name="osMajorVersion" type="xs:unsignedInt"/>
+<xs:element minOccurs="0" name="osMinorVersion" type="xs:unsignedInt"/>
+<xs:element minOccurs="0" name="physicalCores" type="xs:unsignedInt"/>
+<xs:element minOccurs="0" name="platformID" type="xs:unsignedInt"/>
+<xs:element minOccurs="0" name="processAffinityMask" type="xs:unsignedInt"/>
+<xs:element minOccurs="0" name="servicePack" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="systemAffinityMask" type="xs:unsignedInt"/>
+<xs:element minOccurs="0" name="totalMemory" type="xs:unsignedInt"/>
+<xs:element minOccurs="0" name="userID" type="xs:long"/>
+<xs:element minOccurs="0" name="vendorID" type="xs:unsignedInt"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="HardwareInfo" nillable="true" type="tns:HardwareInfo"/>
+<xs:complexType name="UserSettings">
+<xs:sequence>
+<xs:element minOccurs="0" name="desktopResHeight" type="xs:unsignedInt"/>
+<xs:element minOccurs="0" name="desktopResWidth" type="xs:unsignedInt"/>
+<xs:element minOccurs="0" name="fullscreen" type="xs:boolean"/>
+<xs:element minOccurs="0" name="gameResHeight" type="xs:unsignedInt"/>
+<xs:element minOccurs="0" name="gameResWidth" type="xs:unsignedInt"/>
+<xs:element minOccurs="0" name="globalDetailLevel" type="xs:unsignedInt"/>
+<xs:element minOccurs="0" name="userID" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="UserSettings" nillable="true" type="tns:UserSettings"/>
+<xs:complexType name="MachineIdentification">
+<xs:sequence>
+<xs:element minOccurs="0" name="cpuID" type="xs:unsignedInt"/>
+<xs:element minOccurs="0" name="diskSerialNumber" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="gpuID" type="xs:unsignedInt"/>
+<xs:element minOccurs="0" name="mac" type="xs:long"/>
+<xs:element minOccurs="0" name="machineName" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="userID" type="xs:long"/>
+<xs:element minOccurs="0" name="volumeName" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="volumeSerialNumber" type="xs:unsignedInt"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="MachineIdentification" nillable="true" type="tns:MachineIdentification"/>
+<xs:complexType name="LauncherStartTrans">
+<xs:sequence>
+<xs:element minOccurs="0" name="autoLogin" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="autoStart" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="language" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="languageCode" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="region" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="sku" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="userID" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="LauncherStartTrans" nillable="true" type="tns:LauncherStartTrans"/>
+<xs:complexType name="LauncherEndTrans">
+<xs:sequence>
+<xs:element minOccurs="0" name="leaveReasonID" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="patchTime" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="userID" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="LauncherEndTrans" nillable="true" type="tns:LauncherEndTrans"/>
+<xs:complexType name="Vector3">
+<xs:sequence>
+<xs:element minOccurs="0" name="X" type="xs:float"/>
+<xs:element minOccurs="0" name="Y" type="xs:float"/>
+<xs:element minOccurs="0" name="Z" type="xs:float"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="Vector3" nillable="true" type="tns:Vector3"/>
+<xs:complexType name="HeartBeat">
+<xs:sequence>
+<xs:element minOccurs="0" name="MetagameFlags" type="xs:int"/>
+<xs:element minOccurs="0" name="enabledBitField" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="HeartBeat" nillable="true" type="tns:HeartBeat"/>
+<xs:complexType name="FraudConfig">
+<xs:sequence>
+<xs:element minOccurs="0" name="enabledBitField" type="xs:int"/>
+<xs:element minOccurs="0" name="gameFileFreq" type="xs:int"/>
+<xs:element minOccurs="0" name="moduleFreq" type="xs:int"/>
+<xs:element minOccurs="0" name="startUpFreq" type="xs:int"/>
+<xs:element minOccurs="0" name="userID" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="FraudConfig" nillable="true" type="tns:FraudConfig"/>
+<xs:complexType name="ArrayOfProductTrans">
+<xs:sequence>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="ProductTrans" nillable="true" type="tns:ProductTrans"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="ArrayOfProductTrans" nillable="true" type="tns:ArrayOfProductTrans"/>
+<xs:complexType name="ProductTrans">
+<xs:sequence>
+<xs:element minOccurs="0" name="BundleItems" nillable="true" type="tns:ArrayOfProductTrans"/>
+<xs:element minOccurs="0" name="CategoryId" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="Currency" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="Description" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="DurationMinute" type="xs:int"/>
+<xs:element minOccurs="0" name="Hash" type="xs:int"/>
+<xs:element minOccurs="0" name="Icon" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="Level" type="xs:int"/>
+<xs:element minOccurs="0" name="LongDescription" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="Price" type="xs:decimal"/>
+<xs:element minOccurs="0" name="Priority" type="xs:int"/>
+<xs:element minOccurs="0" name="ProductId" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="ProductTitle" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="ProductType" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="SecondaryIcon" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="UseCount" type="xs:int"/>
+<xs:element minOccurs="0" name="VisualStyle" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="WebIcon" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="WebLocation" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="ProductTrans" nillable="true" type="tns:ProductTrans"/>
+<xs:complexType name="InventoryTrans">
+<xs:sequence>
+<xs:element minOccurs="0" name="InventoryItems" nillable="true" type="tns:ArrayOfInventoryItemTrans"/>
+<xs:element minOccurs="0" name="PerformancePartsCapacity" type="xs:long"/>
+<xs:element minOccurs="0" name="PerformancePartsUsedSlotCount" type="xs:long"/>
+<xs:element minOccurs="0" name="SkillModPartsCapacity" type="xs:long"/>
+<xs:element minOccurs="0" name="SkillModPartsUsedSlotCount" type="xs:long"/>
+<xs:element minOccurs="0" name="VisualPartsCapacity" type="xs:long"/>
+<xs:element minOccurs="0" name="VisualPartsUsedSlotCount" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="InventoryTrans" nillable="true" type="tns:InventoryTrans"/>
+<xs:complexType name="EntitlementTrans">
+<xs:sequence>
+<xs:element minOccurs="0" name="Items" nillable="true" type="tns:ArrayOfEntitlementItemTrans"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="EntitlementTrans" nillable="true" type="tns:EntitlementTrans"/>
+<xs:complexType name="ArrayOfEntitlementItemTrans">
+<xs:sequence>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="EntitlementItemTrans" nillable="true" type="tns:EntitlementItemTrans"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="ArrayOfEntitlementItemTrans" nillable="true" type="tns:ArrayOfEntitlementItemTrans"/>
+<xs:complexType name="EntitlementItemTrans">
+<xs:sequence>
+<xs:element minOccurs="0" name="EntitlementId" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="Quantity" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="EntitlementItemTrans" nillable="true" type="tns:EntitlementItemTrans"/>
+<xs:complexType name="ArrayOfCategoryTrans">
+<xs:sequence>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="CategoryTrans" nillable="true" type="tns:CategoryTrans"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="ArrayOfCategoryTrans" nillable="true" type="tns:ArrayOfCategoryTrans"/>
+<xs:complexType name="CategoryTrans">
+<xs:sequence>
+<xs:element minOccurs="0" name="CatalogVersion" type="xs:int"/>
+<xs:element minOccurs="0" name="Categories" nillable="true" type="tns:ArrayOfCategoryTrans"/>
+<xs:element minOccurs="0" name="DisplayName" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="FilterType" type="xs:int"/>
+<xs:element minOccurs="0" name="Icon" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="Id" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="LongDescription" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="Name" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="Priority" type="xs:int"/>
+<xs:element minOccurs="0" name="Products" nillable="true" type="tns:ArrayOfProductTrans"/>
+<xs:element minOccurs="0" name="ShortDescription" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="ShowInNavigationPane" type="xs:boolean"/>
+<xs:element minOccurs="0" name="ShowPromoPage" type="xs:boolean"/>
+<xs:element minOccurs="0" name="WebIcon" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="CategoryTrans" nillable="true" type="tns:CategoryTrans"/>
+<xs:complexType name="CommerceSessionTrans">
+<xs:sequence>
+<xs:element minOccurs="0" name="Basket" nillable="true" type="tns:BasketTrans"/>
+<xs:element minOccurs="0" name="EntitlementsToSell" nillable="true" type="tns:EntitlementTrans"/>
+<xs:element minOccurs="0" name="UpdatedCar" nillable="true" type="tns:OwnedCarTrans"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="CommerceSessionTrans" nillable="true" type="tns:CommerceSessionTrans"/>
+<xs:complexType name="CommerceSessionResultTrans">
+<xs:sequence>
+<xs:element minOccurs="0" name="InvalidBasket" nillable="true" type="tns:InvalidBasketTrans"/>
+<xs:element minOccurs="0" name="InventoryItems" nillable="true" type="tns:ArrayOfInventoryItemTrans"/>
+<xs:element minOccurs="0" name="Status" type="tns:CommerceResultStatus"/>
+<xs:element minOccurs="0" name="UpdatedCar" nillable="true" type="tns:OwnedCarTrans"/>
+<xs:element minOccurs="0" name="Wallets" nillable="true" type="tns:ArrayOfWalletTrans"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="CommerceSessionResultTrans" nillable="true" type="tns:CommerceSessionResultTrans"/>
+<xs:complexType name="ClientServerCryptoTicket">
+<xs:sequence>
+<xs:element minOccurs="0" name="CryptoTicket" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="SessionKey" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="TicketIv" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="ClientServerCryptoTicket" nillable="true" type="tns:ClientServerCryptoTicket"/>
+<xs:complexType name="UdpRelayCryptoTicket">
+<xs:sequence>
+<xs:element minOccurs="0" name="CryptoTicket" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="SessionKey" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="TicketIv" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="UdpRelayCryptoTicket" nillable="true" type="tns:UdpRelayCryptoTicket"/>
+<xs:complexType name="ArrayOfUdpRelayInfo">
+<xs:sequence>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="UdpRelayInfo" nillable="true" type="tns:UdpRelayInfo"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="ArrayOfUdpRelayInfo" nillable="true" type="tns:ArrayOfUdpRelayInfo"/>
+<xs:complexType name="UdpRelayInfo">
+<xs:sequence>
+<xs:element minOccurs="0" name="Host" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="Port" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="UdpRelayInfo" nillable="true" type="tns:UdpRelayInfo"/>
+<xs:complexType name="RegionInfo">
+<xs:sequence>
+<xs:element minOccurs="0" name="CountdownProposalInMilliseconds" type="xs:int"/>
+<xs:element minOccurs="0" name="DirectConnectTimeoutInMilliseconds" type="xs:int"/>
+<xs:element minOccurs="0" name="DropOutTimeInMilliseconds" type="xs:int"/>
+<xs:element minOccurs="0" name="EventLoadTimeoutInMilliseconds" type="xs:int"/>
+<xs:element minOccurs="0" name="HeartbeatIntervalInMilliseconds" type="xs:int"/>
+<xs:element minOccurs="0" name="UdpRelayBandwidthInBps" type="xs:int"/>
+<xs:element minOccurs="0" name="UdpRelayTimeoutInMilliseconds" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="RegionInfo" nillable="true" type="tns:RegionInfo"/>
+<xs:complexType name="CarSlotInfoTrans">
+<xs:sequence>
+<xs:element minOccurs="0" name="CarsOwnedByPersona" nillable="true" type="tns:ArrayOfOwnedCarTrans"/>
+<xs:element minOccurs="0" name="DefaultOwnedCarIndex" type="xs:int"/>
+<xs:element minOccurs="0" name="ObtainableSlots" nillable="true" type="tns:ArrayOfProductTrans"/>
+<xs:element minOccurs="0" name="OwnedCarSlotsCount" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="CarSlotInfoTrans" nillable="true" type="tns:CarSlotInfoTrans"/>
+</xs:schema>

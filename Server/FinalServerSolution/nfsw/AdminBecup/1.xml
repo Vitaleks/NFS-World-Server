@@ -1,0 +1,431 @@
+This XML file does not appear to have any style information associated with it. The document tree is shown below.
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Victory.Service.Objects" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Victory.Service.Objects">
+<xs:import schemaLocation="http://89.234.36.233/nfsw/Engine.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+<xs:import schemaLocation="http://89.234.36.233/nfsw/Engine.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization"/>
+<xs:complexType name="StatNameList">
+<xs:sequence>
+<xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Stats" nillable="true" type="q1:ArrayOfstring"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="StatNameList" nillable="true" type="tns:StatNameList"/>
+<xs:complexType name="RouteArbitrationPacket">
+<xs:complexContent mixed="false">
+<xs:extension base="tns:ArbitrationPacket">
+<xs:sequence>
+<xs:element minOccurs="0" name="BestLapDurationInMilliseconds" type="xs:unsignedInt"/>
+<xs:element minOccurs="0" name="FractionCompleted" type="xs:float"/>
+<xs:element minOccurs="0" name="LongestJumpDurationInMilliseconds" type="xs:unsignedInt"/>
+<xs:element minOccurs="0" name="NumberOfCollisions" type="xs:int"/>
+<xs:element minOccurs="0" name="PerfectStart" type="xs:int"/>
+<xs:element minOccurs="0" name="SumOfJumpsDurationInMilliseconds" type="xs:unsignedInt"/>
+<xs:element minOccurs="0" name="TopSpeed" type="xs:float"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+<xs:element name="RouteArbitrationPacket" nillable="true" type="tns:RouteArbitrationPacket"/>
+<xs:complexType name="ArbitrationPacket">
+<xs:sequence>
+<xs:element minOccurs="0" name="AlternateEventDurationInMilliseconds" type="xs:unsignedInt"/>
+<xs:element minOccurs="0" name="CarId" type="xs:long"/>
+<xs:element minOccurs="0" name="EventDurationInMilliseconds" type="xs:unsignedInt"/>
+<xs:element minOccurs="0" name="FinishReason" type="xs:int"/>
+<xs:element minOccurs="0" name="FraudDetectionInfo" nillable="true" type="tns:FraudDetection"/>
+<xs:element minOccurs="0" name="HacksDetected" type="xs:unsignedInt"/>
+<xs:element minOccurs="0" name="PhysicsMetrics" nillable="true" type="tns:ClientPhysicsMetrics"/>
+<xs:element minOccurs="0" name="Rank" type="xs:int"/>
+<xs:element minOccurs="0" name="Response" nillable="true" type="tns:SecurityResponse"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="ArbitrationPacket" nillable="true" type="tns:ArbitrationPacket"/>
+<xs:complexType name="FraudDetection">
+<xs:sequence>
+<xs:element minOccurs="0" name="Checksum" type="xs:int"/>
+<xs:element minOccurs="0" name="IntValue1" nillable="true" type="xs:int"/>
+<xs:element minOccurs="0" name="IntValue2" nillable="true" type="xs:int"/>
+<xs:element minOccurs="0" name="IntValue3" nillable="true" type="xs:int"/>
+<xs:element minOccurs="0" name="IntValue4" nillable="true" type="xs:int"/>
+<xs:element minOccurs="0" name="IsEncrypted" type="xs:boolean"/>
+<xs:element minOccurs="0" name="ModuleName" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="ModulePath" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="ModuleValue" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="StringValue1" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="StringValue2" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="FraudDetection" nillable="true" type="tns:FraudDetection"/>
+<xs:complexType name="ClientPhysicsMetrics">
+<xs:sequence>
+<xs:element minOccurs="0" name="AccelerationAverage" type="xs:float"/>
+<xs:element minOccurs="0" name="AccelerationMaximum" type="xs:float"/>
+<xs:element minOccurs="0" name="AccelerationMedian" type="xs:float"/>
+<xs:element minOccurs="0" name="SpeedAverage" type="xs:float"/>
+<xs:element minOccurs="0" name="SpeedMaximum" type="xs:float"/>
+<xs:element minOccurs="0" name="SpeedMedian" type="xs:float"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="ClientPhysicsMetrics" nillable="true" type="tns:ClientPhysicsMetrics"/>
+<xs:complexType name="SecurityResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="ChallengeId" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="Result" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="SecurityResponse" nillable="true" type="tns:SecurityResponse"/>
+<xs:complexType name="AchievementsAwarded">
+<xs:sequence>
+<xs:element minOccurs="0" name="Achievements" nillable="true" type="tns:ArrayOfAchievementAwarded"/>
+<xs:element minOccurs="0" name="Badges" nillable="true" type="tns:ArrayOfBadgePacket"/>
+<xs:element minOccurs="0" name="PersonaId" type="xs:long"/>
+<xs:element minOccurs="0" name="Progressed" nillable="true" type="tns:ArrayOfAchievementProgress"/>
+<xs:element minOccurs="0" name="Score" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="AchievementsAwarded" nillable="true" type="tns:AchievementsAwarded"/>
+<xs:complexType name="ArrayOfAchievementAwarded">
+<xs:sequence>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="AchievementAwarded" nillable="true" type="tns:AchievementAwarded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="ArrayOfAchievementAwarded" nillable="true" type="tns:ArrayOfAchievementAwarded"/>
+<xs:complexType name="AchievementAwarded">
+<xs:sequence>
+<xs:element minOccurs="0" name="AchievedOn" type="xs:dateTime"/>
+<xs:element minOccurs="0" name="AchievementDefinitionId" type="xs:int"/>
+<xs:element minOccurs="0" name="AchievementRankId" type="xs:int"/>
+<xs:element minOccurs="0" name="Clip" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="ClipLengthInSeconds" type="xs:float"/>
+<xs:element minOccurs="0" name="Description" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="Icon" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="IsRare" type="xs:boolean"/>
+<xs:element minOccurs="0" name="Name" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="Points" type="xs:short"/>
+<xs:element minOccurs="0" name="Rarity" type="xs:float"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="AchievementAwarded" nillable="true" type="tns:AchievementAwarded"/>
+<xs:complexType name="ArrayOfBadgePacket">
+<xs:sequence>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="BadgePacket" nillable="true" type="tns:BadgePacket"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="ArrayOfBadgePacket" nillable="true" type="tns:ArrayOfBadgePacket"/>
+<xs:complexType name="BadgePacket">
+<xs:sequence>
+<xs:element minOccurs="0" name="AchievementRankId" type="xs:int"/>
+<xs:element minOccurs="0" name="BadgeDefinitionId" type="xs:int"/>
+<xs:element minOccurs="0" name="IsRare" type="xs:boolean"/>
+<xs:element minOccurs="0" name="Rarity" type="xs:float"/>
+<xs:element minOccurs="0" name="SlotId" type="xs:short"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="BadgePacket" nillable="true" type="tns:BadgePacket"/>
+<xs:complexType name="ArrayOfAchievementProgress">
+<xs:sequence>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="AchievementProgress" nillable="true" type="tns:AchievementProgress"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="ArrayOfAchievementProgress" nillable="true" type="tns:ArrayOfAchievementProgress"/>
+<xs:complexType name="AchievementProgress">
+<xs:sequence>
+<xs:element minOccurs="0" name="AchievementDefinitionId" type="xs:int"/>
+<xs:element minOccurs="0" name="CurrentValue" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="AchievementProgress" nillable="true" type="tns:AchievementProgress"/>
+<xs:complexType name="DragArbitrationPacket">
+<xs:complexContent mixed="false">
+<xs:extension base="tns:ArbitrationPacket">
+<xs:sequence>
+<xs:element minOccurs="0" name="FractionCompleted" type="xs:float"/>
+<xs:element minOccurs="0" name="LongestJumpDurationInMilliseconds" type="xs:unsignedInt"/>
+<xs:element minOccurs="0" name="NumberOfCollisions" type="xs:int"/>
+<xs:element minOccurs="0" name="PerfectStart" type="xs:int"/>
+<xs:element minOccurs="0" name="SumOfJumpsDurationInMilliseconds" type="xs:unsignedInt"/>
+<xs:element minOccurs="0" name="TopSpeed" type="xs:float"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+<xs:element name="DragArbitrationPacket" nillable="true" type="tns:DragArbitrationPacket"/>
+<xs:complexType name="TeamEscapeArbitrationPacket">
+<xs:complexContent mixed="false">
+<xs:extension base="tns:ArbitrationPacket">
+<xs:sequence>
+<xs:element minOccurs="0" name="BustedCount" type="xs:int"/>
+<xs:element minOccurs="0" name="CopsDeployed" type="xs:int"/>
+<xs:element minOccurs="0" name="CopsDisabled" type="xs:int"/>
+<xs:element minOccurs="0" name="CopsRammed" type="xs:int"/>
+<xs:element minOccurs="0" name="CostToState" type="xs:int"/>
+<xs:element minOccurs="0" name="DistanceToFinish" type="xs:float"/>
+<xs:element minOccurs="0" name="FractionCompleted" type="xs:float"/>
+<xs:element minOccurs="0" name="Infractions" type="xs:int"/>
+<xs:element minOccurs="0" name="LongestJumpDurationInMilliseconds" type="xs:unsignedInt"/>
+<xs:element minOccurs="0" name="NumberOfCollisions" type="xs:int"/>
+<xs:element minOccurs="0" name="PerfectStart" type="xs:int"/>
+<xs:element minOccurs="0" name="RoadBlocksDodged" type="xs:int"/>
+<xs:element minOccurs="0" name="SpikeStripsDodged" type="xs:int"/>
+<xs:element minOccurs="0" name="SumOfJumpsDurationInMilliseconds" type="xs:unsignedInt"/>
+<xs:element minOccurs="0" name="TopSpeed" type="xs:float"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+<xs:element name="TeamEscapeArbitrationPacket" nillable="true" type="tns:TeamEscapeArbitrationPacket"/>
+<xs:complexType name="PersonaBase">
+<xs:sequence>
+<xs:element minOccurs="0" name="Badges" nillable="true" type="tns:ArrayOfBadgePacket"/>
+<xs:element minOccurs="0" name="IconIndex" type="xs:int"/>
+<xs:element minOccurs="0" name="Level" type="xs:int"/>
+<xs:element minOccurs="0" name="Motto" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="Name" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="PersonaId" type="xs:long"/>
+<xs:element minOccurs="0" name="Presence" type="xs:int"/>
+<xs:element minOccurs="0" name="Score" type="xs:int"/>
+<xs:element minOccurs="0" name="UserId" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="PersonaBase" nillable="true" type="tns:PersonaBase"/>
+<xs:complexType name="PursuitArbitrationPacket">
+<xs:complexContent mixed="false">
+<xs:extension base="tns:ArbitrationPacket">
+<xs:sequence>
+<xs:element minOccurs="0" name="CopsDeployed" type="xs:int"/>
+<xs:element minOccurs="0" name="CopsDisabled" type="xs:int"/>
+<xs:element minOccurs="0" name="CopsRammed" type="xs:int"/>
+<xs:element minOccurs="0" name="CostToState" type="xs:int"/>
+<xs:element minOccurs="0" name="Heat" type="xs:float"/>
+<xs:element minOccurs="0" name="Infractions" type="xs:int"/>
+<xs:element minOccurs="0" name="LongestJumpDurationInMilliseconds" type="xs:unsignedInt"/>
+<xs:element minOccurs="0" name="RoadBlocksDodged" type="xs:int"/>
+<xs:element minOccurs="0" name="SpikeStripsDodged" type="xs:int"/>
+<xs:element minOccurs="0" name="SumOfJumpsDurationInMilliseconds" type="xs:unsignedInt"/>
+<xs:element minOccurs="0" name="TopSpeed" type="xs:float"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+<xs:element name="PursuitArbitrationPacket" nillable="true" type="tns:PursuitArbitrationPacket"/>
+<xs:complexType name="ProfileData">
+<xs:sequence>
+<xs:element minOccurs="0" name="Badges" nillable="true" type="tns:ArrayOfBadgePacket"/>
+<xs:element minOccurs="0" name="Cash" type="xs:decimal"/>
+<xs:element minOccurs="0" name="IconIndex" type="xs:int"/>
+<xs:element minOccurs="0" name="Level" type="xs:int"/>
+<xs:element minOccurs="0" name="Motto" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="Name" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="PercentToLevel" type="xs:float"/>
+<xs:element minOccurs="0" name="PersonaId" type="xs:long"/>
+<xs:element minOccurs="0" name="Rating" type="xs:double"/>
+<xs:element minOccurs="0" name="Rep" type="xs:double"/>
+<xs:element minOccurs="0" name="RepAtCurrentLevel" type="xs:int"/>
+<xs:element minOccurs="0" name="Score" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="ProfileData" nillable="true" type="tns:ProfileData"/>
+<xs:complexType name="ArrayOfPersonaBase">
+<xs:sequence>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="PersonaBase" nillable="true" type="tns:PersonaBase"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="ArrayOfPersonaBase" nillable="true" type="tns:ArrayOfPersonaBase"/>
+<xs:complexType name="AchievementsPacket">
+<xs:sequence>
+<xs:element minOccurs="0" name="Badges" nillable="true" type="tns:ArrayOfBadgeDefinitionPacket"/>
+<xs:element minOccurs="0" name="Definitions" nillable="true" type="tns:ArrayOfAchievementDefinitionPacket"/>
+<xs:element minOccurs="0" name="PersonaId" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="AchievementsPacket" nillable="true" type="tns:AchievementsPacket"/>
+<xs:complexType name="ArrayOfBadgeDefinitionPacket">
+<xs:sequence>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="BadgeDefinitionPacket" nillable="true" type="tns:BadgeDefinitionPacket"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="ArrayOfBadgeDefinitionPacket" nillable="true" type="tns:ArrayOfBadgeDefinitionPacket"/>
+<xs:complexType name="BadgeDefinitionPacket">
+<xs:sequence>
+<xs:element minOccurs="0" name="Background" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="BadgeDefinitionId" type="xs:int"/>
+<xs:element minOccurs="0" name="Border" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="Description" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="Icon" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="Name" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="BadgeDefinitionPacket" nillable="true" type="tns:BadgeDefinitionPacket"/>
+<xs:complexType name="ArrayOfAchievementDefinitionPacket">
+<xs:sequence>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="AchievementDefinitionPacket" nillable="true" type="tns:AchievementDefinitionPacket"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="ArrayOfAchievementDefinitionPacket" nillable="true" type="tns:ArrayOfAchievementDefinitionPacket"/>
+<xs:complexType name="AchievementDefinitionPacket">
+<xs:sequence>
+<xs:element minOccurs="0" name="AchievementDefinitionId" type="xs:int"/>
+<xs:element minOccurs="0" name="AchievementRanks" nillable="true" type="tns:ArrayOfAchievementRankPacket"/>
+<xs:element minOccurs="0" name="BadgeDefinitionId" type="xs:int"/>
+<xs:element minOccurs="0" name="CanProgress" type="xs:boolean"/>
+<xs:element minOccurs="0" name="CurrentValue" type="xs:long"/>
+<xs:element minOccurs="0" name="IsVisible" type="xs:boolean"/>
+<xs:element minOccurs="0" name="ProgressText" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="StatConversion" type="tns:StatConversion"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="AchievementDefinitionPacket" nillable="true" type="tns:AchievementDefinitionPacket"/>
+<xs:complexType name="ArrayOfAchievementRankPacket">
+<xs:sequence>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="AchievementRankPacket" nillable="true" type="tns:AchievementRankPacket"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="ArrayOfAchievementRankPacket" nillable="true" type="tns:ArrayOfAchievementRankPacket"/>
+<xs:complexType name="AchievementRankPacket">
+<xs:sequence>
+<xs:element minOccurs="0" name="AchievedOn" type="xs:dateTime"/>
+<xs:element minOccurs="0" name="AchievementRankId" type="xs:int"/>
+<xs:element minOccurs="0" name="IsRare" type="xs:boolean"/>
+<xs:element minOccurs="0" name="Points" type="xs:short"/>
+<xs:element minOccurs="0" name="Rank" type="xs:short"/>
+<xs:element minOccurs="0" name="Rarity" type="xs:float"/>
+<xs:element minOccurs="0" name="RewardDescription" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="RewardType" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="RewardVisualStyle" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="State" type="tns:AchievementState"/>
+<xs:element minOccurs="0" name="ThresholdValue" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="AchievementRankPacket" nillable="true" type="tns:AchievementRankPacket"/>
+<xs:simpleType name="AchievementState">
+<xs:restriction base="xs:string">
+<xs:enumeration value="Locked"/>
+<xs:enumeration value="InProgress"/>
+<xs:enumeration value="RewardWaiting"/>
+<xs:enumeration value="Completed"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:element name="AchievementState" nillable="true" type="tns:AchievementState"/>
+<xs:simpleType name="StatConversion">
+<xs:restriction base="xs:string">
+<xs:enumeration value="None"/>
+<xs:enumeration value="FromMillisecondsToMinutes"/>
+<xs:enumeration value="FromSecondsToMinutes"/>
+<xs:enumeration value="FromCentimetersPerSecondToSpeed"/>
+<xs:enumeration value="FromMetersToDistance"/>
+<xs:enumeration value="FromNumberToCurrency"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:element name="StatConversion" nillable="true" type="tns:StatConversion"/>
+<xs:complexType name="AchievementRewards">
+<xs:complexContent mixed="false">
+<xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization" base="q2:CommerceResultTrans">
+<xs:sequence>
+<xs:element minOccurs="0" name="AchievementRankId" type="xs:int"/>
+<xs:element minOccurs="0" name="VisualStyle" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+<xs:element name="AchievementRewards" nillable="true" type="tns:AchievementRewards"/>
+<xs:complexType name="BadgeBundle">
+<xs:sequence>
+<xs:element minOccurs="0" name="Badges" nillable="true" type="tns:ArrayOfBadgeInput"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="BadgeBundle" nillable="true" type="tns:BadgeBundle"/>
+<xs:complexType name="ArrayOfBadgeInput">
+<xs:sequence>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="BadgeInput" nillable="true" type="tns:BadgeInput"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="ArrayOfBadgeInput" nillable="true" type="tns:ArrayOfBadgeInput"/>
+<xs:complexType name="BadgeInput">
+<xs:sequence>
+<xs:element minOccurs="0" name="BadgeDefinitionId" type="xs:int"/>
+<xs:element minOccurs="0" name="SlotId" type="xs:short"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="BadgeInput" nillable="true" type="tns:BadgeInput"/>
+<xs:complexType name="BadgesPacket">
+<xs:sequence>
+<xs:element minOccurs="0" name="Badges" nillable="true" type="tns:ArrayOfBadgePacket"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="BadgesPacket" nillable="true" type="tns:BadgesPacket"/>
+<xs:complexType name="ArrayOfShardInfo">
+<xs:sequence>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="ShardInfo" nillable="true" type="tns:ShardInfo"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="ArrayOfShardInfo" nillable="true" type="tns:ArrayOfShardInfo"/>
+<xs:complexType name="ShardInfo">
+<xs:sequence>
+<xs:element minOccurs="0" name="RegionId" type="xs:int"/>
+<xs:element minOccurs="0" name="RegionName" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="ShardName" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="Url" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="ShardInfo" nillable="true" type="tns:ShardInfo"/>
+<xs:complexType name="Report">
+<xs:sequence>
+<xs:element minOccurs="0" name="chatTranscripts" nillable="true" type="tns:ArrayOfChatTranscript"/>
+<xs:element minOccurs="0" name="errorReport" nillable="true" type="tns:ArrayOfErrorReport"/>
+<xs:element minOccurs="0" name="fraudDetectionReport" nillable="true" type="tns:ArrayOfFraudDetection"/>
+<xs:element minOccurs="0" name="shortcutUsage" nillable="true" type="tns:ArrayOfShortcutUsage"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="Report" nillable="true" type="tns:Report"/>
+<xs:complexType name="ArrayOfChatTranscript">
+<xs:sequence>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="ChatTranscript" nillable="true" type="tns:ChatTranscript"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="ArrayOfChatTranscript" nillable="true" type="tns:ArrayOfChatTranscript"/>
+<xs:complexType name="ChatTranscript">
+<xs:sequence>
+<xs:element minOccurs="0" name="Message" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="PersonaId" nillable="true" type="xs:long"/>
+<xs:element minOccurs="0" name="TargetPersonaId" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="UserId" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="ChatTranscript" nillable="true" type="tns:ChatTranscript"/>
+<xs:complexType name="ArrayOfErrorReport">
+<xs:sequence>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="ErrorReport" nillable="true" type="tns:ErrorReport"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="ArrayOfErrorReport" nillable="true" type="tns:ArrayOfErrorReport"/>
+<xs:complexType name="ErrorReport">
+<xs:sequence>
+<xs:element minOccurs="0" name="errorCode" type="xs:int"/>
+<xs:element minOccurs="0" name="errorDescription" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="ErrorReport" nillable="true" type="tns:ErrorReport"/>
+<xs:complexType name="ArrayOfFraudDetection">
+<xs:sequence>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="FraudDetection" nillable="true" type="tns:FraudDetection"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="ArrayOfFraudDetection" nillable="true" type="tns:ArrayOfFraudDetection"/>
+<xs:complexType name="ArrayOfShortcutUsage">
+<xs:sequence>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="ShortcutUsage" nillable="true" type="tns:ShortcutUsage"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="ArrayOfShortcutUsage" nillable="true" type="tns:ArrayOfShortcutUsage"/>
+<xs:complexType name="ShortcutUsage">
+<xs:sequence>
+<xs:element minOccurs="0" name="shortCut" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="timesUsed" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="ShortcutUsage" nillable="true" type="tns:ShortcutUsage"/>
+<xs:complexType name="FraudDetectionCollection">
+<xs:sequence>
+<xs:element minOccurs="0" name="FraudDetectionLogs" nillable="true" type="tns:ArrayOfFraudDetection"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="FraudDetectionCollection" nillable="true" type="tns:FraudDetectionCollection"/>
+</xs:schema>

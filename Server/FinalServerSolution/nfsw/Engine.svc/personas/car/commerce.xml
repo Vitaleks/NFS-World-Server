@@ -1,0 +1,12 @@
+<CommerceSessionResultTrans>
+	<InvalidBasket i:nil="true"/>
+	<InventoryItems i:nil="true"/>
+	<Status>Success</Status>
+	<UpdatedCar>{0}</UpdatedCar>
+	<Wallets>
+		<WalletTrans>
+			<Balance>0</Balance>
+			<Currency>CASH</Currency>
+		</WalletTrans>
+	</Wallets>
+</CommerceSessionResultTrans>

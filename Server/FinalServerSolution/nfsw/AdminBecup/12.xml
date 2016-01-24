@@ -1,0 +1,12 @@
+This XML file does not appear to have any style information associated with it. The document tree is shown below.
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization.PowerUp" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization.PowerUp">
+<xs:complexType name="PowerupActivated">
+<xs:sequence>
+<xs:element minOccurs="0" name="Count" type="xs:int"/>
+<xs:element minOccurs="0" name="Id" type="xs:int"/>
+<xs:element minOccurs="0" name="PersonaId" type="xs:long"/>
+<xs:element minOccurs="0" name="TargetPersonaId" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="PowerupActivated" nillable="true" type="tns:PowerupActivated"/>
+</xs:schema>

@@ -1,0 +1,14 @@
+<ProfileData xmlns="http://schemas.datacontract.org/2004/07/Victory.Service.Objects" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+<Badges/>
+<Cash>{0}</Cash>
+<IconIndex>{1}</IconIndex>
+<Level>{2}</Level>
+<Motto>{3}</Motto>
+<Name>{4}</Name>
+<PercentToLevel>0</PercentToLevel>
+<PersonaId>{5}</PersonaId>
+<Rating>{6}</Rating>
+<Rep>{7}</Rep>
+<RepAtCurrentLevel>0</RepAtCurrentLevel>
+<Score>{8}</Score>
+</ProfileData>

@@ -1,0 +1,7 @@
+/home/wserver/serv/FinalServerSolution/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/wserver/serv/FinalServerSolution/bin/Debug/FinalServerSolution.exe.config
+/home/wserver/serv/FinalServerSolution/bin/Debug/FinalServerSolution.exe.mdb
+/home/wserver/serv/FinalServerSolution/bin/Debug/FinalServerSolution.exe
+/home/wserver/serv/FinalServerSolution/obj/Debug/FinalServerSolution.exe
+/home/wserver/serv/FinalServerSolution/obj/Debug/FinalServerSolution.exe.mdb
+/home/wserver/serv/FinalServerSolution/obj/Debug/.NETFramework,Version=v4.0.AssemblyAttribute.cs

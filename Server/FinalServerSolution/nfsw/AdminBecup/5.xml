@@ -1,0 +1,32 @@
+This XML file does not appear to have any style information associated with it. The document tree is shown below.
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization.LoginAnnouncement" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization.LoginAnnouncement">
+<xs:import schemaLocation="http://89.234.36.233/nfsw/Engine.svc?xsd=xsd15" namespace="http://schemas.datacontract.org/2004/07/Victory.DataObjects.Objects.LoginAnnouncement"/>
+<xs:complexType name="LoginAnnouncementsModifiedMsg">
+<xs:sequence/>
+</xs:complexType>
+<xs:element name="LoginAnnouncementsModifiedMsg" nillable="true" type="tns:LoginAnnouncementsModifiedMsg"/>
+<xs:complexType name="LoginAnnouncementsDefinition">
+<xs:sequence>
+<xs:element minOccurs="0" name="Announcements" nillable="true" type="tns:ArrayOfLoginAnnouncementDefinition"/>
+<xs:element minOccurs="0" name="ImagesPath" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="LoginAnnouncementsDefinition" nillable="true" type="tns:LoginAnnouncementsDefinition"/>
+<xs:complexType name="ArrayOfLoginAnnouncementDefinition">
+<xs:sequence>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="LoginAnnouncementDefinition" nillable="true" type="tns:LoginAnnouncementDefinition"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="ArrayOfLoginAnnouncementDefinition" nillable="true" type="tns:ArrayOfLoginAnnouncementDefinition"/>
+<xs:complexType name="LoginAnnouncementDefinition">
+<xs:sequence>
+<xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Victory.DataObjects.Objects.LoginAnnouncement" minOccurs="0" name="Context" type="q1:LoginAnnouncementContext"/>
+<xs:element minOccurs="0" name="Id" type="xs:int"/>
+<xs:element minOccurs="0" name="ImageChecksum" type="xs:int"/>
+<xs:element minOccurs="0" name="ImageUrl" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="Target" nillable="true" type="xs:string"/>
+<xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Victory.DataObjects.Objects.LoginAnnouncement" minOccurs="0" name="Type" type="q2:LoginAnnouncementType"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="LoginAnnouncementDefinition" nillable="true" type="tns:LoginAnnouncementDefinition"/>
+</xs:schema>

@@ -1,0 +1,25 @@
+<PursuitEventResult
+	xmlns="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization.Event"
+	xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Accolades>
+		<FinalRewards>
+			<Rep>{0}</Rep>
+			<Tokens>{1}</Tokens>
+		</FinalRewards>
+		<HasLeveledUp>false</HasLeveledUp>
+		<LuckyDrawInfo i:nil="true" />
+		<OriginalRewards>
+			<Rep>{2}</Rep>
+			<Tokens>{3}</Tokens>
+		</OriginalRewards>
+		<RewardInfo/>
+	</Accolades>
+	<Durability>{4}</Durability>
+	<EventId>{5}</EventId>
+	<EventSessionId>{6}</EventSessionId>
+	<ExitPath>ExitToFreeroam</ExitPath>
+	<InviteLifetimeInMilliseconds>0</InviteLifetimeInMilliseconds>
+	<LobbyInviteId>0</LobbyInviteId>
+	<PersonaId>{7}</PersonaId>
+	<Heat>{8}</Heat>
+</PursuitEventResult>

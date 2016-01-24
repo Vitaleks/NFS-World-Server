@@ -1,0 +1,174 @@
+This XML file does not appear to have any style information associated with it. The document tree is shown below.
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Victory.TransferObjects.News" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Victory.TransferObjects.News">
+<xs:import schemaLocation="http://89.234.36.233/nfsw/Engine.svc?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+<xs:simpleType name="NewsArticleType">
+<xs:restriction base="xs:string">
+<xs:enumeration value="NullNews"/>
+<xs:enumeration value="FriendRequestReceived"/>
+<xs:enumeration value="FriendLeveledUp"/>
+<xs:enumeration value="TopSpeedEclipsed"/>
+<xs:enumeration value="LongestPursuitEclipsed"/>
+<xs:enumeration value="TotalCostToStateEclipsed"/>
+<xs:enumeration value="WelcomeMessage"/>
+<xs:enumeration value="AutoRejectedFriendRequest"/>
+<xs:enumeration value="DynamicNews">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">9</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="RareItemWonLuckyDraw">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">10</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="RareItemWonCardPack">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">11</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="RepAmplifierExpiring">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">12</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="RepAmplifierExpired">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">13</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="CashAmplifierExpiring">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">14</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="CashAmplifierExpired">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">15</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="CarRentalExpired">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">16</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="CarInsuranceExpiring">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">17</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="CarInsuranceExpired">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">18</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="UnopenedGift">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">19</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="RareItemWonStreak">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">20</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="StreakMilestone">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">21</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="CarClassChanged">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">22</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="ReferralBoostGiftAwarded">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">23</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+</xs:restriction>
+</xs:simpleType>
+<xs:element name="NewsArticleType" nillable="true" type="tns:NewsArticleType"/>
+<xs:simpleType name="NewsArticleFilters">
+<xs:restriction base="xs:string">
+<xs:enumeration value="NEWSFILTERMASK_None"/>
+<xs:enumeration value="NEWSFILTERMASK_Me"/>
+<xs:enumeration value="NEWSFILTERMASK_Friends"/>
+<xs:enumeration value="NEWSFILTERMASK_System">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="NEWSFILTERMASK_Crew">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">8</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="NEWSFILTERMASK_All">
+<xs:annotation>
+<xs:appinfo>
+<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2147483647</EnumerationValue>
+</xs:appinfo>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="NEWSFILTERMASK_ITEM_COUNT"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:element name="NewsArticleFilters" nillable="true" type="tns:NewsArticleFilters"/>
+<xs:complexType name="ArrayOfNewsArticleTrans">
+<xs:sequence>
+<xs:element minOccurs="0" maxOccurs="unbounded" name="NewsArticleTrans" nillable="true" type="tns:NewsArticleTrans"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="ArrayOfNewsArticleTrans" nillable="true" type="tns:ArrayOfNewsArticleTrans"/>
+<xs:complexType name="NewsArticleTrans">
+<xs:sequence>
+<xs:element minOccurs="0" name="ExpiryTime" nillable="true" type="xs:dateTime"/>
+<xs:element minOccurs="0" name="Filters" type="xs:int"/>
+<xs:element minOccurs="0" name="IconType" type="xs:int"/>
+<xs:element minOccurs="0" name="LongText_HALId" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="NewsId" type="xs:long"/>
+<xs:element minOccurs="0" name="Parameters" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="PersonaId" type="xs:long"/>
+<xs:element minOccurs="0" name="ShortText_HALId" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="Sticky" type="xs:int"/>
+<xs:element minOccurs="0" name="Timestamp" type="xs:long"/>
+<xs:element minOccurs="0" name="Type" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="NewsArticleTrans" nillable="true" type="tns:NewsArticleTrans"/>
+</xs:schema>

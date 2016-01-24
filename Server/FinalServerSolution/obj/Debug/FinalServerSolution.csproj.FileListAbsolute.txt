@@ -1,0 +1,12 @@
+c:\users\vital\documents\visual studio 2013\Projects\FinalServerSolution\FinalServerSolution\bin\Debug\FinalServerSolution.exe.config
+c:\users\vital\documents\visual studio 2013\Projects\FinalServerSolution\FinalServerSolution\bin\Debug\FinalServerSolution.exe
+c:\users\vital\documents\visual studio 2013\Projects\FinalServerSolution\FinalServerSolution\bin\Debug\FinalServerSolution.pdb
+c:\users\vital\documents\visual studio 2013\Projects\FinalServerSolution\FinalServerSolution\obj\Debug\FinalServerSolution.csprojResolveAssemblyReference.cache
+c:\users\vital\documents\visual studio 2013\Projects\FinalServerSolution\FinalServerSolution\obj\Debug\FinalServerSolution.exe
+c:\users\vital\documents\visual studio 2013\Projects\FinalServerSolution\FinalServerSolution\obj\Debug\FinalServerSolution.pdb
+C:\Users\Edmundas919\Desktop\serv\serv\FinalServerSolution\bin\Debug\FinalServerSolution.exe.config
+C:\Users\Edmundas919\Desktop\serv\serv\FinalServerSolution\obj\Debug\FinalServerSolution.exe
+C:\Users\Edmundas919\Desktop\serv\serv\FinalServerSolution\obj\Debug\FinalServerSolution.pdb
+C:\Users\Edmundas919\Desktop\serv\serv\FinalServerSolution\bin\Debug\FinalServerSolution.exe
+C:\Users\Edmundas919\Desktop\serv\serv\FinalServerSolution\bin\Debug\FinalServerSolution.pdb
+C:\Users\Edmundas919\Desktop\serv\serv\FinalServerSolution\obj\Debug\FinalServerSolution.csprojResolveAssemblyReference.cache

@@ -1,0 +1,26 @@
+<OwnedCarTrans>
+<CustomCar>
+<BaseCar>{0}</BaseCar>
+<CarClassHash>{1}</CarClassHash>
+<Id>{2}</Id>
+<IsPreset>false</IsPreset>
+<Level>0</Level>
+<Name/>
+<Paints>{3}</Paints>
+<PerformanceParts>{4}</PerformanceParts>
+<PhysicsProfileHash>{5}</PhysicsProfileHash>
+<Rating>{6}</Rating>
+<ResalePrice>{7}</ResalePrice>
+<RideHeightDrop>0</RideHeightDrop>
+<SkillModParts>{8}</SkillModParts>
+<SkillModSlotCount>6</SkillModSlotCount>
+<Version>0</Version>
+<Vinyls>{9}</Vinyls>
+<VisualParts>{10}</VisualParts>
+</CustomCar>
+<Durability>{11}</Durability>
+<ExpirationDate i:nil="true"/>
+<Heat>{12}</Heat>
+<Id>{13}</Id>
+<OwnershipType>CustomizedCar</OwnershipType>
+</OwnedCarTrans>

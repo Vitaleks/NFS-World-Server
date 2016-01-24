@@ -1,0 +1,25 @@
+This XML file does not appear to have any style information associated with it. The document tree is shown below.
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Victory.DataObjects.Objects.LoginAnnouncement" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Victory.DataObjects.Objects.LoginAnnouncement">
+<xs:simpleType name="LoginAnnouncementContext">
+<xs:restriction base="xs:string">
+<xs:enumeration value="NotApplicable"/>
+<xs:enumeration value="CarPurchase"/>
+<xs:enumeration value="CardsPack"/>
+<xs:enumeration value="PaintShop"/>
+<xs:enumeration value="PerformanceShop"/>
+<xs:enumeration value="AftermarketShop"/>
+<xs:enumeration value="VinylShop"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:element name="LoginAnnouncementContext" nillable="true" type="tns:LoginAnnouncementContext"/>
+<xs:simpleType name="LoginAnnouncementType">
+<xs:restriction base="xs:string">
+<xs:enumeration value="ExternalLink"/>
+<xs:enumeration value="SafehouseProduct"/>
+<xs:enumeration value="ImageOnly"/>
+<xs:enumeration value="SafehouseProductNoButton"/>
+<xs:enumeration value="ExternalLinkNoButton"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:element name="LoginAnnouncementType" nillable="true" type="tns:LoginAnnouncementType"/>
+</xs:schema>

@@ -1,0 +1,6 @@
+<ClientServerCryptoTicket 
+xmlns="http://schemas.datacontract.org/2004/07/Victory.DataLayer.Serialization" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<CryptoTicket></CryptoTicket>
+	<SessionKey></SessionKey>
+	<TicketIv></TicketIv>
+</ClientServerCryptoTicket>
