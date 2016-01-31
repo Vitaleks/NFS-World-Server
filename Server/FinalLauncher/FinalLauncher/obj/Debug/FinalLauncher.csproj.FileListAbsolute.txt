@@ -1,0 +1,9 @@
+c:\users\vital\documents\visual studio 2013\Projects\FinalLauncher\FinalLauncher\bin\Debug\FinalLauncher.exe.config
+c:\users\vital\documents\visual studio 2013\Projects\FinalLauncher\FinalLauncher\bin\Debug\FinalLauncher.exe
+c:\users\vital\documents\visual studio 2013\Projects\FinalLauncher\FinalLauncher\bin\Debug\FinalLauncher.pdb
+c:\users\vital\documents\visual studio 2013\Projects\FinalLauncher\FinalLauncher\obj\Debug\FinalLauncher.csprojResolveAssemblyReference.cache
+c:\users\vital\documents\visual studio 2013\Projects\FinalLauncher\FinalLauncher\obj\Debug\FinalLauncher.Form1.resources
+c:\users\vital\documents\visual studio 2013\Projects\FinalLauncher\FinalLauncher\obj\Debug\FinalLauncher.Properties.Resources.resources
+c:\users\vital\documents\visual studio 2013\Projects\FinalLauncher\FinalLauncher\obj\Debug\FinalLauncher.csproj.GenerateResource.Cache
+c:\users\vital\documents\visual studio 2013\Projects\FinalLauncher\FinalLauncher\obj\Debug\FinalLauncher.exe
+c:\users\vital\documents\visual studio 2013\Projects\FinalLauncher\FinalLauncher\obj\Debug\FinalLauncher.pdb
